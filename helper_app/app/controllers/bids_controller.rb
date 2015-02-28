@@ -1,4 +1,4 @@
-class JobsController < ApplicationController
+class BidsController < ApplicationController
 
   def index
   end
@@ -6,10 +6,10 @@ class JobsController < ApplicationController
   def show
   end
 
-  def create
+  def new
   end
 
-  def new
+  def create
   end
 
   def edit
@@ -20,5 +20,5 @@ class JobsController < ApplicationController
 
   def destroy
   end
-  
+
 end
