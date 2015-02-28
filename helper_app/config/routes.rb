@@ -1,23 +1,13 @@
 Rails.application.routes.draw do
-  get 'jobs/index'
+  
+  root 'welcome#index'
 
-  get 'jobs/show'
-
-  get 'jobs/create'
-
-  get 'jobs/new'
-
-  get 'jobs/edit'
-
-  get 'jobs/update'
-
-  get 'jobs/destroy'
+  resources :jobs
 
   # The priority is based upon order of creation: first created -> highest priority.
-  # See how all your routes lay out with "rake routes".
+  # See how all your routes lay out with "rake routes".  
 
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
