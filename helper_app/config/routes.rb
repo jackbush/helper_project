@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   
+  # devise will add users routes here
+
   root 'welcome#index'
 
   resources :jobs
