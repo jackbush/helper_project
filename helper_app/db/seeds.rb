@@ -15,7 +15,7 @@ s = User.create(username: 'test senior', role: 'senior')
 User.create(username: 'test junior one', role: 'junior')
 User.create(username: 'test junior two', role: 'junior')
 
-Job.create()
+Job.create(title: 'pick up my groceries', description: 'pretty please', postcode: 'SE7 8UG', instructions: 'this will be emailed to you', poster: s.id)
 
 Bid.create()
 Bid.create()
