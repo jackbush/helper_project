@@ -11,9 +11,9 @@ User.detele_all
 Job.detele_all
 Bid.detele_all
 
-User.create()
-User.create()
-User.create()
+User.create(username: 'test senior', role: 'senior')
+User.create(username: 'test junior one', role: 'junior')
+User.create(username: 'test junior two', role: 'junior')
 
 Job.create()
 
