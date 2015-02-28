@@ -6,7 +6,13 @@
   = javascript_include_tag 'application', 'data-turbolinks-track' => true
   = csrf_meta_tags
 %body
-
-%h1 Helper App
-
-= yield
+  .header
+    %h1 Helper App
+    .nav
+      %ul.nav-links
+        %li.nav-link= link_to 'see all jobs', jobs_path
+        %li.nav-link= link_to 'list a jobs', new_job_path
+        %li.nav-link= link_to 'see all bids', bids_path
+        
+  .main-content
+    = yield
