@@ -11,32 +11,29 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 20150227144503) do
-=======
-ActiveRecord::Schema.define(version: 20150227150911) do
->>>>>>> a641466fe8e8d6a70b02ad4209e75fa650c6b209
+ActiveRecord::Schema.define(version: 20150228170446) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-<<<<<<< HEAD
-  create_table "users", force: :cascade do |t|
-    t.string   "username"
-    t.string   "email"
-    t.string   "bio"
-=======
-  create_table "comments", force: :cascade do |t|
+  create_table "jobs", force: :cascade do |t|
     t.string   "title"
-    t.string   "content"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string   "description"
+    t.string   "postcode"
+    t.string   "instructions"
+    t.integer  "poster"
+    t.integer  "helper"
+    t.string   "applicants"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
   end
 
-  create_table "profiles", force: :cascade do |t|
-    t.string   "name"
-    t.string   "info"
->>>>>>> a641466fe8e8d6a70b02ad4209e75fa650c6b209
+  create_table "users", force: :cascade do |t|
+    t.string   "username"
+    t.string   "gender"
+    t.string   "postcode"
+    t.string   "avatar"
+    t.text     "about"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
