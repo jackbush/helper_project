@@ -11,14 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150228185826) do
+ActiveRecord::Schema.define(version: 20150228191455) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "bids", force: :cascade do |t|
     t.integer  "job"
-    t.integer  "helper"
+    t.integer  "applicant"
     t.datetime "jobdatetime"
     t.string   "note"
     t.datetime "created_at",  null: false
