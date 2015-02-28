@@ -9,7 +9,7 @@ Rails.application.routes.draw do
 
   # get requests for:
   # dashboards
-  # 
+  # is dashboard the bids index? i think it could easily be
 
 
 
