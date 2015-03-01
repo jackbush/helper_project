@@ -1,6 +1,7 @@
 class Job < ActiveRecord::Base
 
-  # belongs_to :poster, :class_name => 'User', :foreign_key => 'a_player'
-  # belongs_to :helper, :class_name => 'User', :foreign_key => 'helper'
+  has_many :bids
+  belongs_to :poster_id, :class_name => 'User', :foreign_key => 'poster_id'
+  belongs_to :helper_id, :class_name => 'User', :foreign_key => 'helper_id'
 
 end

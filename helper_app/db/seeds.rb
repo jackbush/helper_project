@@ -15,7 +15,7 @@ user_s = User.create(username: 'test senior', role: 'senior')
 user_j1 = User.create(username: 'test junior one', role: 'junior')
 user_j2 = User.create(username: 'test junior two', role: 'junior')
 
-job = Job.create(title: 'pick up my groceries', description: 'pretty please', postcode: 'SE7 8UG', instructions: 'this will be emailed to you', poster: user_s.id)
+job = Job.create(title: 'pick up my groceries', description: 'pretty please', postcode: 'SE7 8UG', instructions: 'this will be emailed to you', poster_id: user_s)
 
-Bid.create(job: job.id, applicant: user_j1.id, note: 'i really want it')
-Bid.create(job: job.id, applicant: user_j2.id, note: 'i want it more')
+Bid.create(job: job, applicant_id: user_j1, note: 'i really want it')
+Bid.create(job: job, applicant_id: user_j2, note: 'i want it more')
