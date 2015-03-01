@@ -1,6 +1,12 @@
 %h2= @job.title
 
-%h3= @job.description
+%h2= link_to 'I CAN HELP', new_job_bid_path
+
+%h3 DESCRIPTION
+%p= @job.description
+
+%h3 INSTRUCTIONS
+%p= @job.instructions
 
 %h4
   posted by
@@ -9,4 +15,4 @@
 %h4
   applied for by
   - @job.applicants.each do |applicant|
-    =applicant.username
+    = link_to applicant.username, profile_path(applicant)

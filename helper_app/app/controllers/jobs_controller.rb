@@ -13,7 +13,7 @@ class JobsController < ApplicationController
   end
 
   def create
-    @job = Job.new(job_params)
+    @job = Job.create(job_params)
     redirect_to jobs_path
   end
 
