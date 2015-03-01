@@ -14,7 +14,7 @@ class BidsController < ApplicationController
 
   def create
     @bid = Bid.new(bid_params)
-    redirect_to bids_path
+    redirect_to job_path(@bid.job)
   end
 
   def edit
@@ -24,12 +24,12 @@ class BidsController < ApplicationController
   def update
     @bid = Bid.find(params[:id])
     @bid.update(bid_params)
-    redirect_to bids_path
+    redirect_to dashboard_path
   end
 
   def destroy
     Bid.find(params[:id]).destroy
-    redirect_to bids_path
+    redirect_to dashboard_path
   end
 
   private
