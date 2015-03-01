@@ -1,15 +1,17 @@
 class JobsController < ApplicationController
 
   def index
+    @jobs = Job.all
   end
 
   def show
-  end
-
-  def create
+    @job = Job.find(params[:id])
   end
 
   def new
+  end
+
+  def create
   end
 
   def edit

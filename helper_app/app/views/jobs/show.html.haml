@@ -1,1 +1,12 @@
-%h2 SHOW JOB
+%h2= @job.title
+
+%h3= @job.description
+
+%h4
+  posted by
+  = @job.poster.username
+
+%h4
+  applied for by
+  - @job.applicants.each do |applicant|
+    =applicant.username
