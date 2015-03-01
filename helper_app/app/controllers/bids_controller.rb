@@ -9,7 +9,8 @@ class BidsController < ApplicationController
   end
 
   def new
-    @bid = Bid.new
+    @job = Job.find(params[:job_id])
+    @bid = @job.bids.new
   end
 
   def create
