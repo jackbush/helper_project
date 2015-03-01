@@ -1,0 +1,6 @@
+%h2 JOBS INDEX
+
+- @jobs.each do |job|
+  .job-post-index
+    %h3= link_to job.title, job_path(job)
+    %h4= job.description
