@@ -3,7 +3,9 @@ Rails.application.routes.draw do
   # devise will add users routes here
 
   root 'welcomes#index'
+
   get '/dashboard', to: 'welcomes#dashboard'
+  get '/users/:id', to: 'users#profile', as: 'profile'
 
   resources :jobs do
     resources :bids

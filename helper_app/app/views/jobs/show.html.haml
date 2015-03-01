@@ -4,7 +4,7 @@
 
 %h4
   posted by
-  = @job.poster.username
+  = link_to @job.poster.username, profile_path(@job.poster)
 
 %h4
   applied for by
