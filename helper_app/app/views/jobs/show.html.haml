@@ -22,11 +22,12 @@
     %td Note
     %td Select
   - @job.bids.each do |bid|
-    %tr
+    %tr#choose_helper_table
       %td= link_to bid.applicant.username, profile_path(bid.applicant)
       %td= bid.note
+      %td= bid.applicant.id
       %td
-        %button#choose_helper_button Choose
+        %button#choose_helper_button{'data-id' => bid.job_id, 'data-helper-id' => bid.applicant.id} Choose
 
 
         / button is pressed by elder, their id is already entered into the job table as current user thru devise. this button needs to enter the applicant_id (from the bid table), into the helper_id in the job table. Then redirect to dashboard
