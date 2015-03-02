@@ -1,5 +1,5 @@
 
- // taking from bids table applicant_id and insterting it into the jobs table as helper id
+// // taking from bids table applicant_id and insterting it into the jobs table as helper id
 
 function request(method, url, data){
 	return $.ajax({
@@ -11,7 +11,7 @@ function request(method, url, data){
 }
 
 function chooseHelpers() {
-	jobId = $(this).data('job-id');
+	jobId = $(this).data('id');
 	helperId = $(this).data('helper-id');
 	request("PUT", "/jobs/"+jobId, {job:{helper_id: helperId}}).done(function(){
 	})
@@ -19,9 +19,11 @@ function chooseHelpers() {
 
 $(document).ready(function() {
 
+	$('#choose_helper_button').on('click', chooseHelpers)
+
+
 	$('#choose_helper_button').on('click', function(e) {
-			console.log($(this).data('helper-id'));
-			
+			console.log($(this).data('id'));		
 	});
 
 });

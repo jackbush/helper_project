@@ -19,9 +19,6 @@ admin.password_confirmation = 'password'
 admin.role = 'admin'
 admin.save!
 
-<<<<<<< HEAD
-job = Job.create(title: 'pick up my groceries', description: 'pretty please', address: 'SE7 8UG', instructions: 'this will be emailed to you', poster: user_s)
-=======
 user_s = User.new
 user_s.username = 'TestSenior'
 user_s.email = 'testsenior@app.com'
@@ -29,7 +26,6 @@ user_s.password = 'password'
 user_s.password_confirmation = 'password'
 admin.role = 'senior'
 user_s.save!
->>>>>>> development
 
 user_j1 = User.new
 user_j1.username = 'TestJunior1'
