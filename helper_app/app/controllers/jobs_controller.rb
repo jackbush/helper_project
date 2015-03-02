@@ -1,5 +1,8 @@
 class JobsController < ApplicationController
 
+  before_action :authenticate_user!, except: [:index, :show]
+  authorize_resource
+
   def index
     @jobs = Job.all
   end

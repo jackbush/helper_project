@@ -6,7 +6,7 @@ class Ability
     #
 
       user ||= user.new
-      if player.admin?
+      if user.admin?
         can :manage, :all
       end
 
