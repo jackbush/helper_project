@@ -33,9 +33,4 @@ $(document).ready(function() {
 
 	$('.choose_helper_button').on('click', chooseHelpers)
 
-
-	// $('.choose_helper_button').on('click', function(e) {
-	// 		console.log($(this).data('helper-id'));		
-	// });
-
 });
