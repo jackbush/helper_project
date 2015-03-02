@@ -6,6 +6,6 @@ class Bid < ActiveRecord::Base
 
   accepts_nested_attributes_for :job
 
-  # validates :applicant, presence: true
+  validates :applicant, presence: true
 
 end
