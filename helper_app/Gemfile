@@ -11,6 +11,7 @@ gem 'omniauth-facebook'
 gem 'omniauth-twitter'
 gem 'omniauth-google-oauth2'
 gem 'letter_opener'
+gem 'rails_admin'
 
 #default
 gem 'rails', '4.2.0'
