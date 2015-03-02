@@ -27,14 +27,14 @@ class JobsController < ApplicationController
   end
 
   def update
-  	# binding.pry
     @job = Job.find(params[:id])
     @job.update(job_params)
-    # head :no_content, status: :ok
     respond_to do |format|
       format.html
       format.json { head :no_content, status: :ok }
     end
+    # hit this on assigning helper
+    # UserMailer.registration_confirmation(@user).deliver
   end
 
   def destroy
