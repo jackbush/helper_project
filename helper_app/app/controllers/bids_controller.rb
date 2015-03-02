@@ -15,7 +15,7 @@ class BidsController < ApplicationController
 
   def create
     @bid = Bid.new(bid_params)
-    redirect_to job_path(@bid.job)
+    redirect_to jobs_path
   end
 
   def edit
