@@ -7,5 +7,8 @@ class Job < ActiveRecord::Base
   belongs_to :helper, :class_name => 'User', :foreign_key => 'helper_id'
 
   validates :poster, presence: true
+  validates :description, presence: true
+  validates :instructions, presence: true
+  validates :address, presence: true
 
 end
