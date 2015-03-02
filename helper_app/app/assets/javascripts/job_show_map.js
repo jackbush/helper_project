@@ -1,5 +1,4 @@
 // function addMarker(map) {
-//   // console.log('showing the marker from geocode')
 //   var geocoder = new google.maps.Geocoder();
 //   var showMarkerFromGeocoderResults = function(results, status) {
 //     if (status == google.maps.GeocoderStatus.OK) {
