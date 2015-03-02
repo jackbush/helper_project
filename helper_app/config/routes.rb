@@ -2,10 +2,6 @@ Rails.application.routes.draw do
   
   devise_for :users, :controllers => { registrations: 'registrations' }
 
-  # authenticated do
-  #   root: => 'welcomes#dashboard'
-  # end
-
   root 'welcomes#index'
 
   get '/dashboard', to: 'welcomes#dashboard'
