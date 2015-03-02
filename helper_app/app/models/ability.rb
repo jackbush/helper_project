@@ -8,6 +8,7 @@ class Ability
       user ||= User.new
       if user.admin?
         can :manage, :all
+        can :access, :rails_admin
       end
 
       can [:index, :show, :new, :create, :edit, :update, :destroy], [Bid, Job, User] 
