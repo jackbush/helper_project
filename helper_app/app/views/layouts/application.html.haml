@@ -7,9 +7,10 @@
   = javascript_include_tag 'application', 'data-turbolinks-track' => true
   = csrf_meta_tags
 %body
-  .site-content
-    .header
+  .header
+    .header-content
       = render 'layouts/header'
+  .site-content
     .devise-alerts
       -# %p.notice= notice
       -# %p.alert= alert
