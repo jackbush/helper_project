@@ -11,10 +11,6 @@ User.delete_all
 Job.delete_all
 Bid.delete_all
 
-user_s = User.create(username: 'test senior', role: 'senior')
-user_j1 = User.create(username: 'test junior one', role: 'junior')
-user_j2 = User.create(username: 'test junior two', role: 'junior')
-
 admin = User.new
 admin.username = 'admin'
 admin.email = 'admin@app.com'
