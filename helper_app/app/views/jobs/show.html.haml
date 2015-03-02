@@ -7,7 +7,7 @@
     %span.bid-status YOU HAVE APPLIED
   - else
     %span.bid-status= link_to 'I CAN HELP', new_job_bid_path(@job)
-  | POSTED BY
+  POSTED BY
   = link_to @job.poster.username, profile_path(@job.poster)
 
 %h3 DESCRIPTION

@@ -85,3 +85,9 @@ h1 {
   background-color: #eee;
   float: right;
 }
+
+.bid-status {
+  background: green;
+  color: white;
+  padding: 10px;
+}
