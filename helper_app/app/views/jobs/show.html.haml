@@ -17,10 +17,13 @@
   %tr
     %td User
     %td Note
+    %td Select
   - @job.bids.each do |bid|
     %tr
       %td= link_to bid.applicant.username, profile_path(bid.applicant)
       %td= bid.note
+      %td
+        %button Choose
 
 .page-nav
   = link_to 'EDIT', edit_job_path
