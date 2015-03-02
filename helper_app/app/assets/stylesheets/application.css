@@ -20,6 +20,13 @@
   margin: 0 auto;
 }
 
+#job-index-map {
+  display: inline-block;
+  width:960px;
+  height:500px;
+  background-color: #eee;
+}
+
 #job-show-map {
   display: inline-block;
   width:700px;

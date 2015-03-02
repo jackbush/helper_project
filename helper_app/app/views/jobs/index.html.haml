@@ -1,5 +1,11 @@
 %h2 JOBS INDEX
 
+%h3 MAP
+
+#job-index-map
+
+%h3 LIST
+
 - @jobs.each do |job|
   .job-post-index
     %h3= link_to job.title, job_path(job)
