@@ -1,6 +1,9 @@
 class UserMailer < ApplicationMailer
   default from: "example@email.com"
 
+
+  #how to hit the trigger for this with user create method in hidden controller?
+  
   def registration_confirmation (user)
     @user = user
     # attachments["logo.jpg"] = File.read("#{Rails.root}/app/assets/images/logo.jpg")

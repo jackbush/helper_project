@@ -34,7 +34,7 @@ class JobsController < ApplicationController
       format.json { head :no_content, status: :ok }
     end
     # hit this on assigning helper
-    # UserMailer.registration_confirmation(@user).deliver
+    # UserMailer.job_allocation(@job.helper.email).deliver
   end
 
   def destroy
