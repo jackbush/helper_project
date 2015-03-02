@@ -16,3 +16,7 @@
   applied for by
   - @job.applicants.each do |applicant|
     = link_to applicant.username, profile_path(applicant)
+
+.page-nav
+  = link_to 'EDIT', edit_job_path
+  = link_to 'BACK', jobs_path
