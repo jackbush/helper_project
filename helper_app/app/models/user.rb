@@ -7,6 +7,8 @@ class User < ActiveRecord::Base
   has_many :jobs
   has_many :bids, :foreign_key => 'applicant_id'
 
+  validates :username, presence: true, uniqueness: true
+  
   include Gravtastic
   gravtastic size: 120, default: "identicon"
 
