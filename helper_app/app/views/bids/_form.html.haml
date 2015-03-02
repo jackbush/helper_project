@@ -1,6 +1,6 @@
 .new-bid
   = form_for @job do |f|
-    = f.fields_for :bids do |bid| 
-      = bid.label :note
-      = bid.text_field :note
+    = f.fields_for :bids do |b| 
+      = b.label :note
+      = b.text_field :note
     = f.submit
