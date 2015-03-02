@@ -1,29 +1,27 @@
 
+ // taking from bids table applicant_id and insterting it into the jobs table as helper id
 
-// // taking from bids table applicant_id and insterting it into the jobs table as helper id
+function request(method, url, data){
+	return $.ajax({
+		url: url, 
+		method: method, 
+		dataType: "json",
+		data: data
+		})
+}
 
-// function chooseHelpers() {
-// 	helper_id = bid.applicant.id
-// 	$.ajax({
-// 			url: '/jobs/+job-id', 
-// 			type: 'PUT', 
-// 			dataType: "json",
-// 			data: {job:{helper_id: }}
-// 			})
-// 			.done(function(data) {
-// 				console.log(data);
-// 			});
-// 	}
-
+function chooseHelpers() {
+	jobId = $(this).data('job-id');
+	helperId = $(this).data('helper-id');
+	request("PUT", "/jobs/"+jobId, {job:{helper_id: helperId}}).done(function(){
+	})
+}
 
 $(document).ready(function() {
 
-
 	$('#choose_helper_button').on('click', function(e) {
-			console.log($(this).data('helper-id')
-			console.log$(this).data('job-id'));
+			console.log($(this).data('helper-id'));
+			
 	});
-
-
 
 });
