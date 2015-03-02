@@ -59,6 +59,7 @@ h1 {
 }
 .nav-links-item {
   display: inline-block;
+  padding: 10px;
 }
 .nav-links-item a {
 
@@ -80,7 +81,7 @@ h1 {
 
 #job-show-map {
   display: inline-block;
-  width:400px;
+  width:500px;
   height:300px;
   background-color: #eee;
   float: right;
