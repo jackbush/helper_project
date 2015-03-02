@@ -15,5 +15,9 @@ class User < ActiveRecord::Base
   def findjobs
     Job.where(poster: self) + Job.where(helper: self)
   end
+
+  def admin?
+    self.role == 'admin'
+  end
   
 end
