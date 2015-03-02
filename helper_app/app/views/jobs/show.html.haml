@@ -29,7 +29,7 @@
       %td= link_to bid.applicant.username, profile_path(bid.applicant)
       %td= bid.note
       %td
-        %button Choose
+        %button{'data-id' => @job.id, 'data-helper-id' => bid.applicant.id} CHOOSE
 
 .page-nav
   = link_to 'EDIT', edit_job_path
