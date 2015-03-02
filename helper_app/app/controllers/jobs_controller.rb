@@ -14,6 +14,8 @@ class JobsController < ApplicationController
 
   def create
     @job = Job.create(job_params)
+    @job.poster_id = current_user.id
+    @job.save
     redirect_to jobs_path
   end
 
