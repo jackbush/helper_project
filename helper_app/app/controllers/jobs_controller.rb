@@ -22,9 +22,14 @@ class JobsController < ApplicationController
   end
 
   def update
+  	# binding.pry
     @job = Job.find(params[:id])
     @job.update(job_params)
-    redirect_to jobs_path
+    # head :no_content, status: :ok
+    respond_to do |format|
+      format.html
+      format.json { head :no_content, status: :ok }
+    end
   end
 
   def destroy
@@ -34,7 +39,7 @@ class JobsController < ApplicationController
 
   private
   def job_params
-    params.require(:job).permit(:poster_id, :title, :description, :postcode, :instructions)
+    params.require(:job).permit(:poster_id, :title, :description, :postcode, :instructions, :helper_id)
   end
   
 end
