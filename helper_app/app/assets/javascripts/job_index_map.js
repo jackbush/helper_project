@@ -18,7 +18,7 @@
 //   });
 // }
 
-function initIndexMap() {
+function initMap() {
   var mapOptions = {
     center: new google.maps.LatLng(51.519889, -0.068799),
     zoom: 10,
@@ -28,4 +28,4 @@ function initIndexMap() {
   // addMarker(map);
 }
 
-google.maps.event.addDomListener(window, 'load', initIndexMap)
+google.maps.event.addDomListener(window, 'load', initMap)

@@ -1,5 +1,8 @@
 class BidsController < ApplicationController
 
+  before_action :authenticate_user!, except: [:index, :show]
+  authorize_resource
+
   def index
     @bids = Bid.all
   end
@@ -17,7 +20,7 @@ class BidsController < ApplicationController
     @bid = Bid.create(bid_params)
     @bid.job_id = params[:job_id]
     @bid.note = params[:bid][:bid][:note]
-    @bid.applicant_id = User.last.id
+    @bid.applicant_id = current_user.id
     @bid.save
     redirect_to jobs_path
   end

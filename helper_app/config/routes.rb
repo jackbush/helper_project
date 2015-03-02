@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   
-  # devise will add users routes here
+  devise_for :users, :controllers => { registrations: 'registrations' }
 
   root 'welcomes#index'
 
