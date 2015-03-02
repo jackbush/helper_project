@@ -21,6 +21,10 @@ class User < ActiveRecord::Base
     self.role == 'admin'
   end
 
+  def registered_user (user)
+    #lookup in provider table
+  end
+
   def self.from_omniauth(auth)
     where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
       user.email = auth.info.email # || "#{Devise.friendly_token[0,10]}@fakemail.com"
@@ -60,11 +64,11 @@ class User < ActiveRecord::Base
         return registered_user
       else
         user = User.create(name:auth.extra.raw_info.name,
-                            provider:auth.provider,
-                            uid:auth.uid,
-                            email:auth.uid+"@twitter.com",
-                            password:Devise.friendly_token[0,20],
-                          )
+                           provider:auth.provider,
+                           uid:auth.uid,
+                           email:auth.uid+"@twitter.com",
+                           password:Devise.friendly_token[0,20],
+               )
       end
     end
   end
