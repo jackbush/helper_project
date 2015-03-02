@@ -12,9 +12,7 @@ class Ability
 
       can [:index, :show, :new, :create, :edit, :update, :destroy], [Bid, Job, User] 
 
-      # can [:new, :create, :edit, :update], Post, user_id: user.id
-
-      # can [:new, :create, :users_posts], Post
+      # can [:new, :create, :edit, :update, :destroy], Job, poster_id: user.id
     
     # The first argument to `can` is the action you are giving the user
     # permission to do.
