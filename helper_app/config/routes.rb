@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   get '/users/:id', to: 'users#profile', as: 'profile'
 
   resources :jobs do
-    resources :bids
+    resources :bids, shallow: true
   end
 
 
