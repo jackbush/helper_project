@@ -59,11 +59,9 @@ h1 {
 }
 .nav-links-item {
   display: inline-block;
-  padding: 5px;
-  border: 1px solid black;
 }
 .nav-links-item a {
-  text-decoration: none
+
 }
 
 /* MAIN CONTENT */
