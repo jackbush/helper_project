@@ -3,7 +3,9 @@
 %h2= @job.title
 
 %h4
-  - if @job.helper == current_user
+  - if @job.poster == current_user
+    %span.bid-status= link_to 'EDIT', edit_job_path
+  - elsif @job.helper == current_user
     %span.bid-status YOU HAVE WON THIS JOB
   - elsif @job.applicants.include? current_user
     %span.bid-status YOU HAVE APPLIED
