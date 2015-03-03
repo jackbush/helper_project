@@ -6,8 +6,13 @@
 
 %h3 LIST
 
+
 - @jobs.each do |job|
-  .well 
+  .well.current-user 
     .job-post-index
       %h3= link_to job.title, job_path(job)
+      %h4= job.poster.username
       %h4= job.description
+      %h4= job.postcode
+    - if job.applicants.include? current_user
+      %span.bid-status YOU HAVE APPLIED

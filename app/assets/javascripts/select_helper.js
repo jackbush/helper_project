@@ -34,16 +34,17 @@ function listHelpers() {
 		method: "GET",
 		dataType: "json",
 	})
-	.done(function(reponse) {
-   console.log(reponse);
-	})
-	.fail(function(error) {
-		console.log(error)
+	.done(function(response) {
+		 var applicants = [];
+	   $.each(response, function(index, bid) {
+	   	applicants.push(bid.applicant);
+		   console.log(applicants);
+		 })
+		 $.each(applicants, function(index, applicant) {
+		 	console.log(applicant.username);
+		 })
 	})
 }
-
-// /jobs/:job_id/bids
-
 
 
 $(document).ready(function() {
@@ -53,3 +54,16 @@ $(document).ready(function() {
 	$('.choose_helper_button').on('click', chooseHelpers)
 
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
