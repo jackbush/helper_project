@@ -13,8 +13,12 @@ class User < ActiveRecord::Base
   include Gravtastic
   gravtastic size: 120, default: "identicon"
 
-  def findjobs
-    Job.where(poster: self) + Job.where(helper: self)
+  def poster_jobs
+    Job.where(poster: self)
+  end
+
+  def helper_jobs
+    Job.where(helper: self)
   end
 
   def admin?
