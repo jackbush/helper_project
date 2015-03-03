@@ -1,5 +1,7 @@
 class Job < ActiveRecord::Base
 
+	acts_as_taggable_on :gardening, :shopping
+
   has_many :bids
   has_many :applicants, through: :bids
 
