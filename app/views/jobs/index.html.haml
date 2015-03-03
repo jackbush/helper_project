@@ -1,12 +1,23 @@
 %h2 JOBS INDEX
-
+%h4.span#toggle-index-view toggle view
+%h4 search for a job
+%input{type: "search", id: "search-keyword"}
+%input{type: "submit", value: 'submit'}
 %h3 MAP
 
 #job-index-map
 
 %h3 LIST
 
+
+
+
 - @jobs.each do |job|
-  .job-post-index
-    %h3= link_to job.title, job_path(job)
-    %h4= job.description
+  .well.current-user 
+    .job-post-index
+      %h3= link_to job.title, job_path(job)
+      %h4= job.poster.username
+      %h4= job.description
+      %h4= job.postcode
+    - if job.applicants.include? current_user
+      %span.bid-status YOU HAVE APPLIED

@@ -27,10 +27,46 @@ function chooseHelpers() {
 	})
 }
 
+// this is a function to list all the helpers that have applied for this job
+
+function listHelpers() {
+	var jobId = $('#hidden-button').val();
+	$.ajax({
+		url: "/jobs/" + jobId + "/bids",
+		method: "GET",
+		dataType: "json",
+	})
+	.done(function(response) {
+		$.each(response, function(index, job) {
+		console.log(job);
+		$('table.js-choose_helper_table').append('<td>' + job.applicant.username + '</td>');
+		$('table.js-choose_helper_table').append('<td>' + job.note + '</td>');
+		})
+	})
+}
+
+// $('.js-choose_helper_table').append('<td>' + job.applicant.username + '</td>');
+// $('.js-choose_helper_table').append('<td>' + job.note + '</td>');
 
 
 $(document).ready(function() {
 
+	console.log($('#hidden-button').val());
+	listHelpers();
+
 	$('.choose_helper_button').on('click', chooseHelpers)
 
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
