@@ -14,8 +14,6 @@
  *= require_self
  */
 
-<<<<<<< HEAD
-
  .header {
    position: fixed;
    top: 0px;
@@ -23,11 +21,6 @@
    z-index: 999;
    width: 100%;
    padding-top: 5px;
-   background: none;
-   overflow: hidden;
-   -webkit-transition: all 0.3s;
-   transition: all 0.3s;
-   opacity: 0;
    top: 0px;
    padding-bottom: 0;
    font-family: "Montserrat", sans-serif;
@@ -78,5 +71,3 @@
    color: #888888;
    font-size: 12px;
  }
-=======
->>>>>>> development
