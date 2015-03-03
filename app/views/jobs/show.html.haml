@@ -39,7 +39,24 @@
           %button.choose_helper_button{'data-id' => bid.job_id, 'data-helper-id' => bid.applicant.id} Choose
           / button is pressed by elder, their id is already entered into the job table as current user thru devise. this button needs to enter the applicant_id (from the bid table), into the helper_id in the job table. Then redirect to dashboard
 
+%table
+  %tr
+    %td User
+    %td Note
+    %td Select
+    %tr.js-choose_helper_table
+      %td
+      %td
+
+
 - if @job.poster == current_user
   .page-nav
     = link_to 'EDIT', edit_job_path
     = link_to 'BACK', jobs_path
+
+
+
+
+
+
+

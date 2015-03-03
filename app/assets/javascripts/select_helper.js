@@ -27,6 +27,8 @@ function chooseHelpers() {
 	})
 }
 
+// this is a function to list all the helpers that have applied for this job
+
 function listHelpers() {
 	var jobId = $('#hidden-button').val();
 	$.ajax({
@@ -35,20 +37,21 @@ function listHelpers() {
 		dataType: "json",
 	})
 	.done(function(response) {
-		 var applicants = [];
-	   $.each(response, function(index, bid) {
-	   	applicants.push(bid.applicant);
-		   console.log(applicants);
-		 })
-		 $.each(applicants, function(index, applicant) {
-		 	console.log(applicant.username);
-		 })
+		$.each(response, function(index, job) {
+		console.log(job);
+		$('.js-choose_helper_table').append('<td>' + job.applicant.username + '</td>');
+		$('.js-choose_helper_table').append('<td>' + job.note + '</td>');
+		})
 	})
 }
+
+// $('.js-choose_helper_table').append('<td>' + job.applicant.username + '</td>');
+// $('.js-choose_helper_table').append('<td>' + job.note + '</td>');
 
 
 $(document).ready(function() {
 
+	console.log($('#hidden-button').val());
 	listHelpers();
 
 	$('.choose_helper_button').on('click', chooseHelpers)
