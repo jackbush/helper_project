@@ -8,7 +8,7 @@ class Ability
       if user.admin?
         can :manage, :all
         can :access, :rails_admin
-        # can :dashboard needs added
+        can :dashboard
       end
 
       can [:profile], User
