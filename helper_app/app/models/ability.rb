@@ -9,11 +9,17 @@ class Ability
       if user.admin?
         can :manage, :all
         can :access, :rails_admin
+        # can :dashboard something
       end
 
-      can [:index, :show, :new, :create, :edit, :update, :destroy], [Bid, Job, User] 
+      can [:profile], User
+      can [:index, :dashboard], Welcome
 
-      # can [:new, :create, :edit, :update, :destroy], Job, poster_id: user.id
+      can [:index, :show, :new, :create], Job
+      can [:edit, :update, :destroy], Job, poster_id: user.id
+
+      can [:index, :show, :new, :create], Bid
+      can [:edit, :update, :destroy], Bid, applicant_id: user.id
     
     # The first argument to `can` is the action you are giving the user
     # permission to do.
