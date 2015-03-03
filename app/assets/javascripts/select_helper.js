@@ -45,6 +45,12 @@ function listHelpers() {
 	})
 }
 
+ var trackCardTemplate = '<div class="track-card">';
+        trackCardTemplate += '<h3 class="song-title">' + value.name + '</h3>';
+        trackCardTemplate += '<img src="' + value.album.images[1].url + '" alt="">';
+        trackCardTemplate += '<audio src="' + value.preview_url + '" controls></audio>';
+        trackCardTemplate += '</div>';
+
 // $('.js-choose_helper_table').append('<td>' + job.applicant.username + '</td>');
 // $('.js-choose_helper_table').append('<td>' + job.note + '</td>');
 
