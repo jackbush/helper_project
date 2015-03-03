@@ -1,15 +1,11 @@
-%h2 JOBS INDEX
-%h4.span#toggle-index-view toggle view
-%h4 search for a job
-%input{type: "search", id: "search-keyword"}
-%input{type: "submit", value: 'submit'}
-%h3 MAP
+
+%button#toggle toggle map
 
 #job-index-map
 
-%h3 LIST
-
-
+/ %h4 search for a job
+/ %input{type: "search", id: "search-keyword"}
+/ %input{type: "submit", value: 'submit'}
 
 
 - @jobs.each do |job|

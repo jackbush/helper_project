@@ -39,8 +39,8 @@ function listHelpers() {
 	.done(function(response) {
 		$.each(response, function(index, job) {
 		console.log(job);
-		$('table.js-choose_helper_table').append('<td>' + job.applicant.username + '</td>');
-		$('table.js-choose_helper_table').append('<td>' + job.note + '</td>');
+		$('table.js-choose_helper_table').append('<tr>' + job.applicant.username + '</tr>');
+		// $('table.js-choose_helper_table').append('<tr>' + job.note + '</tr>');
 		})
 	})
 }
