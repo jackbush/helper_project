@@ -9,7 +9,11 @@ class BidsController < ApplicationController
       format.html
       format.json { render json: @bids, :include => {:applicant =>{:only => :username}} }
    end
+<<<<<<< HEAD
  end
+=======
+  end
+>>>>>>> b73e4230b39156e7ee925e3662a2cf0e1a870d26
 
   def show
     @bid = Bid.find(params[:id])
