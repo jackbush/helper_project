@@ -13,6 +13,7 @@
  *= require_tree .
  *= require_self
  */
+<<<<<<< HEAD
 
  .header {
    position: fixed;
@@ -71,3 +72,5 @@
    color: #888888;
    font-size: 12px;
  }
+=======
+>>>>>>> development

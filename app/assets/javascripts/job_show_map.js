@@ -1,4 +1,4 @@
-// function addMarker(map) {
+// function addShowMarker(map) {
 //   var geocoder = new google.maps.Geocoder();
 //   var showMarkerFromGeocoderResults = function(results, status) {
 //     if (status == google.maps.GeocoderStatus.OK) {
@@ -25,7 +25,7 @@ function initShowMap() {
     // style
   };
   var map = new google.maps.Map(document.getElementById('job-show-map'), mapOptions);
-  // addMarker(map);
+  // addShowMarker(map);
 }
 
 if (window.location.pathname.match(/\/jobs\/\d/)) {

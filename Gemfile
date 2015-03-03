@@ -11,6 +11,8 @@ gem 'omniauth-facebook'
 gem 'omniauth-twitter'
 gem 'omniauth-google-oauth2'
 gem 'rails_admin'
+gem 'acts-as-taggable-on', '~> 3.4'
+
 
 #default
 gem 'rails', '4.2.0'
