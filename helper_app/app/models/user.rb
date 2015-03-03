@@ -16,7 +16,7 @@ class User < ActiveRecord::Base
   gravtastic size: 120, default: "identicon"
 
   def image
-    if self.avatar.nul?
+    if self.avatar.nil?
       return self.gravatar_url
     else
       self.avatar
