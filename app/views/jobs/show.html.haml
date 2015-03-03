@@ -14,6 +14,7 @@
   POSTED BY
   = link_to @job.poster.username, profile_path(@job.poster)
 
+%h4.address= @job.postcode
 %h3 DESCRIPTION
 %p= @job.description
 

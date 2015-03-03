@@ -10,6 +10,6 @@
         Posted by:
         = job.poster.username
       %h4= job.description
-      %h4= job.postcode
+      %h4.address= job.postcode
       - if job.applicants.include? current_user
         %span.bid-status YOU HAVE APPLIED

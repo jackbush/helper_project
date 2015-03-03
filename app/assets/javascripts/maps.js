@@ -55,7 +55,7 @@ function initShowMap() {
     // style
   };
   var map = new google.maps.Map(document.getElementById('job-show-map'), mapOptions);
-  // addShowMarker(map);
+  addMarkers(map);
 }
 
 if (window.location.pathname.match(/\/jobs\/\d/)) {
