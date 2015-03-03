@@ -1,5 +1,5 @@
 %h2 JOBS INDEX
-
+%h4.span#toggle-index-view toggle view
 %h3 MAP
 
 #job-index-map
@@ -7,6 +7,7 @@
 %h3 LIST
 
 - @jobs.each do |job|
-  .job-post-index
-    %h3= link_to job.title, job_path(job)
-    %h4= job.description
+  .well 
+    .job-post-index
+      %h3= link_to job.title, job_path(job)
+      %h4= job.description

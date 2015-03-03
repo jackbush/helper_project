@@ -27,9 +27,28 @@ function chooseHelpers() {
 	})
 }
 
+function listHelpers() {
+	var jobId = $('#hidden-button').val();
+	$.ajax({
+		url: "/jobs/" + jobId + "/bids",
+		method: "GET",
+		dataType: "json",
+	})
+	.done(function(reponse) {
+   console.log(reponse);
+	})
+	.fail(function(error) {
+		console.log(error)
+	})
+}
+
+// /jobs/:job_id/bids
+
 
 
 $(document).ready(function() {
+
+	listHelpers();
 
 	$('.choose_helper_button').on('click', chooseHelpers)
 

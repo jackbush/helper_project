@@ -5,6 +5,11 @@ class BidsController < ApplicationController
 
   def index
     @bids = Bid.all
+    bid_data = @bids.each { |bid| bid_data << { name: bid.applicant.username } }
+    # bid_data = []
+    # # iterate over @bids and extract the info you want
+    # binding.pry
+    render json: bid_data
   end
 
   def show

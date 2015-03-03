@@ -17,6 +17,8 @@
 %h3 DESCRIPTION
 %p= @job.description
 
+%input{type: "hidden", value: @job.id, id: 'hidden-button'}
+
 - if @job.poster == current_user || @job.helper == current_user
   %h3 INSTRUCTIONS
   %p= @job.instructions
