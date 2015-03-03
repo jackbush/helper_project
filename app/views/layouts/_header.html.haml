@@ -1,12 +1,18 @@
-%h1= link_to 'Helpr', root_path
-.nav
-  %ul.nav-links
-    %li.nav-links-item= link_to 'ALL JOBS', jobs_path
-    %li.nav-links-item= link_to 'NEW JOB', new_job_path
-    - if user_signed_in?
-      %li.nav-links-item= link_to 'DASHBOARD', dashboard_path
-      %li.nav-links-item= link_to 'ACCOUNT', edit_user_registration_path
-      %li.nav-links-item= link_to 'LOGOUT', destroy_user_session_path, :method => :delete
-    - else
-      %li.nav-links-item= link_to 'LOGIN', new_user_session_path
-      %li.nav-links-item= link_to 'REGISTER', new_user_registration_path
+%header.main_h
+  .row
+    %a.logo{:href => "#"} Menu
+    .mobile-toggle
+      %span
+      %span
+      %span
+    %nav
+      %ul.nav-links
+        %li.nav-links-item= link_to 'ALL JOBS', jobs_path
+        %li.nav-links-item= link_to 'NEW JOB', new_job_path
+        - if user_signed_in?
+          %li.nav-links-item= link_to 'DASHBOARD', dashboard_path
+          %li.nav-links-item= link_to 'ACCOUNT', edit_user_registration_path
+          %li.nav-links-item= link_to 'LOGOUT', destroy_user_session_path, :method => :delete
+        - else
+          %li.nav-links-item= link_to 'LOGIN', new_user_session_path
+          %li.nav-links-item= link_to 'REGISTER', new_user_registration_path
