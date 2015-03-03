@@ -65,3 +65,12 @@ if (window.location.pathname.match(/\/jobs\/\d/)) {
 if (window.location.pathname === '/jobs') {
   google.maps.event.addDomListener(window, 'load', initIndexMap)
 }
+
+$('#jobs-index-map-search').keypress(function(e) {
+  if (e.which == 13) {
+    var inputAddress = $('#jobs-index-map-search').val()
+    $('#jobs-index-map-search').val('')
+    $('.addresses').append('<address>' + inputAddress + '</address>')
+    initMap()
+  }
+})

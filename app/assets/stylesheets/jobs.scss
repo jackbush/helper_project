@@ -63,12 +63,23 @@ h1 {
 .address {
   display: none;
 }
+#jobs-index-map-container {
+
+}
 
 #jobs-index-map {
   display: inline-block;
   width:960px;
   height:500px;
   background-color: #eee;
+}
+
+#jobs-index-map-search {
+  z-index:100;
+  width: 50%;
+  position:absolute;
+  top: 10px;
+  margin-left:25%;
 }
 
 .hide-index-map {
