@@ -15,6 +15,14 @@ class User < ActiveRecord::Base
   include Gravtastic
   gravtastic size: 120, default: "identicon"
 
+  def image
+    if self.avatar.nul?
+      return self.gravatar_url
+    else
+      self.avatar
+    end
+  end
+
   def poster_jobs
     Job.where(poster: self)
   end
