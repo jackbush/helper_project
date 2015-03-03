@@ -4,8 +4,12 @@ class BidsController < ApplicationController
   authorize_resource
 
   def index
-    @bids = Bid.all
-  end
+    @bids = Bid.where(job_id: params[:job_id])
+    respond_to do |format|
+      format.html
+      format.json { render json: @bids, :include => {:applicant =>{:only => :username}} }
+   end
+ end
 
   def show
     @bid = Bid.find(params[:id])
