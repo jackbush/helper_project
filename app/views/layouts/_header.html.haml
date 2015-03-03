@@ -1,10 +1,6 @@
-%header.main_h
+.header
   .row
-    %a.logo{:href => "#"} Menu
-    .mobile-toggle
-      %span
-      %span
-      %span
+    %a.logo= link_to 'Helpr', root_path
     %nav
       %ul.nav-links
         %li.nav-links-item= link_to 'ALL JOBS', jobs_path
