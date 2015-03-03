@@ -1,6 +1,7 @@
 class Job < ActiveRecord::Base
 
-	# acts_as_taggable_on :gardening, :shopping
+	acts_as_taggable # Alias for acts_as_taggable_on :tags
+  acts_as_taggable_on :north, :south
 
   has_many :bids
   has_many :applicants, through: :bids
