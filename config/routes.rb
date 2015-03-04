@@ -1,10 +1,6 @@
 Rails.application.routes.draw do
   
-  get 'prizes/index'
-
-  get 'prizes/new'
-
-  get 'prizes/create'
+	resources :prizes
 
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   devise_for :users, :controllers => { registrations: 'registrations' }

@@ -1,2 +1,9 @@
-%h1 Prizes#index
-%p Find me in app/views/prizes/index.html.haml
+
+
+%p= link_to "Add Prize", new_prize_path
+/ - @prizes.each do |prize|
+.well
+  %p Company Name
+  %p Company Image
+  %p Title of Prize
+  %p Description

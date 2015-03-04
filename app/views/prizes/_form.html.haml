@@ -1,0 +1,17 @@
+.form
+  .prize-job
+    = form_for @prize do |f|
+     
+      %p= f.text_field :company, :placeholder => "Company Name"
+
+      %p= f.file_field :image, :placeholder => "image"
+
+      %p= f.text_field  :title, :placeholder => "Title"
+
+      %p= f.text_field  :description, :placeholder => "Description"
+
+      %p= f.submit
+
+
+
+
