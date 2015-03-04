@@ -25,6 +25,7 @@ class Job < ActiveRecord::Base
       data.to_json
     else applicants?
       data = {}
+    end
   end
-
+  
 end
