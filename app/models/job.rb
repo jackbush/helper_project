@@ -12,7 +12,8 @@ class Job < ActiveRecord::Base
   validates :address, presence: true
   validates :postcode, presence: true
 
-  # regular expression for validating legitimate postcode:
-  # :with =>  /^([A-PR-UWYZ]([0-9]{1,2}|([A-HK-Y][0-9]|[A-HK-Y][0-9]([0-9]|[ABEHMNPRV-Y]))|[0-9][A-HJKS-UW])\s?[0-9][ABD-HJLNP-UW-Z]{2}|(GIR\ 0AA)|(SAN\ TA1)|(BFPO\ (C\/O\ )?[0-9]{1,4})|((ASCN|BBND|[BFS]IQQ|PCRN|STHL|TDCU|TKCA)\ 1ZZ))$$/i
+  def job_status_json_object
+    
+  end
 
 end
