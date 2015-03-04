@@ -23,7 +23,7 @@
  body {
    width: 100%;
    padding: 0;
-   background: white;
+   background: #FCF8F7;
    font-family: "Cardo", serif;
    font-weight: 300;
  }
@@ -90,7 +90,7 @@ h3 {
   font-family: "Montserrat", sans-serif;
   /*font-weight: lighter;
   font-style: italic;*/
-  color: #8f8f8f; 
+  color: #3CB43E; 
 }
 
 h4 {
@@ -135,17 +135,10 @@ input {
 
 }
 
-.edit_user {
-
-  width: 450px;
-  margin: 0 auto;
-  border-radius: 8px; 
-  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.20);
-  background: #FBFBF4; 
-  padding: 30px;
 
 
-}
+
+
 
 
 .new_job {
@@ -189,7 +182,7 @@ p {
   position: fixed;
   padding: 0;
   padding-top: 25px;
-  background: #eee;
+  background: #FBFBF4;
   border-bottom: 1px solid black;
 }
 
