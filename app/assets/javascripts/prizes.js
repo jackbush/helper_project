@@ -6,14 +6,34 @@ $('button.learn-more').click(function() {
   $("p.prize-info").toggle();
 });
 
+$('button.gold-button').click(function() {
+  // $( ".well.prize-index:contains('gold')" ).toggle();
+  $( ".well.prize-index:contains('silver')" ).toggle();
+  $( ".well.prize-index:contains('bronze')" ).toggle();
+});
+
+$('button.silver-button').click(function() {
+  $( ".well.prize-index:contains('silver')" ).toggle();
+});
+
+$('button.bronze-button').click(function() {
+  $( ".well.prize-index:contains('bronze')" ).toggle();
+});
+
+// console.log($( ".well.prize-index [value='gold'] "));
+// console.log($( ".well.prize-index :input[value="gold"]" ));
+// $('.well.prize-index [value="' + gold + '"]')
+// "input[value='gold']"
+// 'input[value="gold"].well.prize-index'
+
 $( ".well.prize-index:contains('gold')" ).css({ "border-color": "gold", "border-width": "5px" });
 $( ".well.prize-index:contains('silver')" ).css({ "border-color": "silver", "border-width": "5px" });
 $( ".well.prize-index:contains('bronze')" ).css({ "border-color": "bronze", "border-width": "5px" });
-console.log($(".well.prize-index.value"))
+// console.log($(".well.prize-index.value"))
 
-var options = {
-  valueNames: [ '.well.prize-index.value']
-};
+// var options = {
+//   valueNames: [ '.well.prize-index.value']
+// };
 
 // var userList = new List('prizes', options);
 
