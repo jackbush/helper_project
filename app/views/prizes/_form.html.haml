@@ -12,6 +12,10 @@
 
       %p= f.text_field  :description, :placeholder => "Description"
 
+      %p= f.select :tier, options_for_select([["Gold", "gold"], ["Silver", "silver"], ["Bronze", "bronze"]])
+
+      
+
       %p= f.submit
 
 
