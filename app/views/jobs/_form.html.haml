@@ -1,6 +1,6 @@
 .new-job
   = form_for @job do |f|
-
+    .new-form
     %p= f.label :title
     %p= f.text_field :title
 
@@ -15,5 +15,5 @@
 
     %p= f.label :postcode
     %p= f.text_field  :postcode
-
+    %button
     %p= f.submit
