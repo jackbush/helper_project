@@ -71,6 +71,7 @@ h1 a {
   position: fixed;
   top: 15px;
   left: 15px;
+  margin: -5px; 
 }
 
 h2 {
@@ -139,7 +140,8 @@ nav {
   display: inline;
   float: right;
   display: inline-block;
-  text-align: center
+  text-align: center;
+  margin: -28px;
 }
 .nav-links-item {
   display: inline-block;
