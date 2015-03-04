@@ -14,65 +14,146 @@
  *= require_self
  */
 
- .header {
-    position: fixed;
-    top: 0px;
-    max-height: 45px;
-    z-index: 999;
-    width: 100%;
-    padding-top: 25px;
-    top: 0px;
-    padding-bottom: 0;
-    font-family: "Montserrat", sans-serif;
-    font-size: 18px;
-    color: pink;
-    background-color: rgba(255, 255, 255, 0.93);
-    opacity: 1;
-    top: 0px;
-    border-bottom: 1px solid gainsboro;
-    
-  }
+  /*setup*/
 
-  .open-nav {
-    max-height: 400px !important;
-  }
+ * {
+   box-sizing: border-box;
+ }
 
-  .logo a {
-    width: 50px;
-    font-size: 25px;
-    color: #8f8f8f;
-    float: left;
-    margin-top: 0;
-    line-height: 1;
-    margin-bottom: 10px;
-    position: fixed;
-    top: 15px;
-    left: 15px;
-  }
+ body {
+   width: 100%;
+   padding: 0;
+   background: white;
+   font-family: "Cardo", serif;
+   font-weight: 300;
+ }
 
-  nav {
-    float: right;
-    width: 60%;
-  }
+ .site-content {
+   width: 960px;
+   margin: 60px auto;
+ }
 
-  nav ul {
-    list-style: none;
-    overflow: hidden;
-    padding-right: 40px; 
-    float: right;
-    display: inline
-  }
+ .address {
+   display: none;
+ }
 
-  nav ul li {
-    display: inline-block;
-    margin-left: 35px;
-    line-height: 1.5;
-  }
+ .center-button {
+   text-align: center;
+ }
 
-  nav ul a {
-    color: #888888;
-    font-size: 12px;
-  }
+ .bid-status {
+   background: green;
+   color: white;
+   padding: 10px;
+ }
+
+/*typesetting*/
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  float: left;
+  font-size: 30px;
+  line-height: 1.8;
+  font-family: "Montserrat", sans-serif;
+}
+
+h1 a {
+  width: 50px;
+  font-size: 25px;
+  color: #8f8f8f;
+  float: left;
+  margin-top: 0;
+  line-height: 1;
+  margin-bottom: 10px;
+  position: fixed;
+  top: 15px;
+  left: 15px;
+}
+
+h2 {
+  font-size: 102px;
+  color: #3CB43E;
+  border-bottom: 2px solid white;
+  padding-bottom: 12px;
+  line-height: 3;
+  font-family: "Montserrat", sans-serif;
+}
+
+h3 {
+  font-size: 30px;
+  line-height: 1.8;
+  font-family: "Montserrat", sans-serif;
+  font-weight: lighter;
+  font-style: italic;
+}
+
+h4 {
+  font-size: 16px;
+  line-height: 1.3;
+  float: center; 
+  font-family: "Montserrat", sans-serif;
+}
+
+h5 {
+
+}
+
+h6 {
+
+}
+
+p {
+  
+}
+
+/*nav bar*/
+
+.header {
+  max-height: 45px;
+  z-index: 999;
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  background-color: rgba(255, 255, 255, 0.93);
+  top: 0px;
+  width: 100%;
+  position: fixed;
+  padding: 0;
+  padding-top: 25px;
+  background: #eee;
+  border-bottom: 1px solid black;
+}
+
+
+nav {
+  float: right;
+  width: 600px;
+}
+.nav-links {
+  list-style: none;
+  overflow: hidden;
+  padding-right: 40px; 
+  float: right;
+  display: inline;
+  float: right;
+  display: inline-block;
+  text-align: center
+}
+.nav-links-item {
+  display: inline-block;
+  margin-left: 35px;
+  line-height: 1.5;
+  display: inline-block;
+  padding: 10px;
+}
+.nav-links-item a {
+  color: #888888;
+  font-size: 12px;
+}
+
+/*footer*/
 
 .footer {
   background-color: #3CB43E; 
@@ -81,4 +162,92 @@
   font-size: 14px;
   display: inline-block;
   width: 100%; 
+}
+
+/*welcome content*/
+
+.welcome-index-content {
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  padding: 0;
+}
+
+.welcome-index-text {
+  width: 760px;
+  margin: 0 auto;
+  color: #171E45;
+  margin-bottom: 20px;
+  font-size: 17px;
+  line-height: 2;
+}
+
+.header-image {
+  position: relative;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  text-align: center;
+  color: white;
+  padding-top: 50px;
+  min-height: 500px;
+  letter-spacing: 2px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.header-image #1 {
+  background: url(old_person_thumbs_up.jpg) no-repeat center center fixed;
+}
+
+.header-image #2 {
+  background: url(a_z_map.jpg) no-repeat center center fixed;
+}
+
+.header-image #3 {
+  background: url(meals_on_wheels.jpg) no-repeat center center fixed;
+}
+
+/* js-dependent */
+
+#toggle-index-map-list {
+  width: 120px;
+  height: 30px;
+  top: 120px;
+  margin: 20px;
+  background: white;
+  border: 1px solid black;
+}
+
+#jobs-index-map-container {
+  width:960px;
+  position: relative;
+}
+
+#jobs-index-map {
+  display: inline-block;
+  width:960px;
+  height:500px;
+  background-color: #eee;
+}
+
+#jobs-index-map-search {
+  z-index:100;
+  position:absolute;
+  width: 500px;
+  top: 20px;
+  margin-left: 230px;
+  padding: 10px;
+}
+
+.hide-index-map {
+  position: absolute !important;
+  top: -1000px !important;
+}
+
+#job-show-map {
+  display: inline-block;
+  width:500px;
+  height:300px;
+  background-color: #eee;
+  float: right;
 }
