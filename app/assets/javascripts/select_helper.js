@@ -9,28 +9,29 @@ function request(method, url, data) {
 
 // this will be easier with more made available in controller
 
-// function listHelpers() {
-// 	var jobId = $('#show-job-id').val();
-// 	request('GET', '/jobs/' + jobId, null)
-// 	.done(function(response) {
-// 		if helper_id !== null
-// 			// show helper
-// 		} else {
-// 			request('GET', '/jobs/' + jobId + '/bids', null)
-// 			.done(function(response) {
-// 				$.each(response, function(index, job) {
-// 					console.log(job);
-// 					// insert the below structure
-// 				})
-// 			})
-// 		})	
-// }
+function listHelpers() {
+	var jobId = $('#show-job-id').val();
+	request('GET', '/jobs/' + jobId, null)
+	.done(function(response) {
+		if helper !== null
+			// show helper
+		} else {
+			request('GET', '/jobs/' + jobId + '/bids', null)
+			.done(function(response) {
+				$.each(response, function(index, job) {
+					console.log(job);
+					// insert the below structure
+				})
+			})
+		})	
+}
 
 var applicantListItem = '<div class="applicant-list-item">';
    applicantListItem += image
    applicantListItem += username
    applicantListItem += datetime
    applicantListItem += note
+   applicantListItem += button
 
 function chooseHelper() {
 	jobId = $(this).data('id');
