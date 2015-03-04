@@ -8,16 +8,16 @@
     POSTED BY
     = link_to @job.poster.username, profile_path(@job.poster)
   
-  %h4
-    - if user_signed_in?
+  - if user_signed_in?
+    .bid-status
       - if @job.poster == current_user
-        %span.bid-status= link_to 'EDIT', edit_job_path
+        = link_to 'EDIT', edit_job_path
       - elsif @job.helper == current_user
-        %span.bid-status YOU HAVE WON THIS JOB
+        = YOU HAVE WON THIS JOB
       - elsif @job.applicants.include? current_user
-        %span.bid-status YOU HAVE APPLIED
-    - else
-      %span.bid-status= link_to 'I CAN HELP', new_job_bid_path(@job)
+        = YOU HAVE APPLIED
+  - else
+    .bid-status= link_to 'I CAN HELP', new_job_bid_path(@job)
 
 .job-show-content
   %h4 Description
@@ -34,9 +34,15 @@
 
 - if user_signed_in?
   - if @job.poster == current_user
-    - if @job.helper == true
+    - if @job.helper
       .job-show-helper
-        There is a helper for this job.
+        .embedded-profile
+          .embedded-profile-image
+            = image_tag(@job.helper.image)
+          .embedded-profile-stats
+            %h3= @job.helper.username
+            %h4= @job.helper.username
+            
     - else
       .job-show-select-helper
         There are no offers to display yet.
