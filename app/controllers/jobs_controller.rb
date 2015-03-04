@@ -9,7 +9,8 @@ class JobsController < ApplicationController
 
   def show
     @job = Job.find(params[:id])
-
+    # access a class method here to return helper if present or applicants for json
+    # @selection = ...
   end
 
   def new
@@ -17,6 +18,7 @@ class JobsController < ApplicationController
   end
 
   def create
+    #refactor this out to model
     @job = Job.create(job_params)
     @job.poster_id = current_user.id
     @job.save
@@ -45,7 +47,7 @@ class JobsController < ApplicationController
 
   private
   def job_params
-    params.require(:job).permit(:poster_id, :title, :description, :address, :postcode, :instructions, :helper_id, :tag_list => [])
+    params.require(:job).permit(:poster_id, :title, :description, :address, :date_time, :postcode, :instructions, :helper_id)
   end
   
 end

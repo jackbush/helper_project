@@ -1,20 +1,19 @@
 !!! 5
 %html
 %head
-  %title Helpr
+  %title helpr
+  %link{href: "http://fonts.googleapis.com/css?family=Montserrat|Cardo", rel: "stylesheet", type: "text/css"}
   %script{ type: "text/javascript", src: "https://maps.googleapis.com/maps/api/js?key=AIzaSyC8hKAIIWTKKpcc5qz7F7RGkD9vRugPlVE"}
   = stylesheet_link_tag    'application'
   = javascript_include_tag 'application'
   = csrf_meta_tags
 %body
-  .header
-    .header-content
-      = render 'layouts/header'
+  = render 'layouts/header'
   .site-content
     .devise-alerts
       %p.notice= notice
       %p.alert= alert
     .main-content
       = yield
-    .footer
-      = render 'layouts/footer'
+    -# .footer
+    -#   = render 'layouts/footer'

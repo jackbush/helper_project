@@ -1,10 +1,10 @@
 $(document).ready(function() {
 
-$("#job-index-map").hide()
+$("#jobs-index-list").hide()
 
-$('button#toggle').click(function() {
-  $("#job-index-map").toggle();
-  $(".well").toggle();
+$('button#toggle-index-map-list').click(function() {
+  $("#jobs-index-map-container").toggleClass('hide-index-map');
+  $("#jobs-index-list").toggle();
 });
 
 });

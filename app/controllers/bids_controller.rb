@@ -8,7 +8,7 @@ class BidsController < ApplicationController
     respond_to do |format|
       format.html
       format.json { render json: @bids, :include => {:applicant =>{:only => :username}} }
-   end
+    end
   end
 
   def show
@@ -18,6 +18,7 @@ class BidsController < ApplicationController
   def new
     @job = Job.find(params[:job_id])
     @bid = @job.bids.new
+    @bid.date_time = @job.date_time
   end
 
   def create
@@ -46,7 +47,7 @@ class BidsController < ApplicationController
 
   private
   def bid_params
-    params.require(:bid).permit(:job_id, :applicant_id, :jobdatetime, :note)
+    params.require(:bid).permit(:job_id, :applicant_id, :date_time, :note)
   end
 
 end

@@ -14,10 +14,11 @@
   POSTED BY
   = link_to @job.poster.username, profile_path(@job.poster)
 
+%h4.address= @job.postcode
 %h3 DESCRIPTION
 %p= @job.description
 
-%input{type: "hidden", value: @job.id, id: 'hidden-button'}
+%input{type: "hidden", value: @job.id, id: 'show-job-id'}
 
 - if @job.poster == current_user || @job.helper == current_user
   %h3 INSTRUCTIONS
@@ -46,9 +47,9 @@
     %td Select
   %tr
   
-    %button.choose_helper_button
+    %button#choose-helper-button
 
-      
+.select-helper
 
 
 - if @job.poster == current_user
