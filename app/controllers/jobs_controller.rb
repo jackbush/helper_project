@@ -9,26 +9,12 @@ class JobsController < ApplicationController
 
   def show
     @job = Job.find(params[:id])
-    binding.pry
-    @data = @job.construct_custom_json_object
-
-
-    if helper?
-      data = {}
-      data.helper_name = self.helper.helper
-      data.sbgh = dfhjgj
-      data.to_json
-    else applicants?
-      data = {}
-      
-
-
+    # binding.pry
+    @data = @job.job_status_json_object
     respond_to do |format|
       format.html
       format.json { render json: @data }
     end
-    # access a class method here to return helper if present or applicants for json
-    # @selection = ...
   end
 
   def new
@@ -36,10 +22,8 @@ class JobsController < ApplicationController
   end
 
   def create
-    #refactor this out to model
     @job = Job.create(job_params)
-    @job.poster_id = current_user.id
-    @job.save
+    Job.assign_user(@job, current_user.id)
     redirect_to jobs_path
   end
 
