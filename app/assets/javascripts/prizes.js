@@ -6,6 +6,11 @@ $('button.learn-more').click(function() {
   $("p.prize-info").toggle();
 });
 
+$( ".well.prize-index:contains('gold')" ).css( "border-color", "gold" );
+$( ".well.prize-index:contains('silver')" ).css( "border-color", "silver" );
+$( ".well.prize-index:contains('bronze')" ).css( "border-color", "bronze" );
+console.log($('.well.prize-index'));
+
 });
 
 

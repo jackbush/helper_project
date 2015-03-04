@@ -7,8 +7,10 @@
 
 
 
+/ %input{type: "hidden", value: @job.id, id: 'show-job-id'}
+
 -@reversePrizes.each do |prize|
-  .well
+  .well.prize-index{type: "hidden", value: prize.tier}
     .row-fluid.show-grid
       .span3
         %h3= prize.company
