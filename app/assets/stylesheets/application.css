@@ -28,7 +28,7 @@
    font-weight: 300;
  }
 
- .site-content {
+ .standard-width-content {
    width: 960px;
    margin: 60px auto;
  }
@@ -227,7 +227,7 @@ nav {
 
 /*welcome content*/
 
-.welcome-index-content {
+.full-width-content {
   width: 100%;
   margin: 0 auto;
   position: relative;
@@ -250,6 +250,7 @@ nav {
   background-size: cover;
   text-align: center;
   color: white;
+  width: 100%;
   padding-top: 25px;
   min-height: 500px;
   letter-spacing: 2px;

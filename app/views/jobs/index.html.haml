@@ -1,18 +1,19 @@
-.center-button
-  %button#toggle-index-map-list MAP / LIST
+.standard-width-content
+  .center-button
+    %button#toggle-index-map-list MAP / LIST
 
-#jobs-index-map-container
-  -# %input#jobs-index-map-search{placeholder: 'enter an address'}
-  #jobs-index-map
+  #jobs-index-map-container
+    -# %input#jobs-index-map-search{placeholder: 'enter an address'}
+    #jobs-index-map
 
-#jobs-index-list 
-  - @jobs.each do |job|
-    .job-index-post
-      %h3= link_to job.title, job_path(job)
-      %h4
-        Posted by:
-        = job.poster.username
-      %h4= job.description
-      .address= job.postcode
-      - if job.applicants.include? current_user
-        %span.bid-status YOU HAVE APPLIED
+  #jobs-index-list 
+    - @jobs.each do |job|
+      .job-index-post
+        %h3= link_to job.title, job_path(job)
+        %h4
+          Posted by:
+          = job.poster.username
+        %h4= job.description
+        .address= job.postcode
+        - if job.applicants.include? current_user
+          %span.bid-status YOU HAVE APPLIED
