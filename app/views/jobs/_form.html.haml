@@ -2,23 +2,23 @@
   .new-job
     = form_for @job do |f|
 
-      %p= f.label :title
-      %p= f.text_field :title
+      = f.label :title
+      = f.text_field :title
 
-      %p= f.label :description
-      %p= f.text_field  :description
+      = f.label :description
+      = f.text_field  :description
 
-      %p= f.label :instructions
-      %p= f.text_field  :instructions
+      = f.label :instructions
+      = f.text_field  :instructions
 
-      %p= f.label :address
-      %p= f.text_field  :address
+      = f.label :address
+      = f.text_field  :address
 
-      %p= f.label :date_time
-      %p= f.datetime_select  :date_time
+      = f.label :date_time
+      = f.datetime_select  :date_time
 
-      %p= f.label :postcode
-      %p= f.text_field  :postcode
+      = f.label :postcode
+      = f.text_field  :postcode
 
-      %p= f.submit
+      = f.submit
 

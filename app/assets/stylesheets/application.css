@@ -107,8 +107,21 @@ h6 {
 
 }
 
+/*form font */
+
+label {
+  color: red;
+}
+
+input {
+ color: blue; 
+}
+
 p {
-  
+}
+
+.page-nav a {
+  color: yellow;
 }
 
 /*nav bar*/
@@ -192,21 +205,21 @@ nav {
   background-size: cover;
   text-align: center;
   color: white;
-  padding-top: 50px;
+  padding-top: 25px;
   min-height: 500px;
   letter-spacing: 2px;
   font-family: "Montserrat", sans-serif;
 }
 
-.header-image #1 {
+.header-image#a {
   background: url(old_person_thumbs_up.jpg) no-repeat center center fixed;
 }
 
-.header-image #2 {
+.header-image#b {
   background: url(a_z_map.jpg) no-repeat center center fixed;
 }
 
-.header-image #3 {
+.header-image#c {
   background: url(meals_on_wheels.jpg) no-repeat center center fixed;
 }
 
