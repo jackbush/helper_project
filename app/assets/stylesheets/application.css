@@ -110,25 +110,43 @@ h6 {
 /*form font */
 
 label {
+  display: block;
   color: red;
+  font-family: 'Montserrat'
 }
 
 input {
- color: blue; 
-
+  color: blue; 
+  margin-bottom: 10px;
+  width: 100%;
 }
 
-form {
+.form {
+  width: 500px;
+  margin: 0 auto;
+  background: #3CB43E;
+  padding: 20px;
+
 }
 
 .new_job {
+ 
 }
 
 p {
 }
 
+.page-nav {
+  text-align: center;
+  font-family: 'Montserrat'
+}
 .page-nav a {
-  color: yellow;
+  display: inline-block;
+  width: 150px;
+  height: 35px;
+  text-align: center;
+  border: 1px solid black;
+  background: #eee;
 }
 
 /*nav bar*/
