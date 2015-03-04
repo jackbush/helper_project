@@ -15,6 +15,15 @@ class PrizesController < ApplicationController
   	redirect_to prizes_path
   end
 
+  def edit
+  	@prize = Prize.find(params[:id])
+  end
+
+  def update
+  	@prize = Prize.find(params[:id])
+  	@prize.update(prize_params)
+  end
+
 
   def prize_params
   	params.require(:prize).permit(:company, :image, :title, :description, :company_image, :prize_image)
