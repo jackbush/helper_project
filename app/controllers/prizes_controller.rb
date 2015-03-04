@@ -9,7 +9,7 @@ class PrizesController < ApplicationController
   end
 
   def create
-  	@prize = Prize.create
+  	@prize = Prize.create(prize_params)
   	@prize.save
   	redirect_to prizes_path
   end

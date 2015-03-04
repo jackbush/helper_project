@@ -1,9 +1,9 @@
 
 
 %p= link_to "Add Prize", new_prize_path
-/ - @prizes.each do |prize|
-.well
-  %p Company Name
-  %p Company Image
-  %p Title of Prize
-  %p Description
+
+-@prizes.each do |prize|
+  .well
+    / %h3= prize.company
+    = image_tag prize.image
+    / %h3= prize.title

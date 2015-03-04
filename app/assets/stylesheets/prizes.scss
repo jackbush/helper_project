@@ -1,17 +1,19 @@
-// Place all the styles related to the prizes controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-/*!
- * Bootstrap v2.3.2
- *
- * Copyright 2013 Twitter, Inc
- * Licensed under the Apache License v2.0
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Designed and built with all the love in the world by @mdo and @fat.
- */
+.favourite_image {
+  max-height:100px;
+  max-width:100px;
+}
+.friend_image {
+  max-height:100px;
+  max-width:80px;
+}
+.large-user-image {
+ padding-top:60px; 
+}
+
+/** Bootstrap v2.3.2*/
+
 
 .clearfix {
   *zoom: 1;
