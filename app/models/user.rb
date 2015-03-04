@@ -13,7 +13,7 @@ class User < ActiveRecord::Base
   validates :username, presence: true, uniqueness: true
   
   include Gravtastic
-  gravtastic size: 120, default: "identicon"
+  gravtastic size: 100, default: "identicon"
 
   def image
     if self.avatar.nil?

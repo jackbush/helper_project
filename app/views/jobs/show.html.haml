@@ -8,23 +8,23 @@
     POSTED BY
     = link_to @job.poster.username, profile_path(@job.poster)
   
-  %h4
-    - if user_signed_in?
-      - if @job.poster == current_user.id
-        %span.bid-status= link_to 'EDIT', edit_job_path
-      - elsif @job.helper_id == current_user.id
-        %span.bid-status YOU HAVE WON THIS JOB
-      - elsif @job.applicants.include? current_user.id
-        %span.bid-status YOU HAVE APPLIED
-    - else
-      %span.bid-status= link_to 'I CAN HELP', new_job_bid_path(@job)
+  - if user_signed_in?
+    .bid-status
+      - if @job.poster == current_user
+        = link_to 'EDIT', edit_job_path
+      - elsif @job.helper == current_user
+        = YOU HAVE WON THIS JOB
+      - elsif @job.applicants.include? current_user
+        = YOU HAVE APPLIED
+  - else
+    .bid-status= link_to 'I CAN HELP', new_job_bid_path(@job)
 
 .job-show-content
   %h4 Description
   %p= @job.description
 
   - if user_signed_in?
-    - if @job.poster == current_user.id || @job.helper == current_user.id
+    - if @job.poster == current_user || @job.helper == current_user
       %h4 Instructions
       %p= @job.instructions
       %h4 Agreed time
@@ -33,10 +33,16 @@
       %p= @job.address
 
 - if user_signed_in?
-  - if @job.poster == current_user.id
-    - if @job.helper == true
+  - if @job.poster == current_user
+    - if @job.helper
       .job-show-helper
-        There is a helper for this job.
+        .embedded-profile
+          .embedded-profile-image
+            = image_tag(@job.helper.image)
+          .embedded-profile-stats
+            %h3= @job.helper.username
+            %h4= @job.helper.username
+            
     - else
       .job-show-select-helper
         There are no offers to display yet.
