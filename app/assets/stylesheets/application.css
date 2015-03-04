@@ -139,7 +139,8 @@ nav {
   display: inline;
   float: right;
   display: inline-block;
-  text-align: center
+  text-align: center;
+  margin: -30px;
 }
 .nav-links-item {
   display: inline-block;
