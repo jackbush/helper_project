@@ -1,78 +1,49 @@
-
-// // taking from bids table applicant_id and insterting it into the jobs table as helper id
-
-function request(method, url, data){
-	return $.ajax({
-		url: url, 
-		method: method, 
-		dataType: "json",
-		data: data
-		})
+function request(method, url, data) {
+  return $.ajax({
+    url: url,
+    method: method,
+    dataType: 'json',
+    data: data
+  })
 }
 
-// request("PUT", "/jobs/"+jobId, {job:{helper_id: helperId}}).done(function(reponse) {
-//    console.log(reponse);
-// 	})
-
-function chooseHelpers() {
-	jobId = $(this).data('id');
-	helperId = $(this).data('helper-id');
-		$.ajax({
-		url: "/jobs/"+jobId,
-		method: "PUT",
-		dataType: "json",
-		data: {job:{helper_id: helperId}}
-		}).done(function(reponse) {
-   console.log(reponse);
-	})
-}
-
-// this is a function to list all the helpers that have applied for this job
+// this will be easier with more made available in controller
 
 function listHelpers() {
-	var jobId = $('#hidden-button').val();
-	$.ajax({
-		url: "/jobs/" + jobId + "/bids",
-		method: "GET",
-		dataType: "json",
-	})
+	var jobId = $('#show-job-id').val();
+	request('GET', '/jobs/' + jobId, null)
 	.done(function(response) {
-		$.each(response, function(index, job) {
-		console.log(job);
-		$('table.js-choose_helper_table').append('<tr>' + job.applicant.username + '</tr>');
-		// $('table.js-choose_helper_table').append('<tr>' + job.note + '</tr>');
-		})
-	})
+		if helper !== null
+			// show helper
+		} else {
+			request('GET', '/jobs/' + jobId + '/bids', null)
+			.done(function(response) {
+				$.each(response, function(index, job) {
+					console.log(job);
+					// insert the below structure
+				})
+			})
+		})	
 }
 
- var trackCardTemplate = '<div class="track-card">';
-        trackCardTemplate += '<h3 class="song-title">' + value.name + '</h3>';
-        trackCardTemplate += '<img src="' + value.album.images[1].url + '" alt="">';
-        trackCardTemplate += '<audio src="' + value.preview_url + '" controls></audio>';
-        trackCardTemplate += '</div>';
+var applicantListItem = '<div class="applicant-list-item">';
+   applicantListItem += image
+   applicantListItem += username
+   applicantListItem += datetime
+   applicantListItem += note
+   applicantListItem += button
 
-// $('.js-choose_helper_table').append('<td>' + job.applicant.username + '</td>');
-// $('.js-choose_helper_table').append('<td>' + job.note + '</td>');
-
+function chooseHelper() {
+	jobId = $(this).data('id');
+	helperId = $(this).data('helper-id');
+	request('PUT', '/jobs/'+jobId, {job:{helper_id: helperId}})
+	.done(function(reponse) {
+	  console.log(reponse);
+	})
+	showHelper();
+}
 
 $(document).ready(function() {
-
-	console.log($('#hidden-button').val());
 	listHelpers();
-
-	$('.choose_helper_button').on('click', chooseHelpers)
-
+	$('#choose-helper-button').on('click', chooseHelper)
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
