@@ -1,3 +1,16 @@
+function smoothZoom (map, max, cnt) {
+  if (cnt >= max) {
+      return;
+    }
+  else {
+    z = google.maps.event.addListener(map, 'zoom_changed', function(event){
+        google.maps.event.removeListener(z);
+        smoothZoom(map, max, cnt + 1);
+    });
+    setTimeout(function(){map.setZoom(cnt)}, 80);
+  }
+}
+
 function addMarkers(map) {
   var geocoder = new google.maps.Geocoder();
   var showMarkerFromGeocoderResults = function(results, status) {
@@ -30,7 +43,7 @@ function initIndexMap() {
     navigator.geolocation.getCurrentPosition(function (position) {
        initialLocation = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
        map.setCenter(initialLocation);
-       map.setZoom(13)
+       smoothZoom(map, 13, 8);
     });
   }
 }
@@ -51,7 +64,7 @@ function initShowMap() {
 //     console.log(e)
 //     var inputAddress = $('#jobs-index-map-search').val()
 //     $('#jobs-index-map-search').val('')
-//     // center on result
+//     center on result
 //     initMap()
 //   }
 // })
