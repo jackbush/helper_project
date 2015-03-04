@@ -36,6 +36,15 @@ function listHelpers() {
 //    applicantListItem += note
 //    applicantListItem += button
 
+// - if @job.helper
+//       .job-show-helper
+//         .embedded-profile
+//           .embedded-profile-image
+//             = image_tag(@job.helper.image)
+//           .embedded-profile-stats
+//             %h3= @job.helper.username
+//             %h4= @job.helper.username
+
 function chooseHelper() {
 	jobId = $(this).data('id');
 	helperId = $(this).data('helper-id');
