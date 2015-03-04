@@ -9,15 +9,16 @@ class Job < ActiveRecord::Base
   validates :poster, presence: true
   validates :description, presence: true
   validates :instructions, presence: true
+  validates :date_time, presence: true
   validates :address, presence: true
   validates :postcode, presence: true
 
   def assign_user(job, user)
-  #   job.poster_id = user
-  #   job.save
-  # end
+    job.poster_id = user
+    job.save
+  end
 
-  # def job_status_json_object
+  def job_status_json_object
   #   if helper.nil?
   #     data = {}
   #     self.bids.each do |bid|

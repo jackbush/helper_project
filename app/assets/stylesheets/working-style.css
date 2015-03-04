@@ -1,0 +1,25 @@
+/*js-dependent*/
+
+.job-id {
+  display: none;
+}
+
+/*job show page*/
+
+.job-show-header {
+  width: 500px;
+  float: left;
+}
+.job-show-content {
+  width: 460px;
+  padding: 20px;
+  float: right;
+}
+.job-show-helper {
+  float: left;
+  width: 500px;
+}
+.job-show-select-helper {
+  float: left;
+  width: 500px;
+}

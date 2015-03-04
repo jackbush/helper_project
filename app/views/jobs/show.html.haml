@@ -1,35 +1,40 @@
 #job-show-map
 .address= @job.postcode
-%input{type: "hidden", value: @job.id, id: 'show-job-id'}
+.job-id= @job.id
 
-%h3= @job.title
+.job-show-header
+  %h3= @job.title
+  %h4
+    POSTED BY
+    = link_to @job.poster.username, profile_path(@job.poster)
 
-%h4
-  - if @job.poster == current_user
-    %span.bid-status= link_to 'EDIT', edit_job_path
-  - elsif @job.helper == current_user
-    %span.bid-status YOU HAVE WON THIS JOB
-  - elsif @job.applicants.include? current_user
-    %span.bid-status YOU HAVE APPLIED
-  - else
-    %span.bid-status= link_to 'I CAN HELP', new_job_bid_path(@job)
-  POSTED BY
-  = link_to @job.poster.username, profile_path(@job.poster)
+  %h4
+    - if @job.poster == current_user
+      %span.bid-status= link_to 'EDIT', edit_job_path
+    - elsif @job.helper == current_user
+      %span.bid-status YOU HAVE WON THIS JOB
+    - elsif @job.applicants.include? current_user
+      %span.bid-status YOU HAVE APPLIED
+    - else
+      %span.bid-status= link_to 'I CAN HELP', new_job_bid_path(@job)
 
-%h3 Description
-%h4= @job.description
+.job-show-content
+  %h4 Description
+  %p= @job.description
 
-- if @job.poster == current_user || @job.helper == current_user
-  %h3 Instructions
-  %p= @job.instructions
-  %h3 Address
-  %p= @job.address
+  - if @job.poster == current_user || @job.helper == current_user
+    %h4 Instructions
+    %p= @job.instructions
+    %h4 Agreed time
+    %p= @job.date_time.to_formatted_s(:long_ordinal)
+    %h4 Address
+    %p= @job.address
 
 - if @job.helper
-  .show-helper
+  .job-show-helper
     There is a helper for this job.
 -else
-  .select-helper
+  .job-show-select-helper
     There are no offers to display yet.
 
 - if @job.poster == current_user
