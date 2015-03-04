@@ -10,11 +10,11 @@
   
   %h4
     - if user_signed_in?
-      - if @job.poster == current_user.id
+      - if @job.poster == current_user
         %span.bid-status= link_to 'EDIT', edit_job_path
-      - elsif @job.helper_id == current_user.id
+      - elsif @job.helper == current_user
         %span.bid-status YOU HAVE WON THIS JOB
-      - elsif @job.applicants.include? current_user.id
+      - elsif @job.applicants.include? current_user
         %span.bid-status YOU HAVE APPLIED
     - else
       %span.bid-status= link_to 'I CAN HELP', new_job_bid_path(@job)
@@ -24,7 +24,7 @@
   %p= @job.description
 
   - if user_signed_in?
-    - if @job.poster == current_user.id || @job.helper == current_user.id
+    - if @job.poster == current_user || @job.helper == current_user
       %h4 Instructions
       %p= @job.instructions
       %h4 Agreed time
@@ -33,7 +33,7 @@
       %p= @job.address
 
 - if user_signed_in?
-  - if @job.poster == current_user.id
+  - if @job.poster == current_user
     - if @job.helper == true
       .job-show-helper
         There is a helper for this job.
