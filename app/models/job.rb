@@ -12,8 +12,19 @@ class Job < ActiveRecord::Base
   validates :address, presence: true
   validates :postcode, presence: true
 
+  def assign_user(job, user)
+    job.poster_id = user
+    job.save
+  end
+
   def job_status_json_object
-    
+    if helper?
+      data = {}
+      data.helper_name = self.helper.helper
+      data.sbgh = dfhjgj
+      data.to_json
+    else applicants?
+      data = {}
   end
 
 end
