@@ -45,7 +45,7 @@ class JobsController < ApplicationController
 
   private
   def job_params
-    params.require(:job).permit(:poster_id, :title, :description, :address, :postcode, :instructions, :helper_id, :tag_list => [])
+    params.require(:job).permit(:poster_id, :title, :description, :address, :date_time, :postcode, :instructions, :helper_id)
   end
   
 end

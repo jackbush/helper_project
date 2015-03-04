@@ -1,11 +1,11 @@
-function request(method, url, data){
-	return $.ajax({
-		url: url, 
-		method: method, 
-		dataType: "json",
-		data: data
-		})
-}
+// function request(method, url, data){
+// 	return $.ajax({
+// 		url: url, 
+// 		method: method, 
+// 		dataType: "json",
+// 		data: data
+// 		})
+// }
 
 function chooseHelper() {
 	jobId = $(this).data('id');
@@ -36,17 +36,16 @@ function listHelpers() {
 	})
 }
 
-// var trackCardTemplate = '<div class="track-card">';
-//        trackCardTemplate += '<h3 class="song-title">' + value.name + '</h3>';
-//        trackCardTemplate += '<img src="' + value.album.images[1].url + '" alt="">';
-//        trackCardTemplate += '<audio src="' + value.preview_url + '" controls></audio>';
-//        trackCardTemplate += '</div>';
-
-
+var applicantListItem = '<div class="applicant-list-item">';
+   applicantListItem += '<h3 class="song-title">' + value.name + '</h3>';
+   applicantListItem += '<img src="' + value.album.images[1].url + '" alt="">';
+   applicantListItem += '<audio src="' + value.preview_url + '" controls></audio>';
+   applicantListItem += '</div>';
 
 
 $(document).ready(function() {
 	console.log($('#show-job-id').val());
 	listHelpers();
-	$('.choose_helper_button').on('click', chooseHelper)
+
+	$('#choose-helper-button').on('click', chooseHelper)
 });
