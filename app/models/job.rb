@@ -9,6 +9,7 @@ class Job < ActiveRecord::Base
   validates :poster, presence: true
   validates :description, presence: true
   validates :instructions, presence: true
+  validates :date_time, presence: true
   validates :address, presence: true
   validates :postcode, presence: true
 
@@ -18,14 +19,21 @@ class Job < ActiveRecord::Base
   end
 
   def job_status_json_object
-    if helper?
-      data = {}
-      data.helper_name = self.helper.helper
-      data.sbgh = dfhjgj
-      data.to_json
-    else applicants?
-      data = {}
-    end
+  #   if helper.nil?
+  #     data = {}
+  #     self.bids.each do |bid|
+  #       data.bid_id = {
+  #         bid.applicant_name = self.applicant.username
+  #         bid.applicant_id = self.applicant.id
+  #         bid.date_time = self.date_time
+  #         bid.note = self.note
+  #       }
+  #     end
+  #   else applicants?
+  #     data = {}
+  #     data.helper_name = 
+  #   end
+  #   data.to_json
   end
-  
+
 end

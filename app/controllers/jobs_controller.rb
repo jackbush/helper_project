@@ -4,13 +4,13 @@ class JobsController < ApplicationController
   authorize_resource
 
   def index
-    @jobs = Job.all
+    @jobs = Job.where( helper: nil )
   end
 
   def show
     @job = Job.find(params[:id])
     # binding.pry
-    @data = @job.job_status_json_object
+    # @data = @job.job_status_json_object
     respond_to do |format|
       format.html
       format.json { render json: @data }
