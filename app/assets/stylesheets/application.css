@@ -88,8 +88,9 @@ h3 {
   font-size: 30px;
   line-height: 1.8;
   font-family: "Montserrat", sans-serif;
-  font-weight: lighter;
-  font-style: italic;
+  /*font-weight: lighter;
+  font-style: italic;*/
+  color: black; 
 }
 
 h4 {
@@ -111,20 +112,26 @@ h6 {
 
 label {
   display: block;
-  color: red;
-  font-family: 'Montserrat'
+  color: black;
+  font-family: 'Montserrat', sans-serif; 
+  font-weight: lighter;
 }
 
 input {
-  color: blue; 
-  margin-bottom: 10px;
+  color: black; 
+  margin-bottom: 5px;
   width: 100%;
+  text-align: center;
+
 }
 
 .form {
-  width: 500px;
+  width: 450px;
   margin: 0 auto;
-  background: #3CB43E;
+  border-radius: 8px; 
+  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.20);
+  background: #FBFBF4; 
+
   padding: 20px;
 
 }
@@ -138,15 +145,21 @@ p {
 
 .page-nav {
   text-align: center;
-  font-family: 'Montserrat'
+  font-family: 'Montserrat'; 
+
+
+  
 }
 .page-nav a {
   display: inline-block;
   width: 150px;
   height: 35px;
+  border-radius: 8px; 
   text-align: center;
-  border: 1px solid black;
-  background: #eee;
+/*border: 1px solid black;*/
+ background: #eee;
+
+
 }
 
 /*nav bar*/
