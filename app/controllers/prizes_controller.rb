@@ -2,6 +2,7 @@ class PrizesController < ApplicationController
   
   def index
   	@prizes = Prize.all
+  	@reversePrizes = @prizes.reverse
   end
 
   def new
@@ -16,7 +17,7 @@ class PrizesController < ApplicationController
 
 
   def prize_params
-  	params.require(:prize).permit(:company, :image, :title, :description)
+  	params.require(:prize).permit(:company, :image, :title, :description, :company_image, :prize_image)
   end
 
 end

@@ -50,6 +50,7 @@ When you run your app, you will likely serve your assets from a cdn. A content d
 We will need some way of linking the image we upload to the space in our database. We will generate a migration for this. 
 
 `rails g migration AddRecipeImageToRecipes recipe_image:string`
+rails g migration AddCompanyImageToPrizes company_image:string
 
 This will create a migration which will add a RecipeImage column to our Recipes table.
 Now migrate your database.

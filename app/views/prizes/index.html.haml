@@ -2,8 +2,20 @@
 
 %p= link_to "Add Prize", new_prize_path
 
--@prizes.each do |prize|
+%button.btn{"data-target" => "#demo", "data-toggle" => "collapse"} Learn More
+#demo.collapse.in The prizes in this category are awarded to members who have completed more than 50 tasks for the community. When the magic number 50 is reached then you can start winning big. Every month one task at random is chosen, if a helpr who has completed more than 50 tasks completes this magic task then bingo, the prize is theirs. If a helpr with less than 50 tasks complets it it is automatically re-assigned. Happy helping!
+
+
+
+-@reversePrizes.each do |prize|
   .well
-    / %h3= prize.company
-    = image_tag prize.image
-    / %h3= prize.title
+    .row-fluid.show-grid
+      .span3
+        %h3= prize.company
+        = image_tag prize.company_image.url, class: "company-image"
+      .span3
+        %h3= prize.title
+        = image_tag prize.prize_image.url, class: "company-image"
+      .span6
+        %p= prize.description
+
