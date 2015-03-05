@@ -1,7 +1,7 @@
 .standard-width-content
   
   - if current_user.poster_jobs != []
-    %h2 posted jobs
+    %h2 Jobs Posted
 
   - current_user.poster_jobs.each do |job|
     .job-index-post
@@ -10,19 +10,18 @@
         Date and Time:
         = job.date_time.to_formatted_s(:long_ordinal)
       %p= job.description
-      .address= job.postcode
 
   - if current_user.helper_jobs != []
-    %h2 helped jobs
+    %h2 Helping With
 
   - current_user.helper_jobs.each do |job|
     .job-index-post
       %h3= link_to job.title, job_path(job)
       %h4
-        Posted by:
-        = job.poster.username
-      %h4
-        Date and Time:
-        = job.date_time.to_formatted_s(:long_ordinal)
       %p= job.description
-      .address= job.postcode
+      %h4 Instructions
+      %p= job.instructions
+      %h4 Agreed time
+      %p= job.date_time.to_formatted_s(:long_ordinal)
+      %h4 Address
+      %p= job.address
