@@ -1,11 +1,6 @@
 
 
 
-.well.prize-index [value="gold"] {
-	border-color:gold;
-	border-radius: 5px;
-}
-
 
 
 
@@ -21,7 +16,9 @@
 }
 .company-image {
   max-height:100px;
-  max-width:80px;
+  min-height:100px;
+  max-width:100px;
+  min-width:100px;
 }
 .large-user-image {
  padding-top:60px; 
