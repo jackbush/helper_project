@@ -8,19 +8,23 @@ function request(method, url, data) {
 }
 
 function findHelpers() {
-	var jobId = $('.job-id').val();
+debugger;
+	var jobId = $('.job-id').text();
 	request('GET', '/jobs/' + jobId, null)
+
 	.done(function(response) {
-		debugger;
-			if 
-				break;
-			else if (applicants)
-				renderApplicants(response)
-			else if (helper)
-				renderHelper(response)
-		}).fail(function(error) {
-			console.log(error)
-		})
+		console.log(response)
+		
+		// 	if null
+		// 		break;
+		// 	else if (applicants)
+		// 		renderApplicants(response)
+		// 	else if (helper)
+		// 		renderHelper(response)
+	})
+	.fail(function(error) {
+		console.log(error)
+	})
 }
 
 function renderApplicants(response) {
@@ -33,16 +37,16 @@ function renderApplicants(response) {
 
         embeddedProfile += '<div class="embedded-profile-image"><img src="' + value.image.url + '"></div>';
         embeddedProfile += '<div class="embedded-profile-stats">';
-        embeddedProfile += '<h3>' + value.username + '</h3>';.
+        embeddedProfile += '<h3>' + value.username + '</h3>';
         embeddedProfile += '<h4>' + value.date_time + '</h4>';
         embeddedProfile += '<h4>' + value.note + '</h4>';
         embeddedProfile += '<button id="#choose-helper-button" value="' + value.id + '">CHOOSE</button>';
         embeddedProfile += '</div></div>';
 
         results.append(embeddedProfile);
+        results.fadeIn('slow');
     })
-    helper.fadeIn('slow');
-	}).fail(function(error) {
+	.fail(function(error) {
 		console.log(error)
 	})
 }
@@ -63,9 +67,9 @@ function renderHelper(response) {
         embeddedProfile += '</div></div>';
 
         results.append(embeddedProfile);
+    results.fadeIn('slow');
     })
-    helper.fadeIn('slow');
-	}).fail(function(error) {
+	.fail(function(error) {
 		console.log(error)
 	})
 }

@@ -18,13 +18,19 @@ class Job < ActiveRecord::Base
     job.save
   end
 
+  def helper_assigned_email
+    if self.helper
+      UserMailer.job_allocation(self.helper.email).deliver
+    end
+  end
+
   def helper_status_json_object
     data = {}
     helper = self.helper
     if helper.nil?
       data[:applicants] = true
       self.bids.each do |bid|
-        data.bid = {
+        data['bid'] = {
           applicant_name: bid.applicant.username,
           applicant_image: bid.applicant.image,
           applicant_id: bid.applicant.id,

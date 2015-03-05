@@ -33,12 +33,11 @@ class JobsController < ApplicationController
   def update
     @job = Job.find(params[:id])
     @job.update(job_params)
+    @job.helper_assigned_email
     respond_to do |format|
       format.html
       format.json { head :no_content, status: :ok }
     end
-    # hit this on assigning helper
-    # UserMailer.job_allocation(@job.helper.email).deliver
   end
 
   def destroy
