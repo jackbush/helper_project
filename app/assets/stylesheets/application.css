@@ -269,7 +269,7 @@ nav {
 }
 
 .header-image#a {
-  background: url(https://s3-eu-west-1.amazonaws.com/ga-helpr-project/old_person_thumbs_up.jpg) no-repeat center center fixed;
+  background: url(https://s3-eu-west-1.amazonaws.com/ga-helpr-project/old_person_thumbs_up.jpg) no-repeat top center fixed;
   z-index: 100;
 }
 
