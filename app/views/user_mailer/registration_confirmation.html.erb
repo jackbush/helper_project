@@ -1,13 +1,22 @@
-<h1>Welcome, <%= @user.name %></h1>
+<html>
+<head>
+<style> 
+  body {
+    background-color: #FCF8F7;
+  }
+  body {
+    color: #171E45;
+    font-family: "Montserrat", sans-serif;
+  } 
+    </style>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+</head>
+  <body>
+    <h1>Welcome, <%= @user.username %></h1>
+      <p>Thanks for signing up to Helpr.</p>
+  </body> 
+  </html>
 
-<p>Thanks for signing up to Helpr.</p>
-<br>
-<p>You can ask to Help or offer help here</p>
-<br>
-<p>you can edit your detials here</p>
-<br> 
-<p>Thanks for singing up, Helpr</p>
-<rb> 
-<p>To login to the site, just follow this link: <%= @url %>.</p>
+
 
 
