@@ -9,9 +9,7 @@ class JobsController < ApplicationController
 
   def show
     @job = Job.find(params[:id])
-    # helper = @job.helper
-    # @winning_bid = @job.bids.where(applicant: helper)
-    # @data = @job.job_status_json_object
+    @data = @job.job_status_json_object
     respond_to do |format|
       format.html
       format.json { render json: @data }
