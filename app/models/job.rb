@@ -19,8 +19,9 @@ class Job < ActiveRecord::Base
   end
 
   def helper_assigned_email
-    if self.helper
-      UserMailer.job_allocation(self.helper.email).deliver
+    # binding.pry
+    if helper
+      UserMailer.job_allocation(helper, self).deliver
     end
   end
 
