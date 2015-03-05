@@ -12,12 +12,16 @@ $('button.gold-button').click(function() {
   $( ".well.prize-index[value='bronze']" ).toggle();
 });
 
+
+
 $('button.silver-button').click(function() {
-  $( ".well.prize-index[value='silver']" ).toggle();
+  $( ".well.prize-index[value='gold']" ).toggle();
+  $( ".well.prize-index[value='bronze']" ).toggle();
 });
 
 $('button.bronze-button').click(function() {
-  $( ".well.prize-index[value='bronze']" ).toggle();
+  $( ".well.prize-index[value='silver']" ).toggle();
+  $( ".well.prize-index[value='gold']" ).toggle();
 });
 
 

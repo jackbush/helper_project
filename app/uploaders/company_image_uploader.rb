@@ -32,8 +32,11 @@ class CompanyImageUploader < CarrierWave::Uploader::Base
   # end
 
   # Create different versions of your uploaded files:
+  # version :thumb do
+  #   process :scale => [50, 50]
+  # end
   version :thumb do
-    process :scale => [50, 50]
+    process :resize_to_fill => [100, 100]
   end
   version :detail do
     process :resize_to_fit => [400, 400]

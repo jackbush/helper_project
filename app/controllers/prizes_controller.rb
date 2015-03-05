@@ -26,7 +26,7 @@ class PrizesController < ApplicationController
 
 
   def prize_params
-  	params.require(:prize).permit(:company, :image, :title, :description, :company_image, :prize_image, :tier)
+  	params.require(:prize).permit(:company, :image, :title, :description, :company_image, :prize_image, :tier, :remote_prize_image_url, :remote_company_image_url)
   end
 
 end
