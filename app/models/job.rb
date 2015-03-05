@@ -28,7 +28,7 @@ class Job < ActiveRecord::Base
     data = {}
     helper = self.helper
     if helper.nil?
-      data[:applicants] = true
+      data['applicants'] = true
       self.bids.each do |bid|
         data['bid'] = {
           applicant_name: bid.applicant.username,
@@ -39,8 +39,9 @@ class Job < ActiveRecord::Base
         }
       end
     else
-      data[:helper] = true
+      data['helper'] = true
       winning_bid = self.bids.where(applicant: helper)
+      
       data.helper_name = self.helper.username
       data.helper_image = self.applicant.image
       data.helper_id = self.applicant.id
