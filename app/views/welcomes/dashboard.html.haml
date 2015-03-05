@@ -7,8 +7,9 @@
     .job-index-post
       %h3= link_to job.title, job_path(job)
       %h4
-        Date and Time:
         = job.date_time.to_formatted_s(:long_ordinal)
+        |
+        = pluralize(job.applicants.count, 'offer')
       %p= job.description
 
   - if current_user.helper_jobs != []
