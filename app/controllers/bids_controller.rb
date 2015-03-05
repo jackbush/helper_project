@@ -5,11 +5,10 @@ class BidsController < ApplicationController
 
   def index
     @bids = Bid.where(job_id: params[:job_id])
-    # not sure this is necessary
-    respond_to do |format|
-      format.html
-      format.json { render json: @bids, :include => {:applicant =>{:only => :username}} }
-    end
+    # respond_to do |format|
+    #   format.html
+    #   format.json { render json: @bids, :include => {:applicant =>{:only => :username}} }
+    # end
   end
 
   def show
