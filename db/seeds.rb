@@ -39,6 +39,27 @@ user_j3.password = 'password'
 user_j3.password_confirmation = 'password'
 user_j3.save!
 
+user_j4 = User.new
+user_j4.username = 'JohnDoe'
+user_j4.email = 'JohnDoe@app.com'
+user_j4.password = 'password'
+user_j4.password_confirmation = 'password'
+user_j4.save!
+
+user_j5 = User.new
+user_j5.username = 'MikeReed'
+user_j5.email = 'MikeReed@app.com'
+user_j5.password = 'password'
+user_j5.password_confirmation = 'password'
+user_j5.save!
+
+user_j6 = User.new
+user_j6.username = 'JaneSmith'
+user_j6.email = 'JaneSmith@app.com'
+user_j6.password = 'password'
+user_j6.password_confirmation = 'password'
+user_j6.save!
+
 job = Job.create(title: 'Test Job Two Applicants', 
                  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
                  instructions: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur',
@@ -70,3 +91,4 @@ Job.create(title: 'Test Job No Applicants',
 Bid.create(job: job, applicant: user_j1, note: 'I can swing by on the way home tomorrow.', date_time: 'Sat, 07 Mar 2015 12:36:45 UTC +00:00')
 Bid.create(job: job, applicant: user_j2, note: 'Happy to help, will be an hour late though.', date_time: 'Sat, 07 Mar 2015 13:36:45 UTC +00:00')
 Bid.create(job: job1, applicant: user_j3, note: 'You look like my granny.', date_time: job1.date_time)
+
