@@ -197,7 +197,8 @@ nav {
 .nav-links {
   list-style: none;
   overflow: hidden;
-  padding-right: 40px; 
+  padding: 0px;
+  width: 750px; 
   float: right;
   display: inline;
   float: right;
