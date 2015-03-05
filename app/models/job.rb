@@ -18,22 +18,30 @@ class Job < ActiveRecord::Base
     job.save
   end
 
-  def job_status_json_object
-  #   if helper.nil?
-  #     data = {}
-  #     self.bids.each do |bid|
-  #       data.bid_id = {
-  #         bid.applicant_name = self.applicant.username
-  #         bid.applicant_id = self.applicant.id
-  #         bid.date_time = self.date_time
-  #         bid.note = self.note
-  #       }
-  #     end
-  #   else applicants?
-  #     data = {}
-  #     data.helper_name = 
-  #   end
-  #   data.to_json
+  def helper_status_json_object
+    data = {}
+    helper = self.helper
+    if helper.nil?
+      data[:status] = 'helper not chosen'
+      # self.bids.each do |bid|
+      #   data.bid = {
+      #     applicant_name: bid.applicant.username,
+      #     applicant_image: bid.applicant.image,
+      #     applicant_id: bid.applicant.id,
+      #     date_time: bid.date_time,
+      #     note: bid.note,
+      #   }
+      # end
+    else
+      data[:status] = 'helper chosen'
+      # winning_bid = self.bids.where(applicant: helper)
+      # data.helper_name = self.helper.username
+      # data.helper_image = self.applicant.image
+      # data.helper_id = self.applicant.id
+      # data.helper_note = winning_bid.note
+      # data.helper_date_time = winning_bid.date_time
+    end
+    data.to_json
   end
 
 end
