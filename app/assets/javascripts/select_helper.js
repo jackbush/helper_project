@@ -14,7 +14,6 @@ debugger;
 
 	.done(function(response) {
 		console.log(response)
-		
 		// 	if null
 		// 		break;
 		// 	else if (applicants)

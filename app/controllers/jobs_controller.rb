@@ -5,6 +5,10 @@ class JobsController < ApplicationController
 
   def index
     @jobs = Job.where( helper: nil )
+    respond_to do |format|
+      format.html
+      format.json { render json: @jobs }
+    end
   end
 
   def show
