@@ -6,7 +6,7 @@
   .job-show-header
     %h3= @job.title
     %h4
-      POSTED BY
+      Posted by
       = link_to @job.poster.username, profile_path(@job.poster)
     
     - if user_signed_in?
@@ -23,6 +23,8 @@
   .job-show-content
     %h4 Description
     %p= @job.description
+    %h4 Date and time
+    %p= @job.date_time.to_formatted_s(:long_ordinal)
 
     - if user_signed_in?
       - if @job.poster == current_user || @job.helper == current_user
@@ -37,7 +39,6 @@
     .job-show-helper
       There are no offers to show yet.
 
-  - if @job.poster == current_user
     .page-nav
       = link_to 'EDIT', edit_job_path
       = link_to 'BACK', jobs_path
