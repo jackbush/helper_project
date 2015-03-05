@@ -9,8 +9,24 @@ function request(method, url, data) {
 
 // this will be easier with more made available in controller
 
-function listHelpers() {
-	var jobId = $('#show-job-id').val();
+function findHelpers() {
+	var jobId = $('.job-id').val();
+	request('GET', '/jobs/' + jobId, null)
+	.done(function(response) {
+		debugger;
+			if empty
+				return
+			if applicants
+				renderApplicants
+			if helper
+				renderHelper
+		}).fail(function(error) {
+			console.log(error)
+		})
+}
+
+function renderApplicants() {
+	var jobId = $('.job-id').val();
 	request('GET', '/jobs/' + jobId, null)
 	.done(function(response) {
 		debugger;
@@ -28,6 +44,27 @@ function listHelpers() {
 			console.log(error)
 		})
 }
+
+function showHelper() {
+	var jobId = $('.job-id').val();
+	request('GET', '/jobs/' + jobId, null)
+	.done(function(response) {
+		debugger;
+		// if helper !== null
+		// 	// show helper
+		// } else {
+		// 	request('GET', '/jobs/' + jobId + '/bids', null)
+		// 	.done(function(response) {
+		// 		$.each(response, function(index, job) {
+		// 			console.log(job);
+		// 			// insert the below structure
+		// 		})
+		// 	})
+		}).fail(function(error) {
+			console.log(error)
+		})
+}
+
 
 // var applicantListItem = '<div class="applicant-list-item">';
 //    applicantListItem += image
@@ -56,6 +93,6 @@ function chooseHelper() {
 }
 
 $(document).ready(function() {
-	listHelpers();
+	findHelpers();
 	$('#choose-helper-button').on('click', chooseHelper)
 });
