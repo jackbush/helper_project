@@ -1,11 +1,11 @@
-.center-button
-  %button#toggle-index-map-list MAP / LIST
-
-#jobs-index-map-container
-  -# %input#jobs-index-map-search{placeholder: 'enter an address'}
-  #jobs-index-map
-
 .standard-width-content
+  .center-button
+    %button#toggle-index-map-list MAP / LIST
+
+  #jobs-index-map-container
+    -# %input#jobs-index-map-search{placeholder: 'enter an address'}
+    #jobs-index-map
+
   #jobs-index-list 
     - @jobs.each do |job|
       .job-index-post

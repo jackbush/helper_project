@@ -3,7 +3,7 @@
   - if current_user.poster_jobs != []
     %h2 Jobs Posted
 
-  - current_user.poster_jobs.each do |job|
+  - current_user.poster_jobs.order('date_time').each do |job|
     .job-index-post
       %h3= link_to job.title, job_path(job)
       %h4
@@ -15,7 +15,7 @@
   - if current_user.helper_jobs != []
     %h2 Helping With
 
-  - current_user.helper_jobs.each do |job|
+  - current_user.helper_jobs.order('date_time').each do |job|
     .job-index-post
       %h3= link_to job.title, job_path(job)
       %h4
