@@ -26,6 +26,7 @@
    background: #FCF8F7;
    font-family: "Cardo", serif;
    font-weight: 300;
+
  }
 
  .standard-width-content {
@@ -106,7 +107,7 @@ h5 {
 }
 
 h6 {
- font-size: 16px;
+ font-size: 22px;
  font-family: "Montserrat", sans-serif;
  margin-top: -175px; 
 }
@@ -128,9 +129,9 @@ input {
 }
 
 .form {
-  width: 450px;
+  width: 400px;
   margin: 0 auto;
-  border-radius: 8px; 
+  border-radius: 5px; 
   box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.20);
   background: #FBFBF4; 
   padding: 20px;
@@ -261,6 +262,7 @@ nav {
 
 .header-image#a {
   background: url(old_person_thumbs_up.jpg) no-repeat center center fixed;
+  z-index: 100; 
 }
 
 .header-image#b {
