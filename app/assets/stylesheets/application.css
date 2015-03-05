@@ -73,7 +73,7 @@ h1 a {
   position: fixed;
   top: 15px;
   left: 15px;
-  margin: 1px; 
+  margin: 2px; 
 }
 
 h2 {
@@ -184,7 +184,7 @@ p {
   width: 100%;
   position: fixed;
   padding: 0;
-  padding-top: 25px;
+  padding-top: 10px;
   background: white;
   border-bottom: 1px solid black;
 }
@@ -261,16 +261,16 @@ nav {
 }
 
 .header-image#a {
-  background: url(old_person_thumbs_up.jpg) no-repeat center center fixed;
+  background: url(https://s3-eu-west-1.amazonaws.com/ga-helpr-project/old_person_thumbs_up.jpg) no-repeat center center fixed;
   z-index: 100; 
 }
 
 .header-image#b {
-  background: url(a_z_map.jpg) no-repeat center center fixed;
+  background: url(https://s3-eu-west-1.amazonaws.com/ga-helpr-project/a_z_map.jpg) no-repeat center center fixed;
 }
 
 .header-image#c {
-  background: url(meals_on_wheels.jpg) no-repeat center center fixed;
+  background: url(https://s3-eu-west-1.amazonaws.com/ga-helpr-project/meals_on_wheels.jpg) no-repeat center center fixed;
 }
 
 /* js-dependent */
