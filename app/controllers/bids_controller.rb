@@ -5,6 +5,7 @@ class BidsController < ApplicationController
 
   def index
     @bids = Bid.where(job_id: params[:job_id])
+    # not sure this is necessary
     respond_to do |format|
       format.html
       format.json { render json: @bids, :include => {:applicant =>{:only => :username}} }
@@ -23,10 +24,7 @@ class BidsController < ApplicationController
 
   def create
     @bid = Bid.create(bid_params)
-    @bid.job_id = params[:job_id]
-    @bid.note = params[:bid][:bid][:note]
-    @bid.applicant_id = current_user.id
-    @bid.save
+    Bid.initialize_new(@bid, params, current_user.id)
     redirect_to jobs_path
   end
 

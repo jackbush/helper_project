@@ -9,10 +9,39 @@ class Job < ActiveRecord::Base
   validates :poster, presence: true
   validates :description, presence: true
   validates :instructions, presence: true
+  validates :date_time, presence: true
   validates :address, presence: true
   validates :postcode, presence: true
 
-  # regular expression for validating legitimate postcode:
-  # :with =>  /^([A-PR-UWYZ]([0-9]{1,2}|([A-HK-Y][0-9]|[A-HK-Y][0-9]([0-9]|[ABEHMNPRV-Y]))|[0-9][A-HJKS-UW])\s?[0-9][ABD-HJLNP-UW-Z]{2}|(GIR\ 0AA)|(SAN\ TA1)|(BFPO\ (C\/O\ )?[0-9]{1,4})|((ASCN|BBND|[BFS]IQQ|PCRN|STHL|TDCU|TKCA)\ 1ZZ))$$/i
+  def assign_user(job, user)
+    job.poster_id = user
+    job.save
+  end
+
+  def helper_status_json_object
+    data = {}
+    helper = self.helper
+    if helper.nil?
+      data[:status] = 'helper not chosen'
+      # self.bids.each do |bid|
+      #   data.bid = {
+      #     applicant_name: bid.applicant.username,
+      #     applicant_image: bid.applicant.image,
+      #     applicant_id: bid.applicant.id,
+      #     date_time: bid.date_time,
+      #     note: bid.note,
+      #   }
+      # end
+    else
+      data[:status] = 'helper chosen'
+      # winning_bid = self.bids.where(applicant: helper)
+      # data.helper_name = self.helper.username
+      # data.helper_image = self.applicant.image
+      # data.helper_id = self.applicant.id
+      # data.helper_note = winning_bid.note
+      # data.helper_date_time = winning_bid.date_time
+    end
+    data.to_json
+  end
 
 end

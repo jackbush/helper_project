@@ -1,0 +1,58 @@
+/*js-dependent*/
+
+.job-id {
+  display: none;
+}
+
+/*job show page*/
+
+.job-show-header {
+  width: 500px;
+  float: left;
+}
+.job-show-content {
+  width: 460px;
+  padding: 20px;
+  float: right;
+}
+.job-show-helper {
+  float: left;
+  width: 500px;
+  height: 300px;
+  border-top: 1px solid black;
+  margin-top: 20px;
+  padding: 10px;
+}
+.job-show-select-helper {
+  float: left;
+  width: 500px;
+  height: 300px;
+  border-top: 1px solid black;
+  margin-top: 20px;
+  padding: 10px;
+}
+
+.embedded-profile {
+  height: 120px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-top: 20px;
+  background: white;
+}
+.embedded-profile-image {
+  width:100px;
+  height:100px;
+  float:left;
+  padding:0;
+  vertical-align:middle;
+  img {
+    margin: 0 auto;
+    border-radius:100%;
+  }
+}
+.embedded-profile-stats {
+  height: 120px;
+  float:left;
+  padding: 10px;
+  vertical-align: middle;
+}

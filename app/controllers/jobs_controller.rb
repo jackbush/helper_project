@@ -4,13 +4,16 @@ class JobsController < ApplicationController
   authorize_resource
 
   def index
-    @jobs = Job.all
+    @jobs = Job.where( helper: nil )
   end
 
   def show
     @job = Job.find(params[:id])
-    # access a class method here to return helper if present or applicants for json
-    # @selection = ...
+    @data = @job.helper_status_json_object
+    respond_to do |format|
+      format.html
+      format.json { render json: @data }
+    end
   end
 
   def new
@@ -18,10 +21,8 @@ class JobsController < ApplicationController
   end
 
   def create
-    #refactor this out to model
     @job = Job.create(job_params)
-    @job.poster_id = current_user.id
-    @job.save
+    Job.assign_user(@job, current_user.id)
     redirect_to jobs_path
   end
 

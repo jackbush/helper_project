@@ -7,16 +7,12 @@
   = stylesheet_link_tag    'application'
   = javascript_include_tag 'application'
   = csrf_meta_tags
-  %script{:src => "//cdnjs.cloudflare.com/ajax/libs/list.js/1.1.1/list.min.js"}
-  %script{:src => "http://listjs.com/no-cdn/list.js"}
-  %script{:src => "http://listjs.com/no-cdn/list.pagination.js"}
 %body
   = render 'layouts/header'
   .site-content
     .devise-alerts
       %p.notice= notice
       %p.alert= alert
-    .main-content
       = yield
     -# .footer
     -#   = render 'layouts/footer'
