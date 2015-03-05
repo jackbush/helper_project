@@ -8,7 +8,6 @@ function request(method, url, data) {
 }
 
 function findHelpers() {
-// debugger;
 	var jobId = $('.job-id').text();
 	request('GET', '/jobs/' + jobId, null)
 

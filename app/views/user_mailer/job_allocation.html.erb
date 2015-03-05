@@ -1,13 +1,26 @@
-<h1>Welcome, <%= @user.name %></h1>
-
-<p>You got a job! The user says:</p>
-
-title
-
-description
-
-instructions
-
-address
-
-map
+<html>
+  <head>
+ <style> 
+  body {
+    background-color: #FCF8F7;
+  }
+  body {
+    color: #171E45;
+    font-family: "Montserrat", sans-serif;
+  } 
+  </style>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+   <h3>Dear, <%= user.username %></h3>
+     <h4>Your bid was accepted! </h4>
+     <h4>The job is:</h4>
+     <p><%= job.title %></p>
+     <h4>The job description is:</h4>
+     <p><%= job.description %></p>
+     <h4>Your instructions are:</h4>
+     <p><%= job.instructions %></p>
+     <h4>The location is here: <%= job.address %></h4>
+     <h3> Thanks for using Helpr</h3>
+  </body>
+</html>

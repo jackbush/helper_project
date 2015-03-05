@@ -26,6 +26,7 @@
    background: #FCF8F7;
    font-family: "Cardo", serif;
    font-weight: 300;
+
  }
 
 .site-content {
@@ -84,7 +85,7 @@ h1 a {
   position: fixed;
   top: 15px;
   left: 15px;
-  margin: -5px; 
+  margin: 2px; 
 }
 
 h1 a:hover {
@@ -123,7 +124,9 @@ h5 {
 }
 
 h6 {
-
+ font-size: 22px;
+ font-family: "Montserrat", sans-serif;
+ margin-top: -175px; 
 }
 
 /*form font */
@@ -143,9 +146,9 @@ input {
 }
 
 .form {
-  width: 450px;
+  width: 400px;
   margin: 0 auto;
-  border-radius: 8px; 
+  border-radius: 5px; 
   box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.20);
   background: #FBFBF4; 
   padding: 20px;
@@ -188,8 +191,8 @@ p {
   width: 100%;
   position: fixed;
   padding: 0;
-  padding-top: 25px;
-  background: #FBFBF4;
+  padding-top: 10px;
+  background: white;
   border-bottom: 1px solid black;
 }
 
@@ -201,13 +204,14 @@ nav {
 .nav-links {
   list-style: none;
   overflow: hidden;
-  padding-right: 40px; 
+  padding: 0px;
+  width: 750px; 
   float: right;
   display: inline;
   float: right;
   display: inline-block;
   text-align: center;
-  margin: -28px;
+  margin: -20px;
 }
 .nav-links-item {
   display: inline-block;
@@ -265,15 +269,16 @@ nav {
 }
 
 .header-image#a {
-  background: url(old_person_thumbs_up.jpg) no-repeat top center fixed;
+  background: url(https://s3-eu-west-1.amazonaws.com/ga-helpr-project/old_person_thumbs_up.jpg) no-repeat center center fixed;
+  z-index: 100;
 }
 
 .header-image#b {
-  background: url(a_z_map.jpg) no-repeat center center fixed;
+  background: url(https://s3-eu-west-1.amazonaws.com/ga-helpr-project/a_z_map.jpg) no-repeat center center fixed;
 }
 
 .header-image#c {
-  background: url(meals_on_wheels.jpg) no-repeat center center fixed;
+  background: url(https://s3-eu-west-1.amazonaws.com/ga-helpr-project/meals_on_wheels.jpg) no-repeat center center fixed;
 }
 
 /*in site*/
