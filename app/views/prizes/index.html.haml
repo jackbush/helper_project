@@ -17,11 +17,12 @@
       .row-fluid.show-grid
         .span3
           %h3= prize.company
-          = image_tag prize.company_image.url, class: "company-image"
+          = image_tag prize.company_image.detail.url, 
         .span3         
-          = image_tag prize.prize_image.url, class: "company-image"
+          = image_tag prize.prize_image.detail.url,
         .span6
           %h3= prize.title
           %p= prize.description
          
 
+ class: "company-image"

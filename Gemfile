@@ -13,6 +13,7 @@ gem 'omniauth-google-oauth2'
 gem 'rails_admin'
 gem 'acts-as-taggable-on', '~> 3.4'
 gem 'carrierwave', '0.9.0' 
+gem 'rmagick'
 
 
 #default
