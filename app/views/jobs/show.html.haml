@@ -23,7 +23,7 @@
   .job-show-content
     %h4 Description
     %p= @job.description
-    %h4 Date and time
+    %h4 Date and Time
     %p= @job.date_time.to_formatted_s(:long_ordinal)
 
     - if user_signed_in?

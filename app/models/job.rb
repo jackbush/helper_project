@@ -18,17 +18,17 @@ class Job < ActiveRecord::Base
     job.save
   end
 
-  def job_status_json_object
+  def helper_status_json_object
     data = {}
     helper = self.helper
     if helper.nil?
       self.bids.each do |bid|
-        data.bid_id = {
-          bid.applicant_name = self.applicant.username
-          bid.applicant_image = self.applicant.image
-          bid.applicant_id = self.applicant.id
-          bid.date_time = self.date_time
-          bid.note = self.note
+        data.bid {
+          applicant_name: bid.applicant.username,
+          applicant_image: bid.applicant.image,
+          applicant_id: bid.applicant.id,
+          date_time: bid.date_time,
+          note: bid.note,
         }
       end
     else
