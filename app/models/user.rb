@@ -5,7 +5,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable,
          :omniauthable, :omniauth_providers => [:google_oauth2]
 
-         # facebook and twitter almost available
+         # facebook and twitter disabled
 
   has_many :jobs
   has_many :bids, :foreign_key => 'applicant_id'
