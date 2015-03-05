@@ -238,11 +238,11 @@ Devise.setup do |config|
 
   #set keys as env variables
 
-  config.omniauth :facebook, ENV["FACEBOOK_APP_ID"], ENV["FACEBOOK_APP_SECRET"] #, scope: 'add, scope, here'
-
   config.omniauth :google_oauth2, ENV["GOOGLE_APP_ID"], ENV["GOOGLE_APP_SECRET"], scope: 'email,profile'
 
-  config.omniauth :twitter, ENV["TWITTER_API_KEY"], ENV["TWITTER_API_SECRET"] #, scope: 'add, scope, here'
+  # config.omniauth :facebook, ENV["FACEBOOK_APP_ID"], ENV["FACEBOOK_APP_SECRET"] #, scope: 'add, scope, here'
+
+  # config.omniauth :twitter, ENV["TWITTER_API_KEY"], ENV["TWITTER_API_SECRET"] #, scope: 'add, scope, here'
 
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or
