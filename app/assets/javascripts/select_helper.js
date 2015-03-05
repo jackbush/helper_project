@@ -7,80 +7,68 @@ function request(method, url, data) {
   })
 }
 
-// this will be easier with more made available in controller
-
 function findHelpers() {
 	var jobId = $('.job-id').val();
 	request('GET', '/jobs/' + jobId, null)
 	.done(function(response) {
 		debugger;
-			if empty
-				return
-			if applicants
-				renderApplicants
-			if helper
-				renderHelper
+			if 
+				break;
+			else if (applicants)
+				renderApplicants(response)
+			else if (helper)
+				renderHelper(response)
 		}).fail(function(error) {
 			console.log(error)
 		})
 }
 
-function renderApplicants() {
-	var jobId = $('.job-id').val();
-	request('GET', '/jobs/' + jobId, null)
-	.done(function(response) {
-		debugger;
-		// if helper !== null
-		// 	// show helper
-		// } else {
-		// 	request('GET', '/jobs/' + jobId + '/bids', null)
-		// 	.done(function(response) {
-		// 		$.each(response, function(index, job) {
-		// 			console.log(job);
-		// 			// insert the below structure
-		// 		})
-		// 	})
-		}).fail(function(error) {
-			console.log(error)
-		})
+function renderApplicants(response) {
+	  var data = response
+
+		results.hide();
+		results.val('');
+    $.each(data, function(index, value) {
+        var embeddedProfile = '<div class="embedded-profile">';
+
+        embeddedProfile += '<div class="embedded-profile-image"><img src="' + value.image.url + '"></div>';
+        embeddedProfile += '<div class="embedded-profile-stats">';
+        embeddedProfile += '<h3>' + value.username + '</h3>';.
+        embeddedProfile += '<h4>' + value.date_time + '</h4>';
+        embeddedProfile += '<h4>' + value.note + '</h4>';
+        embeddedProfile += '<button id="#choose-helper-button" value="' + value.id + '">CHOOSE</button>';
+        embeddedProfile += '</div></div>';
+
+        results.append(embeddedProfile);
+    })
+    helper.fadeIn('slow');
+	}).fail(function(error) {
+		console.log(error)
+	})
 }
 
-function showHelper() {
-	var jobId = $('.job-id').val();
-	request('GET', '/jobs/' + jobId, null)
-	.done(function(response) {
-		debugger;
-		// if helper !== null
-		// 	// show helper
-		// } else {
-		// 	request('GET', '/jobs/' + jobId + '/bids', null)
-		// 	.done(function(response) {
-		// 		$.each(response, function(index, job) {
-		// 			console.log(job);
-		// 			// insert the below structure
-		// 		})
-		// 	})
-		}).fail(function(error) {
-			console.log(error)
-		})
+function renderHelper(response) {
+	var data = response
+
+		results.hide();
+		results.val('');
+    $.each(data, function(index, value) {
+        var embeddedProfile = '<div class="embedded-profile">';
+
+        embeddedProfile += '<div class="embedded-profile-image"><img src="' + value.image.url + '"></div>';
+        embeddedProfile += '<div class="embedded-profile-stats">';
+        embeddedProfile += '<h3>' + value.username + '</h3>';
+        embeddedProfile += '<h4>' + value.date_time + '</h4>';
+        embeddedProfile += '<h4>' + value.note + '</h4>';
+        embeddedProfile += '</div></div>';
+
+        results.append(embeddedProfile);
+    })
+    helper.fadeIn('slow');
+	}).fail(function(error) {
+		console.log(error)
+	})
 }
-
-
-// var applicantListItem = '<div class="applicant-list-item">';
-//    applicantListItem += image
-//    applicantListItem += username
-//    applicantListItem += datetime
-//    applicantListItem += note
-//    applicantListItem += button
-
-// - if @job.helper
-//       .job-show-helper
-//         .embedded-profile
-//           .embedded-profile-image
-//             = image_tag(@job.helper.image)
-//           .embedded-profile-stats
-//             %h3= @job.helper.username
-//             %h4= @job.helper.username
 
 function chooseHelper() {
 	jobId = $(this).data('id');
@@ -89,10 +77,18 @@ function chooseHelper() {
 	.done(function(reponse) {
 	  console.log(reponse);
 	})
-	showHelper();
+	findHelpers();
 }
 
 $(document).ready(function() {
+
+  var results = $('.job-show-helper');
+  var results = $('.job-show-helper');
+  var results = $('.job-show-helper');
+  var results = $('.job-show-helper');
+	
 	findHelpers();
+	
 	$('#choose-helper-button').on('click', chooseHelper)
+
 });
