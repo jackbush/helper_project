@@ -69,7 +69,7 @@ h1 {
 h1 a {
   width: 50px;
   font-size: 25px;
-  color: #8f8f8f;
+  color: #3CB43E;
   float: left;
   margin-top: 0;
   line-height: 1;
@@ -78,6 +78,11 @@ h1 a {
   top: 15px;
   left: 15px;
   margin: -5px; 
+}
+
+h1 a:hover {
+  color: #3CB43E;
+  text-decoration: none;
 }
 
 h2 {
@@ -138,16 +143,6 @@ input {
   background: #FBFBF4; 
   padding: 20px;
 
-}
-
-
-
-
-
-
-
-.new_job {
- 
 }
 
 p {
@@ -222,7 +217,7 @@ nav {
 /*footer*/
 
 .footer {
-  position:absolute;
+  position:fixed;
   bottom:0;
   left:0;
   background-color: #3CB43E; 
