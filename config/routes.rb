@@ -7,7 +7,8 @@ Rails.application.routes.draw do
 
   get '/dashboard', to: 'welcomes#dashboard'
   get '/users/:id', to: 'users#profile', as: 'profile'
-
+  
+  resources :prizes
   resources :jobs do
     resources :bids, shallow: true
   end

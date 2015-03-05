@@ -88,6 +88,34 @@ Job.create(title: 'Test Job No Applicants',
                  poster: user_s
                  )
 
+<<<<<<< HEAD
+Bid.create(job: job, applicant: user_j1, note: 'I can swing by on the way home tomorrow.')
+Bid.create(job: job, applicant: user_j2, note: 'Would love to help out.')
+
+
+prize1 = Prize.new(company:"British Airways", company_image:"", prize_image:"", title:"", description:"", tier:"" )
+prize2 = Prize.new(company:"British Airways", company_image:"", prize_image:"", title:"", description:"", tier:"" )
+prize3 = Prize.new(company:"British Airways", company_image:"", prize_image:"", title:"", description:"", tier:"" )
+prize4 = Prize.new(company:"British Airways", company_image:"", prize_image:"", title:"", description:"", tier:"" )
+
+
+
+
+
+t.string   "company"
+    t.string   "image"
+    t.string   "title"
+    t.string   "description"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.string   "company_image"
+    t.string   "prize_image"
+    t.string   "tier"
+
+
+
+=======
 Bid.create(job: job, applicant: user_j1, note: 'I can swing by on the way home tomorrow.', date_time: 'Sat, 07 Mar 2015 12:36:45 UTC +00:00')
 Bid.create(job: job, applicant: user_j2, note: 'Happy to help, will be an hour late though.', date_time: 'Sat, 07 Mar 2015 13:36:45 UTC +00:00')
 Bid.create(job: job1, applicant: user_j3, note: 'You look like my granny.', date_time: job1.date_time)
+>>>>>>> development
