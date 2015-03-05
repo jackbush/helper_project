@@ -8,20 +8,11 @@ function request(method, url, data) {
 }
 
 function findHelpers() {
-<<<<<<< HEAD
-// debugger;
-=======
-debugger;
->>>>>>> development
 	var jobId = $('.job-id').text();
 	request('GET', '/jobs/' + jobId, null)
 
 	.done(function(response) {
 		console.log(response)
-<<<<<<< HEAD
-		
-=======
->>>>>>> development
 		// 	if null
 		// 		break;
 		// 	else if (applicants)
