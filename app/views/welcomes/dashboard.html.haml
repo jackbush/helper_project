@@ -1,8 +1,28 @@
 .standard-width-content
-  %h2 DASHBOARD
+  
+  - if current_user.poster_jobs != []
+    %h2 Jobs Posted
 
-  %h3 USER ACTIVE JOBS
+  - current_user.poster_jobs.each do |job|
+    .job-index-post
+      %h3= link_to job.title, job_path(job)
+      %h4
+        = job.date_time.to_formatted_s(:long_ordinal)
+        |
+        = pluralize(job.applicants.count, 'offer')
+      %p= job.description
 
-  %h3 USER'S CURRENT BIDS
+  - if current_user.helper_jobs != []
+    %h2 Helping With
 
-  %h3 USER'S PAST JOBS
+  - current_user.helper_jobs.each do |job|
+    .job-index-post
+      %h3= link_to job.title, job_path(job)
+      %h4
+      %p= job.description
+      %h4 Instructions
+      %p= job.instructions
+      %h4 Agreed time
+      %p= job.date_time.to_formatted_s(:long_ordinal)
+      %h4 Address
+      %p= job.address

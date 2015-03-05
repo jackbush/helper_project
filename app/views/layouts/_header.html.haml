@@ -21,6 +21,7 @@
       %li.nav-links-item= link_to 'ALL JOBS', jobs_path
       %li.nav-links-item= link_to 'NEW JOB', new_job_path
       - if user_signed_in?
+        %li.nav-links-item= link_to 'PRIZES', prizes_path
         %li.nav-links-item= link_to 'DASHBOARD', dashboard_path
         %li.nav-links-item= link_to 'ACCOUNT', edit_user_registration_path
         %li.nav-links-item= link_to 'LOGOUT', destroy_user_session_path, :method => :delete
