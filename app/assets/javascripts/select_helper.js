@@ -31,17 +31,19 @@ function renderApplicants(data) {
   console.log(data)
 
   $.each(data, function(index, value) {
-    var embeddedProfile = '<div class="embedded-profile">';
+    if (value !== true) {
+      var embeddedProfile = '<div class="embedded-profile">';
 
-    embeddedProfile += '<div class="embedded-profile-image"><img src="' + value.applicant_image + '"></div>';
-    embeddedProfile += '<div class="embedded-profile-stats">';
-    embeddedProfile += '<h3>' + value.applicant_name + '</h3>';
-    embeddedProfile += '<h5>' + value.date_time + '</h4>';
-    embeddedProfile += '<h5>' + value.note + '</h4>';
-    embeddedProfile += '<button id="#choose-helper-button" value="' + value.id + '">CHOOSE</button>';
-    embeddedProfile += '</div></div>';
+      embeddedProfile += '<div class="embedded-profile-image"><img src="' + value.applicant_image + '"></div>';
+      embeddedProfile += '<div class="embedded-profile-stats">';
+      embeddedProfile += '<h3>' + value.applicant_name + '</h3>';
+      embeddedProfile += '<h5>' + value.date_time + '</h4>';
+      embeddedProfile += '<h5>' + value.note + '</h4>';
+      embeddedProfile += '<button id="#choose-helper-button" value="' + value.id + '">CHOOSE</button>';
+      embeddedProfile += '</div></div>';
 
-    results.append(embeddedProfile);
+      results.append(embeddedProfile);
+    }
   })
   results.fadeIn('slow');
 }
