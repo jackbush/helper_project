@@ -87,7 +87,7 @@ h2 {
 }
 
 h3 {
-  font-size: 30px;
+  font-size: 18px;
   line-height: 1.8;
   font-family: "Montserrat", sans-serif;
   /*font-weight: lighter;
@@ -262,16 +262,18 @@ nav {
 }
 
 .header-image#a {
-  background: url(https://s3-eu-west-1.amazonaws.com/ga-helpr-project/old_person_thumbs_up.jpg) no-repeat center center fixed;
+  background: url(https://s3-eu-west-1.amazonaws.com/ga-helpr-project/old_people2.jpg) no-repeat center center fixed;
   z-index: 100; 
+  
+
 }
 
 .header-image#b {
-  background: url(https://s3-eu-west-1.amazonaws.com/ga-helpr-project/a_z_map.jpg) no-repeat center center fixed;
+  background: url(https://s3-eu-west-1.amazonaws.com/ga-helpr-project/a_z_map2.jpg) no-repeat center center fixed;
 }
 
 .header-image#c {
-  background: url(https://s3-eu-west-1.amazonaws.com/ga-helpr-project/meals_on_wheels.jpg) no-repeat center center fixed;
+  background: url(https://s3-eu-west-1.amazonaws.com/ga-helpr-project/Meals_on_Wheels2.jpg) no-repeat center center fixed;
 }
 
 /* js-dependent */
