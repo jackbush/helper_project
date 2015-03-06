@@ -26,6 +26,7 @@
    background: #FCF8F7;
    font-family: "Cardo", serif;
    font-weight: 300;
+   margin-top: -50px; 
  }
 
 .site-content {
@@ -129,9 +130,21 @@ h4 {
 
 h5 {
 
+  font-size: 10px;
+  margin-top: -30px;
+  line-height: 1.8;
+  font-family: "Montserrat", sans-serif;
+
 }
 
 h6 {
+
+  font-size: 18px;
+  line-height: 1.8;
+  font-family: "Montserrat", sans-serif;
+  /*font-weight: lighter;
+  font-style: italic;*/
+  color: white; 
 
 }
 
@@ -332,11 +345,12 @@ nav {
 }
 
 .embedded-profile {
-  height: 120px;
+  height: 220px;
   padding-top: 10px;
   padding-bottom: 10px;
   margin-top: 20px;
   background: white;
+  overflow: scroll;
 }
 .embedded-profile-image {
   width:100px;
@@ -344,10 +358,12 @@ nav {
   float:left;
   padding:0;
   vertical-align:middle;
-  img {
-    margin: 0 auto;
-    border-radius:100%;
-  }
+}
+
+.embedded-profile-image img {
+  margin: 0 auto;
+  margin-left: 5px;
+  border-radius:100%;
 }
 .embedded-profile-stats {
   height: 120px;
@@ -356,10 +372,25 @@ nav {
   vertical-align: middle;
 }
 
+.embedded-profile button {
+
+width: 80px;
+height: 30px;
+/*background-color: red; */
+background-color: #3CB43E; 
+line-height: -25px;
+font-size: 12px; 
+border: 1px solid white;
+float: right;
+color: white;
+
+}
+
 .job-index-post {
   border: 1px solid black;
   margin-bottom: 20px;
   padding: 20px;
+
 
 }
 
