@@ -34,11 +34,11 @@ function renderApplicants(data) {
   $.each(data, function(index, value) {
     var embeddedProfile = '<div class="embedded-profile">';
 
-    embeddedProfile += '<div class="embedded-profile-image"><img src="' + value.image + '"></div>';
+    embeddedProfile += '<div class="embedded-profile-image"><img src="' + applicant_image + '"></div>';
     embeddedProfile += '<div class="embedded-profile-stats">';
-    embeddedProfile += '<h3>' + value.username + '</h3>';
-    embeddedProfile += '<h4>' + value.date_time + '</h4>';
-    embeddedProfile += '<h4>' + value.note + '</h4>';
+    embeddedProfile += '<h3>' + applicant_name + '</h3>';
+    embeddedProfile += '<h4>' + date_time + '</h4>';
+    embeddedProfile += '<h4>' + note + '</h4>';
     embeddedProfile += '<button id="#choose-helper-button" value="' + value.id + '">CHOOSE</button>';
     embeddedProfile += '</div></div>';
 
@@ -49,24 +49,19 @@ function renderApplicants(data) {
 
 function renderHelper(data) {
   var results = $('.job-show-helper');
-  // console.log(data)
-  // console.log('hello')
-
 	results.hide();
 	results.text('');
-  $.each(data, function(index, value) {
-    console.log(value)
-    var embeddedProfile = '<div class="embedded-profile">';
 
-    embeddedProfile += '<div class="embedded-profile-image"><img src="' + value.applicant_image + '"></div>';
-    embeddedProfile += '<div class="embedded-profile-stats">';
-    embeddedProfile += '<h3>' + value.username + '</h3>';
-    // embeddedProfile += '<h4>' + value.date_time + '</h4>';
-    // embeddedProfile += '<h4>' + value.note + '</h4>';
-    embeddedProfile += '</div></div>';
+  var embeddedProfile = '<div class="embedded-profile">';
+  embeddedProfile += '<div class="embedded-profile-image"><img src="' + data.helper_image + '"></div>';
+  embeddedProfile += '<div class="embedded-profile-stats">';
+  embeddedProfile += '<h3>' + data.helper_name + '</h3>';
+  embeddedProfile += '<h4>ASSIGNED HELPER</h4>';
+  // embeddedProfile += '<h4>' + value.date_time + '</h4>';
+  // embeddedProfile += '<h4>' + value.note + '</h4>';
+  embeddedProfile += '</div></div>';
 
-    results.append(embeddedProfile);
-  })
+  results.append(embeddedProfile);
   results.fadeIn('slow');
 }
 
