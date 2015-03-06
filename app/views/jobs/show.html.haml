@@ -28,12 +28,13 @@
 
     - if user_signed_in?
       - if @job.poster == current_user || @job.helper == current_user
-        %h4 Agreed time
-        %p= @job.date_time.to_formatted_s(:long_ordinal)
         %h4 Instructions
         %p= @job.instructions
         %h4 Address
         %p= @job.address
+        - if @job.helper
+          %h4 Agreed time
+          %p= @job.date_time.to_formatted_s(:long_ordinal)
 
   - if user_signed_in? && @job.poster == current_user
     .job-show-helper

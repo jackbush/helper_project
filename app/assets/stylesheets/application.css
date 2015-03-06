@@ -291,15 +291,15 @@ nav {
 }
 
 .header-image#a {
-  background: url(old_person_thumbs_up.jpg) no-repeat top center fixed;
+  background: url(ohttps://s3-eu-west-1.amazonaws.com/ga-helpr-project/old_people2.jpg) no-repeat top center fixed;
 }
 
 .header-image#b {
-  background: url(a_z_map.jpg) no-repeat center center fixed;
+  background: url(https://s3-eu-west-1.amazonaws.com/ga-helpr-project/a_z_map2.jpg) no-repeat center center fixed;
 }
 
 .header-image#c {
-  background: url(meals_on_wheels.jpg) no-repeat center center fixed;
+  background: url(https://s3-eu-west-1.amazonaws.com/ga-helpr-project/Meals_on_Wheels2.jpg) no-repeat center center fixed;
 }
 
 /*in site*/
