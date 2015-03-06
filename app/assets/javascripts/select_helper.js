@@ -10,9 +10,8 @@ function request(method, url, data) {
 function findHelpers() {
 	var jobId = $('.job-id').text();
 	request('GET', '/jobs/' + jobId, null)
-
 	.done(function(response) {
-		console.log(response)
+		// console.log(response.applicants)
 			if (response === false)
 				console.log('virgin')
 			else if (response.applicants === true)
@@ -27,10 +26,11 @@ function findHelpers() {
 
 function renderApplicants(data) {
   var results = $('.job-show-helper');
-  console.log(data)
+  // console.log(data)
 
 	results.hide();
 	results.text('');
+
   $.each(data, function(index, value) {
     var embeddedProfile = '<div class="embedded-profile">';
 
@@ -49,18 +49,20 @@ function renderApplicants(data) {
 
 function renderHelper(data) {
   var results = $('.job-show-helper');
-  console.log(data)
+  // console.log(data)
+  // console.log('hello')
 
 	results.hide();
 	results.text('');
   $.each(data, function(index, value) {
+    console.log(value)
     var embeddedProfile = '<div class="embedded-profile">';
 
-    embeddedProfile += '<div class="embedded-profile-image"><img src="' + value.image + '"></div>';
+    embeddedProfile += '<div class="embedded-profile-image"><img src="' + value.applicant_image + '"></div>';
     embeddedProfile += '<div class="embedded-profile-stats">';
     embeddedProfile += '<h3>' + value.username + '</h3>';
-    embeddedProfile += '<h4>' + value.date_time + '</h4>';
-    embeddedProfile += '<h4>' + value.note + '</h4>';
+    // embeddedProfile += '<h4>' + value.date_time + '</h4>';
+    // embeddedProfile += '<h4>' + value.note + '</h4>';
     embeddedProfile += '</div></div>';
 
     results.append(embeddedProfile);
