@@ -112,7 +112,7 @@ h2 {
 }
 
 h3 {
-  font-size: 30px;
+  font-size: 18px;
   line-height: 1.8;
   font-family: "Montserrat", sans-serif;
   /*font-weight: lighter;
@@ -291,7 +291,8 @@ nav {
 }
 
 .header-image#a {
-  background: url(https://s3-eu-west-1.amazonaws.com/ga-helpr-project/old_people2.jpg) no-repeat top center fixed;
+  background: url(https://s3-eu-west-1.amazonaws.com/ga-helpr-project/old_people2.jpg) no-repeat center center fixed;
+  z-index: 100; 
 }
 
 .header-image#b {
@@ -359,6 +360,7 @@ nav {
   border: 1px solid black;
   margin-bottom: 20px;
   padding: 20px;
+
 }
 
 /* js-dependent */
