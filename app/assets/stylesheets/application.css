@@ -43,6 +43,7 @@
  .standard-width-content {
    width: 960px;
    margin: 0 auto;
+   padding-top: 45px;
    padding-bottom: 60px;
  }
 

@@ -1,7 +1,8 @@
-%h2 Edit Job
+.form
+  %h2 Edit Job
 
-= render 'form'
+  = render 'form'
 
-.page-nav
-  = link_to 'CANCEL', jobs_path
-  = link_to 'DELETE', job_path(@job), method: :delete
+  .page-nav
+    = link_to 'CANCEL', jobs_path
+    = link_to 'DELETE', job_path(@job), method: :delete
