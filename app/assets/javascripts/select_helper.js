@@ -37,8 +37,8 @@ function renderApplicants(data) {
     embeddedProfile += '<div class="embedded-profile-image"><img src="' + applicant_image + '"></div>';
     embeddedProfile += '<div class="embedded-profile-stats">';
     embeddedProfile += '<h3>' + applicant_name + '</h3>';
-    embeddedProfile += '<h4>' + date_time + '</h4>';
-    embeddedProfile += '<h4>' + note + '</h4>';
+    embeddedProfile += '<h5>' + date_time + '</h4>';
+    embeddedProfile += '<h5>' + note + '</h4>';
     embeddedProfile += '<button id="#choose-helper-button" value="' + value.id + '">CHOOSE</button>';
     embeddedProfile += '</div></div>';
 
