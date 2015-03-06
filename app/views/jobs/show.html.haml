@@ -23,18 +23,18 @@
   .job-show-content
     %h4 Description
     %p= @job.description
-    %h4 Date and Time
+    %h4 Requested Time
     %p= @job.date_time.to_formatted_s(:long_ordinal)
 
     - if user_signed_in?
       - if @job.poster == current_user || @job.helper == current_user
-        %h4 Instructions
-        %p= @job.instructions
         %h4 Agreed time
         %p= @job.date_time.to_formatted_s(:long_ordinal)
+        %h4 Instructions
+        %p= @job.instructions
         %h4 Address
         %p= @job.address
 
   - if user_signed_in? && @job.poster == current_user
     .job-show-helper
-      There are no offers to show yet.
+      %h4 There are no offers to show yet.

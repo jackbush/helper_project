@@ -19,7 +19,6 @@ class Job < ActiveRecord::Base
   end
 
   def helper_assigned_email
-    # binding.pry
     if helper
       UserMailer.job_allocation(helper, self).deliver
     end
@@ -28,10 +27,13 @@ class Job < ActiveRecord::Base
   def helper_status_json_object
     data = {}
     helper = self.helper
-    if helper.nil?
+    applicants = self.applicants
+    if helper.nil? && applicants == []
+      return data = false
+    elsif helper.nil?
       data['applicants'] = true
       self.bids.each do |bid|
-        data['bid'] = {
+        data[bid] = {
           applicant_name: bid.applicant.username,
           applicant_image: bid.applicant.image,
           applicant_id: bid.applicant.id,
@@ -39,15 +41,15 @@ class Job < ActiveRecord::Base
           note: bid.note,
         }
       end
-    else
+    elsif
       data['helper'] = true
+      helper = self.helper
       winning_bid = self.bids.where(applicant: helper)
-
-      data['helper_name'] = self.helper.username
-      data['helper_image'] = self.applicant.image
-      data['helper_id'] = self.applicant.id
-      data['helper_note'] = winning_bid.note
-      data['helper_date_time'] = winning_bid.date_time
+      data['helper_name'] = helper.username
+      data['helper_image'] = helper.image
+      data['helper_id'] = helper.id
+      # data['helper_note'] = winning_bid.note
+      # data['helper_date_time'] = winning_bid.date_time
     end
     data.to_json
   end

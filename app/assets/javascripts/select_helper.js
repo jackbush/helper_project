@@ -13,12 +13,14 @@ function findHelpers() {
 
 	.done(function(response) {
 		console.log(response)
-		// 	if null
-		// 		break;
-		// 	else if (applicants)
-		// 		renderApplicants(response)
-		// 	else if (helper)
-		// 		renderHelper(response)
+			if (response === false)
+				console.log('virgin')
+			else if (response.applicants === true)
+				console.log('applicants')
+        // renderApplicants(response)
+			else if (response.helper === true)
+        console.log('helper')
+				// renderHelper(response)
 	})
 	.fail(function(error) {
 		console.log(error)
