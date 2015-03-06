@@ -39,7 +39,7 @@ function renderApplicants(data) {
       embeddedProfile += '<h3>' + value.applicant_name + '</h3>';
       embeddedProfile += '<h5>' + value.date_time + '</h4>';
       embeddedProfile += '<h5>' + value.note + '</h4>';
-      embeddedProfile += '<button id="#choose-helper-button" value="' + value.id + '">CHOOSE</button>';
+      embeddedProfile += '<button id="#choose-helper-button" id="' + value.id + '">CHOOSE</button>';
       embeddedProfile += '</div></div>';
 
       results.append(embeddedProfile);
