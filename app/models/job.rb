@@ -37,7 +37,7 @@ class Job < ActiveRecord::Base
           applicant_name: bid.applicant.username,
           applicant_image: bid.applicant.image,
           applicant_id: bid.applicant.id,
-          date_time: bid.date_time,
+          date_time: bid.date_time.to_formatted_s(:long_ordinal),
           note: bid.note,
         }
       end
