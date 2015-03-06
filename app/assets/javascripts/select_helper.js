@@ -67,7 +67,7 @@ function renderHelper(data) {
 }
 
 function chooseHelper() {
-	jobId = $(this).data('id');
+	var jobId = $('.job-id').text();
 	helperId = $(this).data('helper-id');
 	request('PUT', '/jobs/'+jobId, {job:{helper_id: helperId}})
 	.done(function(reponse) {
