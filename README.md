@@ -12,6 +12,7 @@ Built using Ruby 2.1.4, Rails 4.2.0 and PostgreSQL
 
 Install the above dependencies, clone and run:
 ```
+$ bundle
 $ rake db:create
 $ rake db:migrate
 $ rake db:seed
