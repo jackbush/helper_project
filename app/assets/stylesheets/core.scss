@@ -1,4 +1,4 @@
-/*setup*/
+// setup
 
 * {
  box-sizing: border-box;
@@ -6,11 +6,7 @@
 body {
  margin: 0;
  padding: 0;
- width: 100%;
- background: #FCF8F7;
- font-family: "Cardo", serif;
- font-weight: 300;
- // padding-top: 50px; 
+ background: #FFF;
 }
 .site-content {
   width: 100%;
@@ -28,40 +24,29 @@ body {
  padding-top: 45px;
  padding-bottom: 60px;
 }
-.address {
- display: none;
-}
 .center-button {
  text-align: center;
 }
-.bid-status {
-background: #3CB43E;
-font-family: "Montserrat", sans-serif;
-padding-top: 12px;
-text-align: center;
-height: 42px;
-}
-.bid-status a {
-font-size: 20px;
-text-decoration: none;
-color: white;
-}
 
-/*typesetting*/
+// typesetting
 
 a {
   text-decoration: none;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Montserrat", sans-serif;
+}
+h1, h2, h3 {
+  color: #3CB43E;
 }
 h1 {
   float: left;
   font-size: 30px;
   line-height: 1.8;
-  font-family: "Montserrat", sans-serif;
 }
 h1 a {
   width: 50px;
   font-size: 25px;
-  color: #3CB43E;
   float: left;
   margin-top: 0;
   line-height: 1;
@@ -69,7 +54,7 @@ h1 a {
   position: fixed;
   top: 15px;
   left: 15px;
-  margin: -5px; 
+  margin: -5px;
 }
 h1 a:hover {
   color: #3CB43E;
@@ -77,37 +62,33 @@ h1 a:hover {
 }
 h2 {
   font-size: 102px;
-  color: #3CB43E;
   padding-bottom: 12px;
   line-height: 3;
-  font-family: "Montserrat", sans-serif;
 }
 h3 {
   font-size: 18px;
   line-height: 1.8;
-  font-family: "Montserrat", sans-serif;
-  color: #3CB43E; 
 }
 h4 {
   font-size: 16px;
   line-height: 1.3;
-  float: center; 
-  font-family: "Montserrat", sans-serif;
 }
 h5 {
   font-size: 10px;
   margin-top: -30px;
   line-height: 1.8;
-  font-family: "Montserrat", sans-serif;
 }
 h6 {
   font-size: 18px;
   line-height: 1.8;
-  font-family: "Montserrat", sans-serif;
   color: white; 
 }
+p {
+ font-family: "Cardo", serif;
+ font-weight: 300;
+}
 
-/*form font */
+// form font
 
 label {
   display: block;
@@ -143,7 +124,7 @@ input {
   background: #eee;
 }
 
-/*nav bar*/
+// nav bar
 
 .header {
   height: 45px;
@@ -186,7 +167,7 @@ nav {
   font-size: 12px;
 }
 
-/*footer*/
+// footer
 
 .footer {
   position:fixed;
@@ -204,8 +185,11 @@ nav {
   padding-right: 10px;
 }
 
-/* js-dependent */
+// js-dependent
 
+.address {
+ display: none;
+}
 #toggle-index-map-list {
   width: 120px;
   height: 30px;
