@@ -61,6 +61,7 @@ h1 a:hover {
   text-decoration: none;
 }
 h2 {
+  margin: 0;
   font-size: 102px;
   padding-bottom: 12px;
   line-height: 3;
@@ -105,8 +106,7 @@ input {
   width: 450px;
   margin: 0 auto;
   margin-top: 60px;
-  border-radius: 8px; 
-  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.20);
+  border-radius: 8px;
   background: #FBFBF4; 
   padding: 20px;
 }
