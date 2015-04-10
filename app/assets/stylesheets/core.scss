@@ -127,7 +127,7 @@ input {
 // nav bar
 
 .header {
-  height: 45px;
+  height: 42px;
   z-index: 999;
   font-family: "Montserrat", sans-serif;
   font-size: 18px;
@@ -162,8 +162,13 @@ nav {
   padding: 10px;
 }
 .nav-links-item a {
-  color: #888888;
+  color: #ddd;
   font-size: 12px;
+  border-bottom: 2px solid rgb(20,24,39);
+  transition: 0.5s;
+}
+.nav-links-item a:hover {
+  border-bottom: 2px solid #ddd;
 }
 
 // footer
