@@ -10,7 +10,8 @@
 // index
 
 .jobs-index-map-container {
-  width: calc(100% - 442px);
+  width: 100%;
+  padding-right: 442px;
   height: 100%;
   position: fixed;
   top: 42px;
@@ -26,11 +27,10 @@
   position: fixed;
   width: 442px;
   height: 100%;
-  overflow: scroll;
   right: 0;
   top: 42px;
   padding: 20px;
-  background: white;
+  overflow: scroll;
 }
 .job-index-list-top {}
 #jobs-index-list-search {
