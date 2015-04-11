@@ -1,3 +1,56 @@
+// all
+
+.address {
+ display: none;
+}
+.job-id {
+  display: none;
+}
+
+// index
+
+.jobs-index-map-container {
+  width: calc(100% - 442px);
+  height: 100%;
+  position: fixed;
+  top: 42px;
+  left: 0;
+  z-index: -100
+}
+#jobs-index-map {
+  width:100%;
+  height:100%;
+  background-color: #eee;
+}
+.jobs-index-list {
+  position: fixed;
+  width: 442px;
+  height: 100%;
+  overflow: scroll;
+  right: 0;
+  top: 42px;
+  padding: 20px;
+  background: white;
+}
+.job-index-list-top {}
+#jobs-index-list-search {
+  z-index:100;
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+}
+.job-index-post {
+  border-bottom: 1px solid black;
+  margin-bottom: 20px;
+}
+
+// show
+
+#job-show-map {
+  width: 100%;
+  height: 400px;
+  background-color: #eee;
+}
 .job-show-header {
   width: 500px;
   float: left;
@@ -58,20 +111,15 @@
   float: right;
   color: white;
 }
-.job-index-post {
-  border: 1px solid black;
-  margin-bottom: 20px;
-  padding: 20px;
-}
 .bid-status {
-background: #3CB43E;
-font-family: "Montserrat", sans-serif;
-padding-top: 12px;
-text-align: center;
-height: 42px;
+  background: #3CB43E;
+  font-family: "Montserrat", sans-serif;
+  padding-top: 12px;
+  text-align: center;
+  height: 42px;
 }
 .bid-status a {
-font-size: 20px;
-text-decoration: none;
-color: white;
+  font-size: 20px;
+  text-decoration: none;
+  color: white;
 }

@@ -76,6 +76,12 @@ function initIndexMap() {
     center: new google.maps.LatLng(51.519889, -0.068799),
     zoom: 10,
     styles: mapStyle,
+    panControl: false,
+    zoomControl: true,
+    mapTypeControl: false,
+    scaleControl: false,
+    streetViewControl: false,
+    overviewMapControl: false
   };
   var map = new google.maps.Map(document.getElementById('jobs-index-map'), mapOptions);
   addMarkers(map);
@@ -93,6 +99,12 @@ function initShowMap() {
     center: new google.maps.LatLng(51.519889, -0.068799),
     zoom: 15,
     styles: mapStyle,
+    panControl: false,
+    zoomControl: true,
+    mapTypeControl: false,
+    scaleControl: false,
+    streetViewControl: true,
+    overviewMapControl: false
   };
   var map = new google.maps.Map(document.getElementById('job-show-map'), mapOptions);
   addMarkers(map);
