@@ -1,0 +1,77 @@
+.job-show-header {
+  width: 500px;
+  float: left;
+}
+.job-show-content {
+  width: 460px;
+  padding: 20px;
+  float: right;
+}
+.job-show-helper {
+  float: left;
+  width: 500px;
+  height: 300px;
+  border-top: 1px solid black;
+  margin-top: 20px;
+  padding: 10px;
+}
+.job-show-select-helper {
+  float: left;
+  width: 500px;
+  height: 300px;
+  border-top: 1px solid black;
+  margin-top: 20px;
+  padding: 10px;
+}
+.embedded-profile {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-top: 20px;
+  background: white;
+  overflow: scroll;
+}
+.embedded-profile-image {
+  width:100px;
+  height:100px;
+  float:left;
+  padding:0;
+  vertical-align:middle;
+}
+.embedded-profile-image img {
+  margin: 0 auto;
+  margin-left: 5px;
+  border-radius:100%;
+}
+.embedded-profile-stats {
+  width: 375px;
+  float:left;
+  padding: 10px;
+  vertical-align: middle;
+}
+.embedded-profile button {
+  width: 80px;
+  height: 30px;
+  background-color: #3CB43E; 
+  line-height: -25px;
+  font-size: 12px; 
+  border: 1px solid white;
+  float: right;
+  color: white;
+}
+.job-index-post {
+  border: 1px solid black;
+  margin-bottom: 20px;
+  padding: 20px;
+}
+.bid-status {
+background: #3CB43E;
+font-family: "Montserrat", sans-serif;
+padding-top: 12px;
+text-align: center;
+height: 42px;
+}
+.bid-status a {
+font-size: 20px;
+text-decoration: none;
+color: white;
+}
