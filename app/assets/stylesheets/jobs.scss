@@ -11,7 +11,7 @@
 
 .jobs-index-map-container {
   width: 100%;
-  padding-right: 442px;
+  padding-right: 441px;
   height: 100%;
   position: fixed;
   top: 42px;
@@ -25,14 +25,19 @@
 }
 .jobs-index-list {
   position: fixed;
-  width: 442px;
+  width: 441px;
   height: 100%;
   right: 0;
   top: 42px;
   padding: 20px;
   overflow: scroll;
+  border-left: 1px solid #eee;
 }
 .job-index-list-top {}
+.jobs-index-filter {
+  border-bottom: 3px solid #eee;
+  cursor: pointer;
+}
 #jobs-index-list-search {
   z-index:100;
   width: 100%;

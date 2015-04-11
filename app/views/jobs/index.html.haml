@@ -3,17 +3,22 @@
 
 .jobs-index-list
   .job-index-list-top
-    %h3 title
-    %h5 instructions
+    %h3 Search
+    %p
+      %em
+        Filter jobs
+        %span.jobs-index-filter near your location,
+        find the ones
+        %span.jobs-index-filter without offers,
+        or search below:
     %input#jobs-index-list-search{placeholder: 'enter an address'}
   - @jobs.each do |job|
     .job-index-post
       %h3= link_to job.title, job_path(job)
-      %h4
-        Posted by:
+      %h5
+        Posted by
         = job.poster.username
-      %h4
-        Date and Time:
+        for
         = job.date_time.to_formatted_s(:long_ordinal)
       %p= job.description
       .address= job.postcode
