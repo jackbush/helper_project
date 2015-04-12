@@ -1,6 +1,12 @@
-.standard-width-content
-  = image_tag(@user.image)
+.user-profile
+  .avatar
+    = image_tag(@user.image)
 
   %h2= @user.username
+  %h4
+    = pluralize(@num_posted, 'request')
+    • 
+    = pluralize(@num_offered, 'offer')
+    • helped
+    = pluralize(@num_helped, 'time')
   %h3= @user.about
-  %p= @user.about
