@@ -3,20 +3,15 @@
   -webkit-background-size: cover;
   -moz-background-size: cover;
   text-align: center;
-  width: 100%;
   min-height: 260px;
-  letter-spacing: 2px;
-  font-family: "Montserrat", sans-serif;
   background: #ddd;
 }
 .subheader {
-  font-family: "Montserrat", sans-serif;
-  width: 640px;
+  width: 660px;
   margin: 20px auto;
   text-align: center;
-  font-size: 24px;
-  line-height: 1.4;
-  color: rgb(20,24,39);
+  line-height: 1.7;
+  color: $color-navy;
 }
 .welcome-index-text {
   width: 960px;
@@ -25,20 +20,19 @@
   margin-bottom: 20px;
   font-size: 17px;
   line-height: 2;
-}
-.welcome-index-text a {
-  background: #3CB43E;
-  font-family: "Montserrat", sans-serif;
-  font-size: 22px;
-  text-decoration: none;
-  color: white;
-  display: block;
-  width: 300px;
-  height: 50px;
-  padding-top: 4px;
-  margin: 0 auto;
-  margin-top: 30px;
-  text-align: center;
+  a {
+    display: block;
+    width: 300px;
+    height: 50px;
+    background: $color-green;
+    padding-top: 6px;
+    margin: 30px auto;
+    text-align: center;
+    color: white;
+    font-family: $font-header;
+    font-size: 22px;
+    text-decoration: none;
+  }
 }
 .header-image#home-img-a {
   // background: url() no-repeat center center fixed;

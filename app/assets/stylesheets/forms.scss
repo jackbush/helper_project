@@ -21,12 +21,12 @@ input {
   text-align: center;
   font-family: 'Montserrat'; 
   line-height: 220%;
-}
-.page-nav a {
-  display: inline-block;
-  width: 150px;
-  height: 35px;
-  border-radius: 8px; 
-  text-align: center;
-  background: #eee;
+  a {
+    display: inline-block;
+    width: 150px;
+    height: 35px;
+    border-radius: 8px; 
+    text-align: center;
+    background: #eee;
+  }
 }
