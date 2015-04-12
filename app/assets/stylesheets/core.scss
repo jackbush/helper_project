@@ -34,7 +34,10 @@ h1 {
   line-height: 3;
   letter-spacing: 2px;
 }
-h2 {}
+h4 {
+  font-size: 14px;
+  margin-top: -14px;
+}
 
 p {
   font-family: $font-body;

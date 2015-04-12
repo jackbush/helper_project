@@ -39,14 +39,13 @@
   cursor: pointer;
 }
 #jobs-index-list-search {
-  z-index: 100;
   width: 100%;
   margin: 10px 0;
   padding: 10px;
 }
 .job-index-post {
-  border-bottom: 1px solid black;
-  margin-bottom: 20px;
+  border-bottom: 1px dotted black;
+  margin-bottom: 28px;
 }
 
 // show
@@ -57,14 +56,17 @@
   background-color: #eee;
 }
 .job-show-header {
-  width: 500px;
+  width: 380px;
   float: left;
 }
 .job-show-content {
-  width: 460px;
-  padding: 20px;
+  width: 580px;
+  padding-left: 20px;
   float: right;
 }
+
+// bid management
+
 .job-show-helper {
   float: left;
   width: 500px;
@@ -122,9 +124,9 @@
   padding-top: 12px;
   text-align: center;
   height: 42px;
-}
-.bid-status a {
-  font-size: 20px;
-  text-decoration: none;
-  color: white;
+  a {
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+  }
 }
