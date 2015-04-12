@@ -99,6 +99,7 @@ function initShowMap() {
     center: new google.maps.LatLng(51.519889, -0.068799),
     zoom: 15,
     styles: mapStyle,
+    scrollwheel: false,
     panControl: false,
     zoomControl: true,
     mapTypeControl: false,
