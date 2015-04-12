@@ -1,0 +1,32 @@
+label {
+  display: block;
+  color: #8f8f8f;
+  font-family: 'Montserrat', sans-serif; 
+  font-weight: lighter;
+}
+input {
+  color: black; 
+  margin-bottom: 5px;
+  width: 100%;
+}
+.form {
+  width: 450px;
+  margin: 0 auto;
+  margin-top: 60px;
+  border-radius: 8px;
+  background: #FBFBF4; 
+  padding: 20px;
+}
+.page-nav {
+  text-align: center;
+  font-family: 'Montserrat'; 
+  line-height: 220%;
+}
+.page-nav a {
+  display: inline-block;
+  width: 150px;
+  height: 35px;
+  border-radius: 8px; 
+  text-align: center;
+  background: #eee;
+}

@@ -1,0 +1,43 @@
+.header {
+  position: fixed;
+  height: 42px;
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding: 25px 0 0 0;
+  background: $color-navy;
+  z-index: 1000;
+  font-family: $font-header;
+  border-bottom: 1px solid #222;
+}
+.nav-title {
+  font-size: 28px;
+  position: fixed;
+  top: 5px;
+  left: 5px;
+}
+.nav-title a {
+  color: $color-green;
+}
+.nav-links {
+  float: right;
+  list-style: none;
+  padding-right: 40px;
+  text-align: center;
+  margin: -22px;
+}
+.nav-links-item {
+  display: inline-block;
+  margin-left: 35px;
+  line-height: 1.5;
+  padding: 10px;
+  font-size: 12px;
+}
+.nav-links-item a {
+  color: #ddd;
+  border-bottom: 2px $color-navy;
+  transition: 0.5s;
+}
+.nav-links-item a:hover {
+  border-bottom: 2px solid #ddd;
+}

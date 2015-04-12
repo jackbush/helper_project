@@ -10,8 +10,21 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require "normalize"
- *= require "core"
- *= require_tree .
- *= require_self
+ * require "normalize"
+ * require "core"
+ * require_tree .
+ * require_self
  */
+
+@import "normalize";
+@import "core";
+
+@import "navbar";
+@import "forms";
+
+@import "welcome";
+@import "dashboard";
+@import "jobs";
+
+
+
