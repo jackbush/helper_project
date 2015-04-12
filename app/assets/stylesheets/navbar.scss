@@ -1,0 +1,39 @@
+.header {
+  position: fixed;
+  height: 42px;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: $color-navy;
+  z-index: 1000;
+  border-bottom: 1px solid #222;
+  font-family: $font-header;
+}
+.nav-title {
+  font-size: 28px;
+  position: fixed;
+  top: 5px;
+  left: 5px;
+}
+.nav-title a {
+  color: $color-green;
+}
+.nav-links {
+  float: right;
+  margin-top: 11px;
+  list-style: none;
+  text-align: center;
+}
+.nav-links-item {
+  display: inline-block;
+  padding: 0 28px;
+  font-size: 12px;
+}
+.nav-links-item a {
+  color: #ddd;
+  border-bottom: 2px $color-navy;
+  transition: 0.5s;
+}
+.nav-links-item a:hover {
+  border-bottom: 2px solid #ddd;
+}

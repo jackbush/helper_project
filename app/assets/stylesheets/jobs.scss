@@ -19,8 +19,8 @@
   z-index: -100
 }
 #jobs-index-map {
-  width:100%;
-  height:100%;
+  width: 100%;
+  height: 100%;
   background-color: #eee;
 }
 .jobs-index-list {
@@ -39,7 +39,7 @@
   cursor: pointer;
 }
 #jobs-index-list-search {
-  z-index:100;
+  z-index: 100;
   width: 100%;
   margin: 10px 0;
   padding: 10px;
@@ -89,20 +89,20 @@
   overflow: scroll;
 }
 .embedded-profile-image {
-  width:100px;
-  height:100px;
-  float:left;
-  padding:0;
-  vertical-align:middle;
-}
-.embedded-profile-image img {
-  margin: 0 auto;
-  margin-left: 5px;
-  border-radius:100%;
+  width: 100px;
+  height: 100px;
+  float: left;
+  padding: 0;
+  vertical-align: middle;
+  img {
+    margin: 0 auto;
+    margin-left: 5px;
+    border-radius: 100%;
+  }
 }
 .embedded-profile-stats {
   width: 375px;
-  float:left;
+  float: left;
   padding: 10px;
   vertical-align: middle;
 }
