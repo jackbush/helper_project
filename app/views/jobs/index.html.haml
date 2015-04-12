@@ -15,11 +15,7 @@
   - @jobs.each do |job|
     .job-index-post
       %h3= link_to job.title, job_path(job)
-      %h5
-        Posted by
-        = job.poster.username
-        for
-        = job.date_time.to_formatted_s(:long_ordinal)
+      %h4= job.date_time.to_formatted_s(:long_ordinal)
       %p= job.description
       .address= job.postcode
       - if job.applicants.include? current_user

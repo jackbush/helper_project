@@ -4,7 +4,7 @@
 
 .standard-width-content
   .job-show-header
-    %h3= @job.title
+    %h2= @job.title
     %h4
       Posted by
       = link_to @job.poster.username, profile_path(@job.poster)
@@ -21,19 +21,19 @@
       .bid-status= link_to 'I CAN HELP', new_job_bid_path(@job)
 
   .job-show-content
-    %h4 Description
+    %h3 Description
     %p= @job.description
-    %h4 Requested Time
+    %h3 Requested Time
     %p= @job.date_time.to_formatted_s(:long_ordinal)
 
     - if user_signed_in?
       - if @job.poster == current_user || @job.helper == current_user
-        %h4 Instructions
+        %h3 Instructions
         %p= @job.instructions
-        %h4 Address
+        %h3 Address
         %p= @job.address
         - if @job.helper
-          %h4 Agreed time
+          %h3 Agreed time
           %p= @job.date_time.to_formatted_s(:long_ordinal)
 
   - if user_signed_in? && @job.poster == current_user
