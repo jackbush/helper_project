@@ -6,12 +6,12 @@
     %h2 Search
     %p
       %em
-        Filter jobs
-        %span.jobs-index-filter near your location,
+        See the jobs
+        %span.jobs-index-filter#by-location near your location,
         find the ones
-        %span.jobs-index-filter without offers,
-        or search below:
-    %input#jobs-index-list-search{placeholder: 'enter an address'}
+        %span.jobs-index-filter#no-offers without offers yet,
+        or enter a location below:
+    %input#jobs-index-list-search{placeholder: 'ENTER A POSTCODE'}
   - @jobs.each do |job|
     .job-index-post
       %h3= link_to job.title, job_path(job)

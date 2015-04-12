@@ -30,6 +30,9 @@
   padding: 20px;
   overflow: scroll;
   border-left: 1px solid #eee;
+  h2 {
+    margin-bottom: 0;
+  }
 }
 .jobs-index-filter {
   border-bottom: 3px solid #eee;
@@ -37,8 +40,8 @@
 }
 #jobs-index-list-search {
   width: 100%;
-  margin: 10px 0;
-  padding: 10px;
+  margin: 0 0 20px 0;
+  padding: 13px 10px 7px 10px;
 }
 .job-index-post {
   border-bottom: 1px dotted black;
