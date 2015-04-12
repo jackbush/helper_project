@@ -10,12 +10,12 @@
   background: #ddd;
 }
 .subheader {
+  font-family: "Montserrat", sans-serif;
   width: 640px;
-  margin: 0 auto;
-  padding-bottom: 75px;
-  margin-bottom: 75px;
+  margin: 20px auto;
+  text-align: center;
   font-size: 24px;
-  line-height: 1.2;
+  line-height: 1.4;
   color: rgb(20,24,39);
 }
 .welcome-index-text {
@@ -40,13 +40,10 @@
   margin-top: 30px;
   text-align: center;
 }
-// .header-image#a {
-//   background: url(https://s3-eu-west-1.amazonaws.com/ga-helpr-project/old_people2.jpg) no-repeat center center fixed;
-//   z-index: 100; 
-// }
-// .header-image#b {
-//   background: url(https://s3-eu-west-1.amazonaws.com/ga-helpr-project/a_z_map2.jpg) no-repeat center center fixed;
-// }
-// .header-image#c {
-//   background: url(https://s3-eu-west-1.amazonaws.com/ga-helpr-project/Meals_on_Wheels2.jpg) no-repeat center center fixed;
+.header-image#home-img-a {
+  // background: url() no-repeat center center fixed;
+  padding-top: 48px;
+}
+// .header-image#home-img-b {
+//   background: url() no-repeat center center fixed;
 // }
