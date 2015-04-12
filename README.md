@@ -6,7 +6,7 @@ Built using Ruby 2.1.4, Rails 4.2.0 and PostgreSQL
 
 ### On Heroku:
 
-<https://helpr.jackbush.co/>
+<http://helpr.jackbush.co/>
 
 ### To run locally:
 
