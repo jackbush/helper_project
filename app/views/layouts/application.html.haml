@@ -12,6 +12,7 @@
   = render 'layouts/header'
   .site-content
     .devise-alerts
-      %p.notice= notice
-      %p.alert= alert
+      .flash-notice
+        %p= notice
+        %p= alert
     = yield
