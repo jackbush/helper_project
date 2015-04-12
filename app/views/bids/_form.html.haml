@@ -1,13 +1,12 @@
 .form
   .new-bid
     = form_for [@job, @bid] do |f|
-
       = f.fields_for :bid do |b| 
-
-        %p= f.label :date_time
-        %p= f.datetime_select  :date_time
-    
-        %p= b.label :note
-        %p= b.text_field :note
-    
-      = f.submit
+        .field
+          %p= f.label :date_time
+          %p= f.datetime_select  :date_time
+        .field
+          %p= b.label :note
+          %p= b.text_field :note
+      .actions
+        = f.submit

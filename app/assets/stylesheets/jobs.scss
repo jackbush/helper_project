@@ -1,8 +1,6 @@
 // all
 
-.address {
- display: none;
-}
+.address, 
 .job-id {
   display: none;
 }
@@ -33,7 +31,6 @@
   overflow: scroll;
   border-left: 1px solid #eee;
 }
-.job-index-list-top {}
 .jobs-index-filter {
   border-bottom: 3px solid #eee;
   cursor: pointer;
