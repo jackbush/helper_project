@@ -4,11 +4,10 @@
   width: 100%;
   top: 0;
   left: 0;
-  padding: 25px 0 0 0;
   background: $color-navy;
   z-index: 1000;
-  font-family: $font-header;
   border-bottom: 1px solid #222;
+  font-family: $font-header;
 }
 .nav-title {
   font-size: 28px;
@@ -21,16 +20,13 @@
 }
 .nav-links {
   float: right;
+  margin-top: 10px;
   list-style: none;
-  padding-right: 40px;
   text-align: center;
-  margin: -22px;
 }
 .nav-links-item {
   display: inline-block;
-  margin-left: 35px;
-  line-height: 1.5;
-  padding: 10px;
+  padding: 0 28px;
   font-size: 12px;
 }
 .nav-links-item a {
