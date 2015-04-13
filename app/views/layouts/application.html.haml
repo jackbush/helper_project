@@ -11,8 +11,5 @@
 %body
   = render 'layouts/header'
   .site-content
-    .devise-alerts
-      .flash-notice
-        %p= notice
-        %p= alert
+    .flash-notice= alert || notice
     = yield

@@ -7,9 +7,9 @@
   background: $color-navy;
   z-index: 1000;
   border-bottom: 1px solid #222;
-  font-family: $font-header;
 }
 .nav-title {
+  font-family: $font-title;
   font-size: 24px;
   position: fixed;
   top: 7px;
@@ -27,10 +27,11 @@
   margin-top: 11px;
   list-style: none;
   text-align: center;
+  font-family: $font-header;
 }
 .nav-links-item {
   display: inline-block;
-  padding: 0 28px;
+  padding: 0 33px;
   font-size: 12px;
 }
 .nav-links-item a {

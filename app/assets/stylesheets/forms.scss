@@ -5,12 +5,14 @@
   background: $color-lightgrey;
   padding: 18px;
 }
-.field {
-  label {}
-  input {
-    width: 100%;
-    padding: 10px;
-    margin: 6px 0 18px 0;
+.field input {
+  width: 100%;
+  padding: 10px;
+  margin: 6px 0 18px 0;
+  border: 1px solid #ddd;
+  &:focus {
+    outline: none;
+    border: 1px solid $color-blue;
   }
 }
 input[type="submit"] {
