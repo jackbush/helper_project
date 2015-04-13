@@ -35,8 +35,12 @@
   }
 }
 .jobs-index-filter {
-  border-bottom: 3px solid #eee;
+  border-bottom: 3px solid #ccc;
   cursor: pointer;
+  transition: 0.3s;
+  &:hover {
+    border-bottom: 3px solid $color-green;
+  }
 }
 #jobs-index-list-search {
   width: 100%;
@@ -64,16 +68,21 @@
   padding-left: 20px;
   float: right;
 }
-.bid-status {
+.bid-status a {
+  display: block;
   background: $color-green;
   font-family: $font-header;
   padding-top: 10px;
   text-align: center;
   height: 42px;
-  a {
-    font-size: 20px;
-    text-decoration: none;
-    color: white;
+  font-size: 20px;
+  text-decoration: none;
+  color: white;
+  &:hover {
+    background: white;
+    border: 3px solid $color-green;
+    padding-top: 7px;
+    color: $color-green;
   }
 }
 

@@ -14,9 +14,13 @@
   position: fixed;
   top: 7px;
   left: 7px;
-}
-.nav-title a {
-  color: $color-green;
+  a {
+    color: $color-green;
+    transition: 0.3s;
+    &:hover {
+      color: lighten( $color-green, 7% )
+    }
+  }
 }
 .nav-links {
   float: right;
