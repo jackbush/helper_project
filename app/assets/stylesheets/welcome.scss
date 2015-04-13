@@ -1,7 +1,7 @@
 .header-image {
   text-align: center;
   min-height: 260px;
-  background-color: #ddd;
+  background-color: #eee;
   background-size: cover; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -26,25 +26,24 @@
     display: block;
     width: 300px;
     height: 50px;
-    background: $color-green;
-    padding-top: 7px;
     margin: 30px auto;
+    padding-top: 4px;
+    background: white;
+    border: 3px solid $color-green;
     text-align: center;
-    color: white;
     font-family: $font-header;
     font-size: 22px;
+    color: $color-green;
     text-decoration: none;
   }
   a:hover {
-    background: white;
-    border: 3px solid $color-green;
-    padding-top: 4px;
-    color: $color-green;
+    background: $color-green;
+    color: white;
   }
 }
 #home-img-a {
   background-image: url(http://41.media.tumblr.com/2ed18967c176c37180318e4d3cd10831/tumblr_nmqzf4EEDo1u1xp8xo1_1280.jpg);
-  padding-top: 64px;
+  padding-top: 58px;
 }
 #home-img-b {
   background-image: url(http://36.media.tumblr.com/b71a825f1daa3defb8bbd13c2686d82f/tumblr_nmqzel6s6B1u1xp8xo1_1280.jpg);
