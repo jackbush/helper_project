@@ -27,6 +27,7 @@
   height: 100%;
   right: 0;
   top: 42px;
+  background: $color-lightgrey;
   padding: 20px;
   overflow: scroll;
   border-left: 1px solid #eee;
@@ -70,19 +71,18 @@
 }
 .bid-status a {
   display: block;
-  background: $color-green;
-  font-family: $font-header;
-  padding-top: 10px;
-  text-align: center;
   height: 42px;
+  padding-top: 7px;
+  background: white;
+  border: 3px solid $color-green;
+  text-align: center;
+  font-family: $font-header;
   font-size: 20px;
+  color: $color-green;
   text-decoration: none;
-  color: white;
   &:hover {
-    background: white;
-    border: 3px solid $color-green;
-    padding-top: 7px;
-    color: $color-green;
+    background: $color-green;
+    color: white;
   }
 }
 
