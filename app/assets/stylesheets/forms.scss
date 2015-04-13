@@ -5,13 +5,13 @@
   background: #eee; 
   padding: 18px;
 }
-label {}
-input[type="text"],
-input[type="email"],
-input[type="password"] {
-  width: 100%;
-  padding: 10px;
-  margin: 6px 0 18px 0;
+.field {
+  label {}
+  input {
+    width: 100%;
+    padding: 10px;
+    margin: 6px 0 18px 0;
+  }
 }
 input[type="submit"] {
   width: 100%;

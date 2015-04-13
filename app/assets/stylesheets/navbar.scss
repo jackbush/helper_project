@@ -10,13 +10,17 @@
   font-family: $font-header;
 }
 .nav-title {
-  font-size: 28px;
+  font-size: 24px;
   position: fixed;
-  top: 5px;
-  left: 5px;
-}
-.nav-title a {
-  color: $color-green;
+  top: 7px;
+  left: 7px;
+  a {
+    color: $color-green;
+    transition: 0.3s;
+    &:hover {
+      color: lighten( $color-green, 7% )
+    }
+  }
 }
 .nav-links {
   float: right;

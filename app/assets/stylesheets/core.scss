@@ -1,5 +1,5 @@
 $color-navy: rgb(12, 35, 64);
-$color-green: #3CB43E;
+$color-green: rgb(0, 199, 149);
 $font-header: "Montserrat", sans-serif;
 $font-body: Georgia, serif;
 
@@ -34,6 +34,10 @@ h1, h2, h3, h4, h5, h6 {
   font-family: $font-header;
   a {
     color: #666;
+    transition: 0.3s;
+  }
+  a:hover {
+    color: $color-green;
   }
 }
 h1 {

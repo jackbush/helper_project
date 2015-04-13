@@ -9,7 +9,7 @@
 
 .jobs-index-map-container {
   width: 100%;
-  padding-right: 441px;
+  padding-right: 451px;
   height: 100%;
   position: fixed;
   top: 42px;
@@ -23,7 +23,7 @@
 }
 .jobs-index-list {
   position: fixed;
-  width: 441px;
+  width: 451px;
   height: 100%;
   right: 0;
   top: 42px;
@@ -35,13 +35,17 @@
   }
 }
 .jobs-index-filter {
-  border-bottom: 3px solid #eee;
+  border-bottom: 3px solid #ccc;
   cursor: pointer;
+  transition: 0.3s;
+  &:hover {
+    border-bottom: 3px solid $color-green;
+  }
 }
 #jobs-index-list-search {
   width: 100%;
   margin: 0 0 20px 0;
-  padding: 13px 10px 7px 10px;
+  padding: 12px 10px 8px 10px;
 }
 .job-index-post {
   border-bottom: 1px dotted black;
@@ -64,16 +68,21 @@
   padding-left: 20px;
   float: right;
 }
-.bid-status {
+.bid-status a {
+  display: block;
   background: $color-green;
   font-family: $font-header;
   padding-top: 10px;
   text-align: center;
   height: 42px;
-  a {
-    font-size: 20px;
-    text-decoration: none;
-    color: white;
+  font-size: 20px;
+  text-decoration: none;
+  color: white;
+  &:hover {
+    background: white;
+    border: 3px solid $color-green;
+    padding-top: 7px;
+    color: $color-green;
   }
 }
 
