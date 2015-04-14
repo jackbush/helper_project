@@ -1,16 +1,14 @@
 .form
-  %h2
-    Edit #{resource_name.to_s.humanize}
+  %h2 Edit #{resource_name.to_s.humanize}
+  %h5 We use Gravatars to show profile pictures. Please go <a href="https://signup.wordpress.com/signup/?ref=oauth2&oauth2_redirect=f74c53eaf5f25874681f5beacfb48bf7%40https%3A%2F%2Fpublic-api.wordpress.com%2Foauth2%2Fauthorize%2F%3Fclient_id%3D1854%26response_type%3Dcode%26blog_id%3D0%26state%3D079d982952e2af4922f2ca16b0c4fba72e31225141e597576b23eaa4ecf53f01%26redirect_uri%3Dhttps%253A%252F%252Fen.gravatar.com%252Fconnect%252F%253Faction%253Drequest_access_token%26jetpack-code%26jetpack-user-id%3D0%26action%3Doauth2-login&wpcom_connect=1">here</a> to change yours.
   = form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f|
     = devise_error_messages!
     .field
       = f.label :email
-      %br/
       = f.email_field :email, autofocus: true
 
     .field
       = f.label :username
-      %br
       = f.text_field :username
     
     - if devise_mapping.confirmable? && resource.pending_reconfirmation?
@@ -20,21 +18,19 @@
     .field
       = f.label :password
       %i (leave blank if you don't want to change it)
-      %br/
       = f.password_field :password, autocomplete: "off"
     
     .field
       = f.label :password_confirmation
-      %br/
       = f.password_field :password_confirmation, autocomplete: "off"
     
     .field
       = f.label :current_password
       %i (we need your current password to confirm your changes)
-      %br/
       = f.password_field :current_password, autocomplete: "off"
     
     .actions
       = f.submit "Update"
+
   .page-nav
     = link_to "Back", :back
