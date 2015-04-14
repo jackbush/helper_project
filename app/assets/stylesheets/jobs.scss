@@ -99,6 +99,11 @@
 .job-show-helper {
   float: left;
   width: 380px;
+  h6 {
+    margin-top: 28px;
+    font-size: 18px;
+    font-style: italic;
+  }
 }
 .job-show-select-helper {
   float: left;
@@ -145,7 +150,7 @@
   }
 }
 
-// user partial
+// user profile
 
 .user-profile {
   width: 400px;

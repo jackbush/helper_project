@@ -27,7 +27,7 @@
         %h2 Your Pending Offers
         = link_to 'LEND A HAND', jobs_path
       .dashboard-jobs-details
-        - if @helper_jobs == []
+        - if @offers == []
           %h5 (No offers to display)
         -else
           - @offers.order('date_time').each do |offer|
@@ -48,7 +48,7 @@
           %h5 (No tasks to display)
         -else
           - @helper_jobs.order('date_time').each do |job|
-            .dashboard-job
+            .dashboard-offer
               %h3= link_to job.title, job_path(job)
               %h4= job.date_time.to_formatted_s(:long_ordinal)
               %h4= job.address

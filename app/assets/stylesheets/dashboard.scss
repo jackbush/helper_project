@@ -42,7 +42,7 @@
 .dashboard-jobs-details {
   display: inline-block;
   padding: 10px;
-  max-height: 100%;
+  max-height: 400px;
   overflow: scroll;
 }
 .dashboard-job {
@@ -68,22 +68,8 @@
     background: $color-blue;
     color: $color-lightgrey;
   }
-  .red a {
-    width: 49%;
-    height: 42px;
-    margin: 6px 0 0 0;
-    padding-top: 7px;
-    background: $color-lightgrey;
-    border: 3px solid $color-red;
-    text-align: center;
-    font-family: $font-header;
-    font-size: 20px;
-    color: $color-red;
-    text-decoration: none;
-    text-transform: uppercase;
-  }
-  .red a:hover {
-    background: $color-red;
-    color: $color-lightgrey;
-  }
+  
+}
+.dashboard-offer {
+  width: 378px;
 }

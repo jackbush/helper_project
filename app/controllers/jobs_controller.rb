@@ -4,7 +4,7 @@ class JobsController < ApplicationController
   authorize_resource
 
   def index
-    @jobs = Job.where( helper: nil )#.where(["date_time > ?", Time.now])
+    @jobs = Job.where( helper: nil ).where(["date_time > ?", Time.now])
     respond_to do |format|
       format.html
       format.json { render json: @jobs }
