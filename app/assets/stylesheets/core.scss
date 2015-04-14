@@ -2,6 +2,7 @@ $color-navy: rgb(12, 35, 64);
 $color-green: rgb(0, 199, 149);
 $color-lightgrey: rgb(251, 251, 252);
 $color-blue: rgb(139, 191, 207);
+$color-red: rgb(200, 91, 91);
 $font-title: "Montserrat", "Gill Sans", sans-serif;
 $font-header: "Gill Sans", "Montserrat", sans-serif;
 $font-body: "Georgia", serif;
@@ -64,7 +65,11 @@ h4 {
   font-size: 14px;
   margin-top: -14px;
 }
-
+h5 {
+  font-size: 16px;
+  font-weight: normal;
+  font-style: italic;
+}
 p {
   font-family: $font-body;
   font-size: 14px;
