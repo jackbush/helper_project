@@ -37,7 +37,9 @@ class JobsController < ApplicationController
   def update
     @job = Job.find(params[:id])
     @job.update(job_params)
-    @job.helper_assigned_email
+    if @job.helper != nil
+      @job.helper_assigned_email
+    end
     respond_to do |format|
       format.html
       format.json { head :no_content, status: :ok }
