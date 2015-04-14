@@ -1,7 +1,6 @@
-%h2 Edit Bid
-
-= render 'form'
-
-.page-nav
-  = link_to 'CANCEL', job_bids_path
-  = link_to 'DELETE', bid_path(@bid), method: :delete
+.form
+  %h2 Edit Bid
+  = render 'form'
+  .page-nav
+    = link_to 'CANCEL', dashboard_path
+    = link_to 'DELETE', bid_path(@bid), method: :delete

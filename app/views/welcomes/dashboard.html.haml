@@ -1,32 +1,56 @@
-.standard-width-content
-  
-  - if current_user.poster_jobs == [] && current_user.helper_jobs == []
-    %h2 Welcome!
-    %h3 To get started, please browse or post jobs from the links above.
-  
-  - if current_user.poster_jobs != []
-    %h2 Jobs Posted
-
-  - current_user.poster_jobs.order('date_time').each do |job|
-    .job-index-post
-      %h3= link_to job.title, job_path(job)
-      %h4
-        = job.date_time.to_formatted_s(:long_ordinal)
-        |
-        = pluralize(job.applicants.count, 'offer')
-      %p= job.description
-
-  - if current_user.helper_jobs != []
-    %h2 Helping With
-
-  - current_user.helper_jobs.order('date_time').each do |job|
-    .job-index-post
-      %h3= link_to job.title, job_path(job)
-      %h4
-      %p= job.description
-      %h4 Instructions
-      %p= job.instructions
-      %h4 Agreed time
-      %p= job.date_time.to_formatted_s(:long_ordinal)
-      %h4 Address
-      %p= job.address
+.dashboard-jobs-container
+  - if current_user.poster_jobs == [] && current_user.helper_jobs == [] && current_user.bids == []
+    %h1 Welcome!
+    %h2 To get started, please browse or post jobs from the links above.
+  -else
+    .dashboard-jobs-column
+      .dashboard-jobs-top
+        %h2 Your Posted Tasks
+        = link_to 'FIND A HELPR', new_job_path
+      .dashboard-jobs-details
+        - if @poster_jobs == []
+          %h5 (No tasks to display)
+        -else
+          - @poster_jobs.order('date_time').each do |job|
+            .dashboard-job
+              %h3= link_to job.title, job_path(job)
+              %h4= job.date_time.to_formatted_s(:long_ordinal)
+              %h4= job.address
+              .dashboard-job-links
+                = link_to 'EDIT', edit_job_path(job), class: 'left'
+                - if job.helper == nil
+                  = link_to pluralize(job.applicants.count, 'offer'), job_path(job), class: 'right'
+                - else
+                  = link_to 'assigned', job_path(job), class: 'right'
+    .dashboard-jobs-column
+      .dashboard-jobs-top
+        %h2 Your Pending Offers
+        = link_to 'LEND A HAND', jobs_path
+      .dashboard-jobs-details
+        - if @offers == []
+          %h5 (No offers to display)
+        -else
+          - @offers.order('date_time').each do |offer|
+            - if offer.job.helper == nil
+              .dashboard-job
+                %h3= link_to offer.job.title, job_path(offer.job)
+                %h4= offer.date_time.to_formatted_s(:long_ordinal)
+                %h4= offer.job.address
+                %p= offer.note
+                .dashboard-job-links
+                  = link_to 'EDIT', edit_bid_path(offer), class: 'left'
+                  = link_to 'WITHDRAW', bid_path(offer), method: :delete, class: 'right'
+    .dashboard-jobs-column
+      .dashboard-jobs-top
+        %h2 You're Helping With
+        = link_to 'BROWSE POSTS', jobs_path
+      .dashboard-jobs-details
+        - if @helper_jobs == []
+          %h5 (No tasks to display)
+        -else
+          - @helper_jobs.order('date_time').each do |job|
+            .dashboard-offer
+              %h3= link_to job.title, job_path(job)
+              %h4= job.date_time.to_formatted_s(:long_ordinal)
+              %h4= job.address
+              %p= job.instructions

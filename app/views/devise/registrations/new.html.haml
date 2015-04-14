@@ -1,5 +1,6 @@
 .form
   %h2 Sign up
+  %h5 We use Gravatars to show profile pictures. Please go <a href="https://signup.wordpress.com/signup/?ref=oauth2&oauth2_redirect=f74c53eaf5f25874681f5beacfb48bf7%40https%3A%2F%2Fpublic-api.wordpress.com%2Foauth2%2Fauthorize%2F%3Fclient_id%3D1854%26response_type%3Dcode%26blog_id%3D0%26state%3D079d982952e2af4922f2ca16b0c4fba72e31225141e597576b23eaa4ecf53f01%26redirect_uri%3Dhttps%253A%252F%252Fen.gravatar.com%252Fconnect%252F%253Faction%253Drequest_access_token%26jetpack-code%26jetpack-user-id%3D0%26action%3Doauth2-login&wpcom_connect=1">here</a> to get yours.
   = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
     = devise_error_messages!
     

@@ -4,7 +4,7 @@ class JobsController < ApplicationController
   authorize_resource
 
   def index
-    @jobs = Job.where( helper: nil )
+    @jobs = Job.where( helper: nil ).where(["date_time > ?", Time.now])
     respond_to do |format|
       format.html
       format.json { render json: @jobs }
@@ -37,7 +37,9 @@ class JobsController < ApplicationController
   def update
     @job = Job.find(params[:id])
     @job.update(job_params)
-    @job.helper_assigned_email
+    if @job.helper != nil
+      @job.helper_assigned_email
+    end
     respond_to do |format|
       format.html
       format.json { head :no_content, status: :ok }

@@ -1,24 +1,22 @@
-.form
-  .new-job
-    = form_for @job do |f|
-      .field
-        = f.label :title
-        = f.text_field :title
-      .field
-        = f.label :description
-        = f.text_field  :description
-      .field
-        = f.label :instructions
-        = f.text_field  :instructions
-      .field
-        = f.label :address
-        = f.text_field  :address
-      .field
-        = f.label :date_time
-        = f.datetime_select  :date_time
-      .field
-        = f.label :postcode
-        = f.text_field  :postcode
-      .actions
-        = f.submit
+= form_for @job do |f|
+  .field
+    = f.label :title
+    = f.text_field :title
+  .field
+    = f.label :description
+    = f.text_field  :description
+  .field
+    = f.label :instructions
+    = f.text_field  :instructions
+  .field
+    = f.label :address
+    = f.text_field  :address
+  .field
+    = f.label :postcode
+    = f.text_field  :postcode
+  .field
+    = f.label :date_time, 'Date & Time'
+    = f.datetime_select  :date_time
+  .actions
+    = f.submit
 
