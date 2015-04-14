@@ -14,9 +14,9 @@
         - if @job.poster == current_user
           = link_to 'EDIT', edit_job_path
         - elsif @job.helper == current_user
-          = YOU HAVE WON THIS TASK
+          = link_to 'YOU HAVE WON', dashboard_path
         - elsif @job.applicants.include? current_user
-          = YOU HAVE OFFERED
+          = link_to 'YOU HAVE OFFERED', dashboard_path
     - else
       .bid-status= link_to 'I CAN HELP', new_job_bid_path(@job)
 
