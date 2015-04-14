@@ -31,14 +31,15 @@
           %h5 (No offers to display)
         -else
           - @offers.order('date_time').each do |offer|
-            .dashboard-job
-              %h3= link_to offer.job.title, job_path(offer.job)
-              %h4= offer.date_time.to_formatted_s(:long_ordinal)
-              %h4= offer.job.address
-              %p= offer.note
-              .dashboard-job-links
-                = link_to 'EDIT', edit_bid_path(offer), class: 'left'
-                = link_to 'WITHDRAW', bid_path(offer), method: :delete, class: 'right'
+            - if offer.job.helper == nil
+              .dashboard-job
+                %h3= link_to offer.job.title, job_path(offer.job)
+                %h4= offer.date_time.to_formatted_s(:long_ordinal)
+                %h4= offer.job.address
+                %p= offer.note
+                .dashboard-job-links
+                  = link_to 'EDIT', edit_bid_path(offer), class: 'left'
+                  = link_to 'WITHDRAW', bid_path(offer), method: :delete, class: 'right'
     .dashboard-jobs-column
       .dashboard-jobs-top
         %h2 You're Helping With
