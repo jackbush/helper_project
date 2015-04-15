@@ -41,7 +41,7 @@ class JobsController < ApplicationController
       @job.helper_assigned_email
     end
     respond_to do |format|
-      format.html
+      format.html {redirect_to dashboard_path}
       format.json { head :no_content, status: :ok }
     end
   end
