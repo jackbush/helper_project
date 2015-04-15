@@ -25,7 +25,6 @@
     %p= @job.description
     %h3 Requested Time
     %p= @job.date_time.to_formatted_s(:long_ordinal)
-
     - if user_signed_in?
       - if @job.poster == current_user || @job.helper == current_user
         %h3 Instructions
