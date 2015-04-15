@@ -8,7 +8,11 @@
 }
 .field {
   label {
-    display: block
+    display: block;
+    margin-top: 6px;
+  }
+  select {
+    margin: 6px 1.3px;
   }
   input {
     width: 100%;
@@ -35,27 +39,6 @@ input[type="submit"] {
   &:hover {
     color: $color-lightgrey;
     background: $color-green;
-  }
-}
-.page-nav {
-  a {
-    display: block;
-    width: 100%;
-    height: 42px;
-    margin: 12px 0 0 0;
-    padding-top: 7px;
-    background: $color-lightgrey;
-    border: 3px solid $color-red;
-    text-align: center;
-    font-family: $font-header;
-    font-size: 20px;
-    color: $color-red;
-    text-decoration: none;
-    text-transform: uppercase;
-  }
-  a:hover {
-    background: $color-red;
-    color: $color-lightgrey;
   }
 }
 .devise-links {

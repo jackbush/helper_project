@@ -1,6 +1,6 @@
 var geocoder = new google.maps.Geocoder();
 
-var returnGeocoderPosition = function(results, status) {
+var returnGeocoderPosition = function(map, results, status) {
   if (status == google.maps.GeocoderStatus.OK) {
     var position = results[0].geometry.location;
     return position;
@@ -14,13 +14,13 @@ function centerOnUserLocation(map) {
        map.setCenter(initialLocation);
        smoothZoom(map, 13, 8);
     });
-  }
-}
+  };
+};
 
 function addMarkers(map) {
   var showMarkerFromGeocoderResults = function(results, status) {
     if (status == google.maps.GeocoderStatus.OK) {
-      var position = results[0].geometry.location
+      var position = results[0].geometry.location;
       var marker = new google.maps.Marker({
         map: map,
         position: position
@@ -30,7 +30,7 @@ function addMarkers(map) {
   };
   $('.address').each(function(index, element) {
     var geocoderOptions = { address: $(element).text() };
-    geocoder.geocode(geocoderOptions, showMarkerFromGeocoderResults)
+    geocoder.geocode(geocoderOptions, showMarkerFromGeocoderResults);
   });
 }
 
@@ -38,7 +38,7 @@ function addInfoWindows(map) {
 
   var showMarkerFromGeocoderResults = function(results, status) {
     if (status == google.maps.GeocoderStatus.OK) {
-      var position = results[0].geometry.location
+      var position = results[0].geometry.location;
       var marker = new google.maps.Marker({
         map: map,
         position: position
@@ -51,7 +51,7 @@ function addInfoWindows(map) {
   .done(function(response){
     $.each(response, function(index, job){
       var geocoderOptions = { address: job.postcode };
-      geocoder.geocode( geocoderOptions, showMarkerFromGeocoderResults)
+      geocoder.geocode( geocoderOptions, showMarkerFromGeocoderResults);
     });
 
     // var marker = new google.maps.Marker({

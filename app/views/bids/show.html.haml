@@ -1,1 +1,11 @@
-%h3 Please manage bids from the job page.
+.bid-show
+  %h2= link_to @job.title, job_path(@job)
+  %h4= @bid.date_time.to_formatted_s(:long_ordinal)
+  %h3 Description
+  %p= @job.description
+  %h3 Helpr's Note
+  %p= @bid.note
+  - if @bid.applicant_id == current_user.id
+    .page-nav
+      = link_to 'EDIT', edit_bid_path(@bid)
+      = link_to 'DELETE', bid_path(@bid), method: :delete

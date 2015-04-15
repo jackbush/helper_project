@@ -1,0 +1,16 @@
+.user-profile {
+  width: 400px;
+  margin: 96px auto 24px auto;
+  background: #eee; 
+  padding: 18px;
+  h4 {
+    text-transform: uppercase;
+  }
+  .avatar {
+    margin: 28px auto;
+    text-align: center;
+    img {
+      border-radius: 100%;
+    }
+  }
+}

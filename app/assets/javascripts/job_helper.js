@@ -14,9 +14,9 @@ function renderApplicants(data) {
           embeddedProfile += '</div></div>';
       results.append(embeddedProfile);
     }
-  })
+  });
   results.fadeIn('slow');
-}
+};
 
 function renderHelper(data) {
   var results = $('.job-show-helper');
@@ -37,25 +37,25 @@ function findHelpers() {
   request('GET', '/jobs/' + jobId, null)
   .done(function(response) {
     if (response.applicants === true)
-      renderApplicants(response)
+      renderApplicants(response);
     else if (response.helper === true)
-      renderHelper(response)
+      renderHelper(response);
   })
   .fail(function(error) {
-    console.log(error)
-  })
-}
+    console.log(error);
+  });
+};
 
 function chooseHelper() {
 	var jobId = $('.job-id').text();
   //change these two to pull the id and datetime from data argument in button
 	helperId = $(this).data('helper-id');
-  helperTime = $(this)
+  helperTime = $(this);
 	request('PUT', '/jobs/'+jobId, {job:{helper_id: helperId, date_time: helperTime}})
 	.done(function() {
 	  findHelpers();
 	})
   .fail(function(error) {
-    console.log(error)
+    console.log(error);
   });
-}
+};

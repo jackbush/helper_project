@@ -4,5 +4,5 @@ function request(method, url, data) {
     method: method,
     dataType: 'json',
     data: data
-  })
-}
+  });
+};
