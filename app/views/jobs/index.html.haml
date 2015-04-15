@@ -11,12 +11,9 @@
         find the ones
         %span.jobs-index-filter#no-offers without offers yet,
         or enter a location below.
-    %input#jobs-index-list-search{autofocus: true}
+    %input#jobs-index-map-search{autofocus: true}
   - @jobs.each do |job|
     .job-index-post
       %h3= link_to job.title, job_path(job)
       %h4= job.date_time.to_formatted_s(:long_ordinal)
       %p= job.description
-      .address= job.postcode
-      - if job.applicants.include? current_user
-        %span.bid-status YOU HAVE APPLIED
