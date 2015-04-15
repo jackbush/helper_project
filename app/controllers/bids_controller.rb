@@ -4,11 +4,12 @@ class BidsController < ApplicationController
   authorize_resource
 
   def index
-    @bids = Bid.where(job_id: params[:job_id])
+    redirect_to dashboard_path
   end
 
   def show
     @bid = Bid.find(params[:id])
+    @job = Job.find(@bid.job_id)
   end
 
   def new
