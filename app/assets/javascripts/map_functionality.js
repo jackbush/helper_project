@@ -1,5 +1,12 @@
 var geocoder = new google.maps.Geocoder();
 
+var returnGeocoderPosition = function(results, status) {
+  if (status == google.maps.GeocoderStatus.OK) {
+    var position = results[0].geometry.location;
+    return position;
+  };
+};
+
 function centerOnUserLocation(map) {
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(function (position) {
@@ -66,13 +73,6 @@ function addInfoWindows(map) {
     //   infowindow.open(map, marker);
     // });
   });
-};
-
-var returnGeocoderPosition = function(results, status) {
-  if (status == google.maps.GeocoderStatus.OK) {
-    var position = results[0].geometry.location;
-    return position;
-  };
 };
 
 function initIndexMap() {

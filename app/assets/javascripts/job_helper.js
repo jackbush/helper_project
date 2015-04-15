@@ -7,10 +7,10 @@ function renderApplicants(data) {
       var embeddedProfile  = '<div class="embedded-profile">';
           embeddedProfile += '<div class="embedded-profile-image"><img src="' + value.applicant_image + '"></div>';
           embeddedProfile += '<div class="embedded-profile-stats">';
-          embeddedProfile += '<h3>' + value.applicant_name + '</h3>';
-          embeddedProfile += '<h4>' + value.date_time + '</h4>';
+          embeddedProfile += '<h3><a href="/users/' + value.applicant_id + '">' + value.applicant_name + '</a></h3>';
+          embeddedProfile += '<h4>' + value.offer_time + '</h4>';
           embeddedProfile += '<p>' + value.note + '</p>';
-          embeddedProfile += '<button id="#choose-helper-button" id="' + value.id + '">CHOOSE</button>';
+          embeddedProfile += '<button id="choose-helper-button" data-helper-id="' + value.applicant_id + '" data-helper-datetime="' + value.datetime + '">CHOOSE</button>';
           embeddedProfile += '</div></div>';
       results.append(embeddedProfile);
     }
@@ -48,8 +48,10 @@ function findHelpers() {
 
 function chooseHelper() {
 	var jobId = $('.job-id').text();
+  //change these two to pull the id and datetime from data argument in button
 	helperId = $(this).data('helper-id');
-	request('PUT', '/jobs/'+jobId, {job:{helper_id: helperId}})
+  helperTime = $(this)
+	request('PUT', '/jobs/'+jobId, {job:{helper_id: helperId, date_time: helperTime}})
 	.done(function() {
 	  findHelpers();
 	})

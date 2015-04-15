@@ -37,7 +37,8 @@ class Job < ActiveRecord::Base
           applicant_name: bid.applicant.username,
           applicant_image: bid.applicant.image,
           applicant_id: bid.applicant.id,
-          date_time: bid.date_time.to_formatted_s(:long_ordinal),
+          offer_time: bid.date_time.to_formatted_s(:long_ordinal),
+          datetime: bid.date_time,
           note: bid.note,
         }
       end
@@ -48,8 +49,6 @@ class Job < ActiveRecord::Base
       data['helper_name'] = helper.username
       data['helper_image'] = helper.image
       data['helper_id'] = helper.id
-      # data['helper_note'] = winning_bid.note
-      # data['helper_date_time'] = winning_bid.date_time
     end
     data.to_json
   end
