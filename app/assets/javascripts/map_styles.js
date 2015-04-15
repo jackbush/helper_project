@@ -116,5 +116,5 @@ function smoothZoom(map, max, current) {
       smoothZoom(map, max, current + 1);
     });
     setTimeout(function(){map.setZoom(current)}, 80);
-  }
-}
+  };
+};

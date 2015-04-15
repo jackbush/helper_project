@@ -7,11 +7,11 @@
 
 $(document).ready(function() {
   if (window.location.pathname === '/jobs') {
-    google.maps.event.addDomListener(window, 'load', initIndexMap)
-  }
+    google.maps.event.addDomListener(window, 'load', initIndexMap);
+  };
   if (window.location.pathname.match(/\/jobs\/\d/)) {
-    google.maps.event.addDomListener(window, 'load', initShowMap)
-  }
+    google.maps.event.addDomListener(window, 'load', initShowMap);
+  };
   findHelpers();
   // the below cannot target an element rendered by js -- target parent
   $('#choose-helper-button').on('click', chooseHelper);

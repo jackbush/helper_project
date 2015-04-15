@@ -8,7 +8,11 @@
 }
 .field {
   label {
-    display: block
+    display: block;
+    margin-top: 6px;
+  }
+  select {
+    margin: 6px 1.3px;
   }
   input {
     width: 100%;
