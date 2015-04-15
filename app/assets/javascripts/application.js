@@ -1,8 +1,8 @@
 //= require jquery
 //= require jquery_ujs
 //= require core
-//= require map_style
-//= require maps
+//= require map_styles
+//= require map_functionality
 //= require job_helper
 
 $(document).ready(function() {

@@ -1,15 +1,5 @@
 var geocoder = new google.maps.Geocoder();
 
-function smoothZoom(map, max, current) {
-  if (current <= max) {
-    var zoom = google.maps.event.addListener(map, 'zoom_changed', function(event){
-      google.maps.event.removeListener(zoom);
-      smoothZoom(map, max, current + 1);
-    });
-    setTimeout(function(){map.setZoom(current)}, 80);
-  }
-}
-
 function centerOnUserLocation(map) {
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(function (position) {
@@ -78,18 +68,15 @@ function addInfoWindows(map) {
   });
 };
 
-function initIndexMap() {
-  var mapOptions = {
-    center: new google.maps.LatLng(51.519889, -0.068799),
-    zoom: 10,
-    styles: mapStyle,
-    panControl: false,
-    zoomControl: true,
-    mapTypeControl: false,
-    scaleControl: false,
-    streetViewControl: false,
-    overviewMapControl: false
+var returnGeocoderPosition = function(results, status) {
+  if (status == google.maps.GeocoderStatus.OK) {
+    var position = results[0].geometry.location;
+    return position;
   };
+};
+
+function initIndexMap() {
+  var mapOptions = indexMapOptions;
   var map = new google.maps.Map(document.getElementById('jobs-index-map'), mapOptions);
   addInfoWindows(map);
   $('#by-location').on('click', function() {
@@ -99,30 +86,14 @@ function initIndexMap() {
     if (e.which == 13) {
       var inputAddress = $('#jobs-index-map-search').val();
       $('#jobs-index-map-search').val('');
-      var centerOnGeocoderResults = function(results, status) {
-        if (status == google.maps.GeocoderStatus.OK) {
-          var position = results[0].geometry.location;
-          map.setCenter(position);
-        };
-      };
-      geocoder.geocode(inputAddress, centerOnGeocoderResults);
+      var position = geocoder.geocode(inputAddress, returnGeocoderPosition);
+      map.setCenter(position);
     };
   });
 }
 
 function initShowMap() {
-  var mapOptions = {
-    center: new google.maps.LatLng(51.519889, -0.068799),
-    zoom: 15,
-    styles: mapStyle,
-    scrollwheel: false,
-    panControl: false,
-    zoomControl: true,
-    mapTypeControl: false,
-    scaleControl: false,
-    streetViewControl: true,
-    overviewMapControl: false
-  };
+  var mapOptions = showMapOptions;
   var map = new google.maps.Map(document.getElementById('job-show-map'), mapOptions);
   addMarkers(map);
 }
