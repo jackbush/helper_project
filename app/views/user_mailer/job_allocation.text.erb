@@ -1,21 +1,17 @@
-///////////////////////////////////////////////////
-
 Dear <%= @user.username %>,
 
-Your bid was accepted!
+Your offer to help with <%= @job.title %> was accepted!
 
-The job is:
-<%= @job.title %>
-
-The job description is:
+Description:
 <%= @job.description %>
 
-Your instructions are:
+Instructions:
 <%= @job.instructions %>
 
-The location is here: 
+Address: 
 <%= @job.address %>
 
-Thanks for using Helpr
+Date and time: 
+<%= @job.date_time %>
 
-//////////////////////////////////////////////////
+Thanks for using Helpr
