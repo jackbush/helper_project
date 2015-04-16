@@ -13,6 +13,7 @@ $(document).ready(function() {
     google.maps.event.addDomListener(window, 'load', initShowMap);
   };
   findHelpers();
-  // the below cannot target an element rendered by js -- target parent
-  $('#choose-helper-button').on('click', chooseHelper);
+  $('.job-show-helper').on('click', function() {
+    $('#choose-helper-button').on('click', chooseHelper);
+  })
 });
