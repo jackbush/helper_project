@@ -48,9 +48,8 @@ function findHelpers() {
 
 function chooseHelper() {
 	var jobId = $('.job-id').text();
-  //change these two to pull the id and datetime from data argument in button
 	helperId = $(this).data('helper-id');
-  helperTime = $(this);
+  helperTime = $(this).data('helper-datetime');
 	request('PUT', '/jobs/'+jobId, {job:{helper_id: helperId, date_time: helperTime}})
 	.done(function() {
 	  findHelpers();
