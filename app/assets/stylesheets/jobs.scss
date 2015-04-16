@@ -61,6 +61,13 @@
     border: none;
   }
 }
+#info-window-content {
+  width: 300px;
+  margin-left: 20px;
+  padding-bottom: 20px;
+  max-height: 400px;
+  overflow: scroll;
+}
 
 // show
 
