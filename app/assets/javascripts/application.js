@@ -14,6 +14,9 @@ $(document).ready(function() {
   };
   findHelpers();
   $('.job-show-helper').on('click', function() {
-    $('#choose-helper-button').on('click', chooseHelper);
+    // $('#choose-helper-button').on('click', chooseHelper);
+    $('#choose-helper-button').on('click', function () {
+      console.log('ye')
+    });
   })
 });

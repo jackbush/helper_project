@@ -1,12 +1,5 @@
 var geocoder = new google.maps.Geocoder();
 
-var returnGeocoderPosition = function(results, status, map) {
-  if (status == google.maps.GeocoderStatus.OK) {
-    var position = results[0].geometry.location;
-    return position;
-  };
-};
-
 function geocoderCallback(results, status, map){
   if (status == google.maps.GeocoderStatus.OK) {
     var position = results[0].geometry.location;
@@ -26,6 +19,20 @@ function centerOnUserLocation(map) {
        smoothZoom(map, 13, 8);
     });
   };
+};
+
+function textSearchMap(map) {
+  var findCenterFromGeocoderResults = function(results, status) {
+    if (status == google.maps.GeocoderStatus.OK) {
+      var position = results[0].geometry.location
+      map.setCenter(position);
+      map.setZoom(14);
+    } else {
+      console.log(status);
+    }
+  };
+  var geocoderOptions = { address: $('.center-on').val() };
+  geocoder.geocode( geocoderOptions, findCenterFromGeocoderResults);
 };
 
 function addMarkers(map) {
@@ -68,14 +75,14 @@ function initIndexMap() {
   $('#by-location').on('click', function() {
     centerOnUserLocation(map);
   });
-  // $('#jobs-index-map-search').keypress(function(e) {
-  //   if (e.which == 13) {
-  //     var inputAddress = $('#jobs-index-map-search').val();
-  //     $('#jobs-index-map-search').val('');
-  //     var position = geocoder.geocode(inputAddress, returnGeocoderPosition);
-  //     map.setCenter(position);
-  //   };
-  // });
+  $('#jobs-index-map-search').keypress(function(e) {
+    if (e.which == 13) {
+      var inputAddress = $('#jobs-index-map-search').val();
+      $('#jobs-index-map-search').val('');
+      $('.center-on').val(inputAddress);
+      textSearchMap(map);
+    };
+  });
 };
 
 function initShowMap() {
