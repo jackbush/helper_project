@@ -3,6 +3,7 @@ $color-green: rgb(0, 199, 149);
 $color-lightgrey: rgb(251, 251, 252);
 $color-blue: rgb(139, 191, 207);
 $color-red: rgb(200, 91, 91);
+$color-title-bg: rgb(39, 80, 97);
 $font-title: "Montserrat", "Gill Sans", sans-serif;
 $font-header: "Gill Sans", "Montserrat", sans-serif;
 $font-body: "Georgia", serif;
@@ -57,6 +58,13 @@ p {
 * {
   box-sizing: border-box;
   outline: none;
+}
+.background-block {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  z-index: -1000;
+  background: $color-title-bg;
 }
 .site-content {
   margin-top: 42px;
