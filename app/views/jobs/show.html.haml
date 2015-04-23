@@ -17,6 +17,8 @@
           = link_to 'YOU HAVE WON', dashboard_path
         - elsif @job.applicants.include? current_user
           = link_to 'YOU HAVE OFFERED', dashboard_path
+        - else
+          = link_to 'I CAN HELP', new_job_bid_path(@job)
     - else
       .bid-status= link_to 'I CAN HELP', new_job_bid_path(@job)
 
