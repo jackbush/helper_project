@@ -13,7 +13,7 @@ class Job < ActiveRecord::Base
   validates :address, presence: true
   validates :postcode, presence: true
 
-  def assign_user(job, user)
+  def self.assign_user(job, user)
     job.poster_id = user
     job.save
   end
