@@ -236,7 +236,7 @@ Devise.setup do |config|
 
   #set keys as env variables
 
-  config.omniauth :google_oauth2, ENV["GOOGLE_APP_ID"], ENV["GOOGLE_APP_SECRET"], scope: 'email,profile'
+  # config.omniauth :google_oauth2, ENV["GOOGLE_APP_ID"], ENV["GOOGLE_APP_SECRET"], scope: 'email,profile'
 
   # config.omniauth :facebook, ENV["FACEBOOK_APP_ID"], ENV["FACEBOOK_APP_SECRET"] #, scope: 'add, scope, here'
 

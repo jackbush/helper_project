@@ -3,9 +3,9 @@ class User < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable,
-         :omniauthable, :omniauth_providers => [:google_oauth2]
+         :omniauthable#, :omniauth_providers => [:google_oauth2]
 
-         # facebook and twitter disabled
+         # facebook, google and twitter disabled
 
   has_many :jobs
   has_many :bids, :foreign_key => 'applicant_id'
